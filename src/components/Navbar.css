@@ -1,0 +1,243 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  color: var(--accent-primary);
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav-links a:not(.btn) {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a:not(.btn):hover {
+  color: var(--accent-primary);
+}
+
+/* Mega Menu Styles */
+.dropdown {
+  position: relative;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: -200px;
+  width: 800px;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dropdown:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-sidebar {
+  width: 280px;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+}
+
+.mega-menu-sidebar ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.mega-menu-sidebar li {
+  padding: 12px 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.mega-menu-sidebar li:hover {
+  color: var(--text-main);
+  background: #f1f5f9;
+}
+
+.mega-menu-sidebar li.active {
+  background: #f1f5f9;
+  color: var(--text-main);
+}
+
+.mega-menu-sidebar .chevron {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.2s ease;
+}
+
+.mega-menu-sidebar li.active .chevron,
+.mega-menu-sidebar li:hover .chevron {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mega-menu-content {
+  flex-grow: 1;
+  padding: 24px;
+  background: #ffffff;
+}
+
+.product-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-display {
+  width: 100%;
+  height: 200px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.mega-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.series-list {
+  display: flex;
+  gap: 32px;
+}
+
+.series-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.series-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.series-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .mega-menu {
+    display: none; /* Hide mega menu on mobile for simplicity, standard dropdown behavior */
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    padding: 24px 0;
+    gap: 24px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+}

@@ -1,0 +1,91 @@
+.footer {
+  background: #0f172a; /* Keeping footer dark for solid modern anchor */
+  padding-top: 80px;
+  color: #f8fafc;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* Ensuring logo text is white inside the dark footer */
+.footer .logo-text {
+  color: #ffffff;
+}
+
+.footer-desc {
+  color: #94a3b8;
+  margin: 20px 0;
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent-primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer-links h4 {
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.footer-links a {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

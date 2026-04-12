@@ -1,0 +1,67 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.service-card {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: rgba(255, 123, 0, 0.1);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background: var(--accent-primary);
+  color: #fff;
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 10px 20px rgba(255, 123, 0, 0.2);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.service-desc {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.service-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main); /* Changed from e0e0e0 to dark text for light theme */
+}
+
+.feature-dot {
+  width: 8px; /* Slightly larger for visibility */
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-secondary);
+}

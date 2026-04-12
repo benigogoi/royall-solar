@@ -1,0 +1,73 @@
+.clients-page {
+  background: var(--bg-dark);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+.clients-content {
+  padding-top: 60px;
+}
+
+.clients-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.clients-intro strong {
+  color: var(--text-main);
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.client-logo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  height: 140px;
+}
+
+.client-logo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: var(--accent-primary);
+}
+
+.client-icon {
+  color: var(--accent-secondary);
+  margin-bottom: 12px;
+}
+
+.real-client-logo {
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.client-logo-card:hover .real-client-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.client-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
