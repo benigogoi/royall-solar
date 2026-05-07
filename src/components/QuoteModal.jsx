@@ -1,5 +1,6 @@
 import { X } from 'lucide-react';
 import './QuoteModal.css';
+import { productCategories } from '../data/siteContent';
 
 const QuoteModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -34,15 +35,11 @@ const QuoteModal = ({ isOpen, onClose }) => {
           
           <div className="form-group">
             <label>Interested Service</label>
-            <select required>
-              <option value="" disabled selected>Select a product or service</option>
-              <option value="Line Interactive UPS">Line Interactive UPS</option>
-              <option value="Online Single Phase UPS">Online Single Phase UPS</option>
-              <option value="Online 3 Phase UPS">Online 3 Phase UPS</option>
-              <option value="Modular UPS">Modular UPS</option>
-              <option value="Li-ion Based ESS">Li-ion Based ESS</option>
-              <option value="Solar Plant">Solar Plant</option>
-              <option value="Industrial Stabilizer">Industrial Stabilizer</option>
+            <select required defaultValue="">
+              <option value="" disabled>Select a product or service</option>
+              {productCategories.map((category) => (
+                <option key={category.id} value={category.title}>{category.title}</option>
+              ))}
               <option value="Other">Other Power Solution</option>
             </select>
           </div>

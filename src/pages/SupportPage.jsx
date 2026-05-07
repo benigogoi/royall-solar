@@ -1,37 +1,12 @@
 import PageHeader from '../components/PageHeader';
 import { PhoneCall, Mail, MapPin, Map, Building, Headset, ShieldCheck } from 'lucide-react';
 import './SupportPage.css';
-
-const OUTSIDE_SUPPORT = [
-  { isHeader: true, title: "North-Eastern Zone" },
-  { id: 1, eng: "Silchar", loc: "Karimganj, Hailakandi, Mizoram" },
-  { id: 2, eng: "Jorhat", loc: "Jorhat, Golaghat, Dimapur, Diphu" },
-  { id: 3, eng: "Dibrugarh", loc: "Dibrugarh, Tinsukia, Digboi, Duliajan" },
-  { id: 4, eng: "Barpeta", loc: "Barpeta, Kokrajhar, Goalpara" },
-  { id: 5, eng: "Imphal", loc: "Manipur" },
-  { id: 6, eng: "Siliguri", loc: "Sikkim, North Bengal, North Bihar" },
-  { isHeader: true, title: "West Zone" },
-  { id: 7, eng: "Mumbai", loc: "Maharashtra" },
-  { id: 8, eng: "Chennai", loc: "Tamil Nadu, Telengana" },
-  { isHeader: true, title: "North Zone" },
-  { id: 9, eng: "Jaipur", loc: "Rajasthan" },
-  { id: 10, eng: "Jammu", loc: "J&K, Himachal" },
-];
-
-const SERVICE_CENTRES = [
-  { id: 1, center: "Guwahati Head Office", loc: "Guwahati (Rural & Metro), Tangla, Jagiroad" },
-  { id: 2, center: "Tezpur Branch Office", loc: "Tezpur/Nagaon/ N. Lakhimpur/Arunachal Pradesh/ Dhemaji" },
-  { id: 3, center: "Kolkata Regional Office", loc: "West Bengal, Jharkhand, Bihar" },
-  { id: 4, center: "Agartala Branch office", loc: "Tripura" },
-  { id: 5, center: "Bangalore Regional Office", loc: "Karnataka, Kerala" },
-  { id: 6, center: "New Delhi Regional Office", loc: "Punjab, Haryana, UP west" },
-  { id: 7, center: "Bhubaneswar Branch Office", loc: "Odisha, Chhattisgarh" },
-];
+import { contactDetails, serviceResources, supportChannels } from '../data/siteContent';
 
 const SupportPage = () => {
   return (
     <div className="support-page">
-      <PageHeader title="OUR SUPPORT" bgImage="/solar_battery.png" />
+      <PageHeader title="SUPPORT" bgImage="/solar_battery.png" />
       
       <div className="container support-content">
         
@@ -42,12 +17,12 @@ const SupportPage = () => {
           <div className="support-section-card glass-panel">
             <div className="section-header-banner">
               <Headset className="header-icon" size={24} />
-              <h3>Resident Engineers</h3>
-              <p>Coverage by specialized personnel</p>
+              <h3>Sales and Service</h3>
+              <p>Direct guidance for enquiries, follow-up, and complaint support</p>
             </div>
             
             <div className="data-list">
-              {OUTSIDE_SUPPORT.map((item, index) => (
+              {supportChannels.map((item, index) => (
                 item.isHeader ? (
                   <div key={`header-${index}`} className="zone-divider">
                     <Map size={18} className="zone-icon" />
@@ -67,12 +42,12 @@ const SupportPage = () => {
           <div className="support-section-card glass-panel">
             <div className="section-header-banner">
               <Building className="header-icon" size={24} />
-              <h3>Service Centres</h3>
-              <p>Regional infrastructure & offices</p>
+              <h3>Policies and Resources</h3>
+              <p>Important customer-facing information inspired by the reference site</p>
             </div>
             
             <div className="data-list pb-extra">
-              {SERVICE_CENTRES.map((item) => (
+              {serviceResources.map((item) => (
                 <div key={item.id} className="data-row">
                   <div className="data-primary"><strong>{item.center}</strong></div>
                   <div className="data-secondary"><MapPin size={14} className="pin-icon" /> {item.loc}</div>
@@ -87,8 +62,8 @@ const SupportPage = () => {
         <div className="premium-contact-section">
           <div className="contact-text-area">
             <ShieldCheck size={40} className="shield-icon" />
-            <h2 className="support-heading">Need Online Warranty Verification?</h2>
-            <p className="support-subtitle">Get immediate after-sales service and support verification directly from Royall Solar representatives.</p>
+            <h2 className="support-heading">Need Warranty or Order Assistance?</h2>
+            <p className="support-subtitle">Connect with Royall Solar for complaint handling, warranty guidance, dispatch updates, and technical support.</p>
           </div>
 
           <div className="premium-contact-cards">
@@ -99,8 +74,8 @@ const SupportPage = () => {
               </div>
               <div className="premium-card-content">
                 <h4>Customer Care Toll-Free</h4>
-                <div className="contact-bold">1800-345-3758</div>
-                <div className="contact-meta">Mobile: 97060-60804 &nbsp;|&nbsp; 98640-94804</div>
+                <div className="contact-bold">{contactDetails.carePhone}</div>
+                <div className="contact-meta">Mobile: {contactDetails.mobilePhone} | {contactDetails.alternatePhone}</div>
               </div>
             </div>
 
@@ -111,8 +86,8 @@ const SupportPage = () => {
               </div>
               <div className="premium-card-content">
                 <h4>Email Support</h4>
-                <div className="contact-bold email-text">customer.care@royallsolar.co.in</div>
-                <div className="contact-meta">service@... &nbsp;|&nbsp; gm.service@...</div>
+                <div className="contact-bold email-text">{contactDetails.email}</div>
+                <div className="contact-meta">Share product details, order references, and service requirements for faster follow-up.</div>
               </div>
             </div>
           </div>

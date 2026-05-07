@@ -1,53 +1,52 @@
-import { Sun, Battery, Activity } from 'lucide-react';
+import { Activity, Battery, FileCheck2, HousePlus, PanelsTopLeft, ShieldCheck, Sun } from 'lucide-react';
 import './Services.css';
+import { benefits, productCategories } from '../data/siteContent';
 
-const services = [
-  {
-    icon: <Sun size={40} />,
-    title: 'Rooftop Solar Systems',
-    description: 'High-efficiency monocrystalline solar panels engineered to maximize power generation for residential and corporate roofs.',
-    features: ['25-Year Warranty', 'Tier-1 Modules', 'Smart Inverters']
-  },
-  {
-    icon: <Battery size={40} />,
-    title: 'Lithium Energy Storage',
-    description: 'Next-generation lithium-ion battery packs offering deep discharge capabilities and unparalleled lifespan.',
-    features: ['Fast Charging', 'Zero Maintenance', 'Compact Design']
-  },
-  {
-    icon: <Activity size={40} />,
-    title: 'Power Conditioners (PCU)',
-    description: 'Intelligent solar PCUs that seamlessly manage grid, solar, and battery power to ensure uninterrupted supply.',
-    features: ['MPPT Technology', 'Grid Interactive', 'Remote Monitoring']
-  }
-];
+const iconMap = {
+  rooftop: <Sun size={34} />,
+  panels: <PanelsTopLeft size={34} />,
+  batteries: <Battery size={34} />,
+  inverters: <HousePlus size={34} />,
+  loan: <FileCheck2 size={34} />,
+  care: <ShieldCheck size={34} />,
+  pcu: <Activity size={34} />,
+};
 
 const Services = () => {
   return (
-    <section id="services" className="section">
+    <section id="services" className="section services-section">
       <div className="container">
-        <h2 className="section-title">Our <span className="text-gradient-alt">Solutions</span></h2>
+        <h2 className="section-title">Products <span className="text-gradient-alt">Categories</span></h2>
         <p className="section-subtitle">
-          Cutting-edge products designed to bring energy independence and absolute reliability to your infrastructure.
+          Browse Royall Solar the way customers expect from a solar marketplace: rooftop systems, panels,
+          inverters, batteries, loan help, and installation support in one place.
         </p>
 
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div key={index} className="glass-panel service-card transition-delay" style={{ animationDelay: `${index * 0.2}s` }}>
-              <div className="service-icon-wrapper">
-                {service.icon}
+          {productCategories.map((service) => (
+            <article key={service.id} className="service-card">
+              <div className="service-image">
+                <img src={service.image} alt={service.title} />
               </div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-desc">{service.description}</p>
-              
-              <ul className="service-features">
-                {service.features.map((feature, i) => (
-                  <li key={i}>
-                    <div className="feature-dot"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+              <div className="service-body">
+                <div className="service-icon-wrapper">{iconMap[service.id]}</div>
+                <h3 className="service-title">{service.title}</h3>
+                <p className="service-desc">{service.description}</p>
+                <ul className="service-features">
+                  {service.features.map((feature) => (
+                    <li key={feature}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="benefits-strip">
+          {benefits.map((benefit) => (
+            <div key={benefit.title} className="benefit-item">
+              <strong>{benefit.title}</strong>
+              <span>{benefit.detail}</span>
             </div>
           ))}
         </div>

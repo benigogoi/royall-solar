@@ -1,8 +1,10 @@
+import PageHeader from '../components/PageHeader';
 import About from '../components/About';
 
 const AboutPage = () => {
   return (
-    <div style={{ paddingTop: '80px', minHeight: 'calc(100vh - 300px)' }}>
+    <div style={{ minHeight: 'calc(100vh - 300px)' }}>
+      <PageHeader title="ABOUT US" bgImage="/hero_solar.png" />
       <About />
     </div>
   );

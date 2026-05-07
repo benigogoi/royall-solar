@@ -1,5 +1,5 @@
 .footer {
-  background: #0f172a; /* Keeping footer dark for solid modern anchor */
+  background: #2d4a07;
   padding-top: 80px;
   color: #f8fafc;
 }
@@ -11,9 +11,33 @@
   margin-bottom: 60px;
 }
 
-/* Ensuring logo text is white inside the dark footer */
-.footer .logo-text {
-  color: #ffffff;
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.footer-logo-image {
+  width: 320px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.unit-tag {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.parent-logo {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  opacity: 1;
 }
 
 .footer-desc {
@@ -41,7 +65,7 @@
 }
 
 .social-links a:hover {
-  background: var(--accent-primary);
+  background: #f97316;
   color: #fff;
   transform: translateY(-3px);
 }
@@ -61,7 +85,24 @@
 }
 
 .footer-links a:hover {
-  color: var(--accent-secondary);
+  color: #fbbf24;
+}
+
+.footer-contact-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding: 18px 5%;
+  background: #f97316;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.footer-contact-bar span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .footer-bottom {

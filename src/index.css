@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
 
 :root {
-  --font-heading: 'Outfit', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
 
   /* Light Theme Variables */
@@ -12,11 +12,19 @@
   --text-main: #0f172a;       /* Dark slate */
   --text-muted: #475569;      /* Gray for subtitles */
   
-  --accent-primary: #FF7B00;
-  --accent-primary-hover: #e66e00;
-  --accent-secondary: #0284c7; /* Adjusted cyan/blue for white bg */
+  --accent-primary: #f97316;
+  --accent-primary-hover: #ea580c;
+  --accent-secondary: #4d7c0f;      /* Darker Lime for text */
+  --accent-secondary-light: #84cc16; /* Standard Lime */
+  --accent-lime-vibrant: #a3e635;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+  --shadow-xl: 0 25px 50px -12px rgba(0,0,0,0.15);
 
-  --nav-height: 80px;
+  --nav-height: 84px;
+  --top-bar-height: 40px;
 }
 
 * {
@@ -47,14 +55,14 @@ a {
 
 /* Typography Utilities */
 .text-gradient {
-  background: linear-gradient(135deg, var(--accent-primary), #d97706);
+  background: linear-gradient(135deg, var(--accent-primary), #f59e0b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-alt {
-  background: linear-gradient(135deg, var(--accent-secondary), #3b82f6);
+  background: linear-gradient(135deg, #073d22, #16a34a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,20 +70,20 @@ a {
 
 /* Glassmorphism Panel (Light Mode adjustments) */
 .glass-panel {
-  background: var(--bg-panel);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05); /* Added soft shadow for light theme */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-md);
   border-radius: 16px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .glass-panel:hover {
-  background: var(--bg-panel-hover);
-  border-color: #ffffff;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08); /* Stronger shadow on hover */
-  transform: translateY(-5px);
+  background: #ffffff;
+  border-color: var(--accent-primary);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px) scale(1.02);
 }
 
 /* Buttons */
@@ -96,33 +104,35 @@ a {
 }
 
 .btn-primary {
-  background: var(--accent-primary);
+  background: linear-gradient(135deg, var(--accent-primary), #fb923c);
   color: #fff;
-  box-shadow: 0 4px 15px rgba(255, 123, 0, 0.2);
+  box-shadow: 0 10px 20px -10px rgba(249, 115, 22, 0.5);
 }
 
 .btn-primary:hover {
-  background: var(--accent-primary-hover);
-  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.3);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--accent-primary-hover), var(--accent-primary));
+  box-shadow: 0 15px 25px -10px rgba(249, 115, 22, 0.6);
+  transform: translateY(-3px);
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--text-main);
-  border: 2px solid var(--text-main);
+  color: var(--accent-secondary);
+  border: 2px solid var(--accent-secondary);
 }
 
 .btn-outline:hover {
-  background: var(--text-main);
-  color: var(--bg-dark);
+  background: var(--accent-secondary);
+  color: #fff;
+  box-shadow: 0 10px 20px -10px rgba(6, 78, 59, 0.4);
 }
 
 /* Layout */
 .container {
-  max-width: 1280px;
+  width: min(1680px, calc(100% - 96px));
+  max-width: 1680px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0;
 }
 
 .section {
@@ -151,4 +161,20 @@ a {
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease forwards;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    width: min(100% - 48px, 960px);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .section {
+    padding: 72px 0;
+  }
 }

@@ -1,56 +1,82 @@
-import { Send } from 'lucide-react';
+import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import './Contact.css';
+import { contactDetails, productCategories } from '../data/siteContent';
 
 const Contact = () => {
   return (
     <section id="contact" className="section contact-section">
       <div className="container contact-container">
         <div className="contact-info">
-          <h2 className="section-title text-left">Connect With Us</h2>
+          <span className="contact-label">Call for free consultation</span>
+          <h2 className="section-title text-left">Get Your Solar Quote</h2>
           <p className="contact-desc">
-            Ready to transition to endless, clean energy? Get in touch with our experts today for a customized quote tailored to your energy needs.
+            Share your rooftop type, electricity bill, and preferred package. Royall Solar can guide you through
+            system size, subsidy, loan documents, installation, and net metering.
           </p>
-          
+
           <div className="contact-details">
             <div className="detail-item">
-              <span className="detail-label">Email</span>
-              <a href="mailto:hello@royalsolar.co.in" className="detail-link">hello@royalsolar.co.in</a>
+              <Phone size={22} />
+              <div>
+                <span className="detail-label">Call Now</span>
+                <a href={`tel:${contactDetails.carePhone.replace(/[^+\d]/g, '')}`} className="detail-link">
+                  {contactDetails.carePhone}, {contactDetails.mobilePhone}
+                </a>
+              </div>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Phone</span>
-              <a href="tel:+919876543210" className="detail-link">+91 98765 43210</a>
+              <Mail size={22} />
+              <div>
+                <span className="detail-label">Email</span>
+                <a href={`mailto:${contactDetails.email}`} className="detail-link">{contactDetails.email}</a>
+              </div>
             </div>
             <div className="detail-item">
-              <span className="detail-label">Office</span>
-              <span className="detail-text">Tech Park, Phase 1, Bangalore, India</span>
+              <MapPin size={22} />
+              <div>
+                <span className="detail-label">Visit Us</span>
+                <span className="detail-text">{contactDetails.office}</span>
+              </div>
             </div>
           </div>
         </div>
-        
-        <div className="glass-panel form-panel">
+
+        <div className="form-panel">
           <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your name" required />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="9707670101" required />
+              </div>
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" placeholder="john@company.com" required />
+              <input type="email" id="email" placeholder="name@example.com" />
             </div>
-            
+
             <div className="form-group">
-              <label htmlFor="service">Interested Service</label>
+              <label htmlFor="service">Interested Category</label>
               <select id="service">
-                <option value="rooftop">Rooftop Solar</option>
-                <option value="storage">Lithium Storage</option>
-                <option value="pcu">Power Conditioners (PCU)</option>
+                {productCategories.map((category) => (
+                  <option key={category.id} value={category.id}>{category.title}</option>
+                ))}
                 <option value="other">Other Inquiry</option>
               </select>
             </div>
-            
+
+            <div className="form-group">
+              <label htmlFor="message">Project Details</label>
+              <textarea id="message" rows="4" placeholder="Monthly bill, roof type, location, or system size" />
+            </div>
+
             <button type="submit" className="btn btn-primary submit-btn">
-              Send Message <Send size={18} style={{ marginLeft: '8px' }} />
+              Send Enquiry <Send size={18} />
             </button>
           </form>
         </div>

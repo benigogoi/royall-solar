@@ -31,13 +31,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 24px 16px;
   text-align: center;
   background: #ffffff;
   border-radius: 8px;
   transition: all 0.3s ease;
-  height: 140px;
+  min-height: 220px;
 }
 
 .client-logo-card:hover {
@@ -51,23 +51,15 @@
   margin-bottom: 12px;
 }
 
-.real-client-logo {
-  max-width: 70px;
-  max-height: 70px;
-  object-fit: contain;
-  margin-bottom: 12px;
-  filter: grayscale(100%);
-  transition: all 0.3s ease;
-  opacity: 0.8;
-}
-
-.client-logo-card:hover .real-client-logo {
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-.client-name {
-  font-size: 0.85rem;
-  font-weight: 600;
+.partner-title {
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.partner-copy {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
 }

@@ -1,16 +1,6 @@
 .bg-alt {
-  background: #ffffff; /* pure white for contrast against f8fafc */
+  background: #ffffff;
   position: relative;
-}
-
-.bg-alt::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
 }
 
 .about-container {
@@ -27,13 +17,14 @@
 .about-text {
   font-size: 1.125rem;
   color: var(--text-muted);
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .about-features {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
+  margin-bottom: 32px;
 }
 
 .about-feature {
@@ -43,13 +34,13 @@
 }
 
 .about-icon {
-  color: var(--accent-secondary);
+  color: #f97316;
   flex-shrink: 0;
   margin-top: 4px;
 }
 
 .about-feature h4 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   margin-bottom: 8px;
   color: var(--text-main);
 }
@@ -59,63 +50,243 @@
   font-size: 0.95rem;
 }
 
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.about-stat-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(132, 204, 22, 0.2);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.about-stat-card:hover {
+  transform: translateY(-5px);
+  border-color: #84cc16;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-stat-label {
+  display: block;
+  color: #f97316;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.about-stat-value {
+  color: #4d7c0f;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
 .about-visual {
   position: relative;
 }
 
 .image-panel {
-  padding: 16px;
-  aspect-ratio: 4/5;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-}
-
-.image-placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255, 123, 0, 0.1), rgba(2, 132, 199, 0.1));
-  border-radius: 8px;
   position: relative;
   overflow: hidden;
+  aspect-ratio: 4/5;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: var(--shadow-xl);
 }
 
-.placeholder-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.image-panel img {
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(0,0,0,0.05) 1px, transparent 1px);
-  background-size: 20px 20px;
+  object-fit: cover;
 }
 
 .floating-badge {
   position: absolute;
   bottom: 24px;
-  right: -20px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  padding: 16px 32px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  right: -10px;
+  background: linear-gradient(135deg, #4d7c0f, #84cc16);
+  padding: 16px 28px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(77, 124, 15, 0.3);
+  font-weight: 800;
+  color: #ffffff;
+  animation: float 5s ease-in-out infinite;
+  z-index: 5;
+}
+
+.about-lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 70px;
+}
+
+.documents-card,
+.brand-card {
+  padding: 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(132, 204, 22, 0.1);
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+}
+
+.documents-card:hover,
+.brand-card:hover {
+  border-color: #84cc16;
+  transform: translateY(-2px);
+}
+
+.documents-heading {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 22px;
+  color: #4d7c0f;
+}
+
+.documents-heading span,
+.brand-card > span {
+  display: block;
+  color: #f97316;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.documents-heading h3,
+.brand-card h3 {
+  font-size: 1.55rem;
+  color: #4d7c0f;
+}
+
+.documents-card ul {
+  columns: 2;
+  list-style: none;
+}
+
+.documents-card li {
+  break-inside: avoid;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: #4d7c0f;
   font-weight: 700;
-  color: var(--accent-secondary);
-  animation: float 6s infinite ease-in-out;
+}
+
+.documents-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #16a34a;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.brand-grid strong {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+  color: #4d7c0f;
+  border: 1px solid rgba(132, 204, 22, 0.1);
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.brand-grid strong:hover {
+  background: #ffffff;
+  border-color: #84cc16;
+  color: #84cc16;
+  transform: scale(1.05);
+}
+
+.testimonials-section {
+  margin-top: 70px;
+}
+
+.testimonials-section h3 {
+  font-size: 2rem;
+  font-size: 2.2rem;
+  color: #4d7c0f;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonials-grid blockquote {
+  margin: 0;
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #4d7c0f, #2d4a07);
+  color: #ffffff;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+}
+
+.testimonials-grid blockquote:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.testimonials-grid p {
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.testimonials-grid cite {
+  color: #fbbf24;
+  font-style: normal;
+  font-weight: 800;
 }
 
 @media (max-width: 992px) {
-  .about-container {
+  .about-container,
+  .about-lower {
     grid-template-columns: 1fr;
   }
-  
-  .image-panel {
-    aspect-ratio: 16/9;
+
+  .about-stats-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .floating-badge {
-    right: 24px;
+
+  .image-panel {
+    aspect-ratio: 16/10;
+  }
+}
+
+@media (max-width: 640px) {
+  .documents-card ul {
+    columns: 1;
+  }
+
+  .brand-grid {
+    grid-template-columns: 1fr;
   }
 }
