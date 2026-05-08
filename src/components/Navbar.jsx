@@ -75,7 +75,7 @@ const Navbar = () => {
           <Link to="/certifications" onClick={() => setIsMobileMenuOpen(false)}>BRANDS</Link>
           <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>CONTACT US</Link>
           
-          <button className="btn btn-primary nav-cta" onClick={() => setIsQuoteModalOpen(true)}>GET A QUOTE</button>
+          <button className="btn btn-primary nav-cta" onClick={() => setIsQuoteModalOpen(true)}>GET FREE QUOTE</button>
         </div>
 
         <button 

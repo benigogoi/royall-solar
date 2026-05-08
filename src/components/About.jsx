@@ -16,12 +16,13 @@ const About = () => {
       <div className="container about-container">
         <div className="about-content">
           <h2 className="section-title text-left">
-            Powering a <span className="text-gradient">Brighter Tomorrow</span>
+            Smart Solar Solutions Built for <span className="text-gradient">Real Savings</span>
           </h2>
-          <p className="about-text">
-            Royall Solar is a unit of Royal Infratech, focused on rooftop solar systems, premium panels,
-            inverters, batteries, bank loan guidance, and service support for customers in Assam.
-          </p>
+          <div className="about-text">
+            <p>At Royall Solar, we help homes and businesses reduce electricity costs with efficient and reliable solar energy systems.</p>
+            <p>From consultation to installation and support, our focus is simple — deliver solar solutions that perform consistently and save money for years.</p>
+            <p>Whether you want to reduce monthly bills, secure backup power during outages, or invest in long-term energy independence, we build systems tailored to your needs.</p>
+          </div>
 
           <div className="about-features">
             {aboutPillars.map((pillar, index) => {

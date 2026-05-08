@@ -89,6 +89,7 @@
 @media (max-width: 768px) {
   .top-bar-inner {
     width: calc(100% - 32px);
+    justify-content: center;
   }
 
   .top-bar-text {
@@ -96,6 +97,10 @@
   }
 
   .top-bar-brand {
-    margin: 0 auto;
+    margin: 0;
+  }
+
+  .top-bar-logo {
+    height: 24px;
   }
 }

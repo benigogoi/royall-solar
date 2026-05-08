@@ -18,29 +18,29 @@ const Hero = () => {
         <div className="hero-content animate-fade-in">
 
           <h1 className="hero-title">
-            Power your home with <span>Royall Solar</span>
+            Cut Your Electricity Bills with <span>Smart Solar Solutions</span>
           </h1>
 
-          <p className="hero-kicker">Go solar. Save more. Live brighter.</p>
+          <p className="hero-kicker">Reliable. Practical. Premium.</p>
 
           <p className="hero-subtitle">
-            Complete 3 kW rooftop solar systems with subsidy guidance, bank loan support,
-            professional installation, and net-metering assistance from Sonari, Charaideo.
+            Reliable solar installation for homes and businesses. Save money, reduce power dependency, 
+            and enjoy uninterrupted energy with professionally installed solar systems.
           </p>
 
           <div className="hero-actions">
-            <a href="#products" className="btn btn-primary">
-              View 3 kW Packages <ArrowRight size={19} />
+            <a href="#contact" className="btn btn-primary">
+              Get Free Consultation <ArrowRight size={19} />
             </a>
-            <a href={`tel:${contactDetails.mobilePhone.replace(/[^+\d]/g, '')}`} className="btn btn-outline">
-              <Phone size={18} /> Call Now
+            <a href="#services" className="btn btn-outline">
+              <Zap size={18} /> Calculate Your Savings
             </a>
           </div>
 
           <div className="hero-proof">
-            <span><BadgeIndianRupee size={18} /> Subsidy support</span>
-            <span><ShieldCheck size={18} /> 25 years warranty</span>
-            <span><Leaf size={18} /> Clean energy</span>
+            <span><ShieldCheck size={18} /> Professional Installation</span>
+            <span><Zap size={18} /> Bill Savings</span>
+            <span><Sun size={18} /> Energy Independence</span>
           </div>
         </div>
 
@@ -50,18 +50,16 @@ const Hero = () => {
           </div>
 
           <div className="offer-card">
-            <span>Special Discount</span>
-            <strong>Rs. 2,500 off</strong>
-            <p>Per 3 kW connection</p>
+            <span>Long-Term</span>
+            <strong>Reliability</strong>
+            <p>Quality Solar Components</p>
           </div>
 
-          <div className="subsidy-card">
             <BadgeIndianRupee size={26} />
             <div>
-              <span>Total subsidy up to</span>
-              <strong>Rs. 1,30,800*</strong>
+              <span>Smart Solar</span>
+              <strong>Real Savings</strong>
             </div>
-          </div>
 
           <div className="campaign-stack">
             {bannerSlides.map((slide, index) => (
@@ -77,7 +75,7 @@ const Hero = () => {
 
           <div className="energy-ribbon">
             <Zap size={18} />
-            <span>360-430 units monthly generation estimate</span>
+            <span>Switch to solar for consistent performance</span>
           </div>
         </div>
       </div>

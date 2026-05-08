@@ -7,11 +7,11 @@ const Contact = () => {
     <section id="contact" className="section contact-section">
       <div className="container contact-container">
         <div className="contact-info">
-          <span className="contact-label">Call for free consultation</span>
-          <h2 className="section-title text-left">Get Your Solar Quote</h2>
+          <span className="contact-label">Ready to Switch to Solar?</span>
+          <h2 className="section-title text-left">Get Your Customized Solar Quote</h2>
           <p className="contact-desc">
-            Share your rooftop type, electricity bill, and preferred package. Royall Solar can guide you through
-            system size, subsidy, loan documents, installation, and net metering.
+            Get a customized solar solution designed for your energy needs and budget. 
+            Our team will guide you through the process of saving more on your electricity bills.
           </p>
 
           <div className="contact-details">
@@ -76,7 +76,7 @@ const Contact = () => {
             </div>
 
             <button type="submit" className="btn btn-primary submit-btn">
-              Send Enquiry <Send size={18} />
+              Get Free Quote <Send size={18} />
             </button>
           </form>
         </div>

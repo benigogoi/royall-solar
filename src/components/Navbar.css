@@ -260,17 +260,21 @@
   }
 
   .logo-image {
-    width: 220px;
-    height: 56px;
+    width: 160px;
+    height: 42px;
   }
 
   .mobile-toggle {
     display: block;
   }
   
+  .navbar {
+    height: 64px;
+  }
+
   .nav-links {
     position: absolute;
-    top: 100%;
+    top: 64px;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.98);

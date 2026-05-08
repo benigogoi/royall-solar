@@ -7,6 +7,12 @@
     linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
+@media (max-width: 768px) {
+  .hero::before, .hero::after {
+    display: none !important;
+  }
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -411,7 +417,8 @@
   }
 
   .hero-title {
-    font-size: clamp(2.25rem, 10vw, 3.5rem);
+    font-size: clamp(2rem, 8vw, 2.5rem);
+    line-height: 1.1;
   }
 
   .hero-actions {
@@ -423,35 +430,32 @@
   }
 
   .hero-showcase {
-    min-height: 560px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
   }
 
   .showcase-image {
-    inset: 92px 0 95px 0;
-  }
-
-  .offer-card {
-    top: 0;
-    left: 0;
-    width: 205px;
-  }
-
-  .subsidy-card {
-    right: 0;
-    top: 82px;
-    max-width: 235px;
-  }
-
-  .campaign-stack {
-    right: 0;
-    bottom: 0;
+    position: relative;
+    inset: 0;
     width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 16px;
   }
 
-  .energy-ribbon {
-    left: 0;
-    bottom: 205px;
-    max-width: 92%;
+  .offer-card, .subsidy-card, .campaign-stack, .energy-ribbon {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    animation: none !important;
+    box-shadow: var(--shadow-md) !important;
   }
 
   .stats-grid {

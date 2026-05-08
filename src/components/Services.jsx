@@ -16,10 +16,10 @@ const Services = () => {
   return (
     <section id="services" className="section services-section">
       <div className="container">
-        <h2 className="section-title">Products <span className="text-gradient-alt">Categories</span></h2>
+        <h2 className="section-title">Solar <span className="text-gradient-alt">Solutions</span></h2>
         <p className="section-subtitle">
-          Browse Royall Solar the way customers expect from a solar marketplace: rooftop systems, panels,
-          inverters, batteries, loan help, and installation support in one place.
+          Explore our range of professionally installed solar energy systems designed to deliver 
+          maximum efficiency and long-term savings for your home or business.
         </p>
 
         <div className="services-grid">

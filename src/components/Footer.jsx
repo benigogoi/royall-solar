@@ -53,7 +53,7 @@ const Footer = () => {
         <span><Globe size={18} /> {contactDetails.website}</span>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Royall Solar. Clean energy, smart choice, better tomorrow.</p>
+        <p>&copy; {new Date().getFullYear()} Royall Solar. Real savings. Reliable power.</p>
       </div>
     </footer>
   );

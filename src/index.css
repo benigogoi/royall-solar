@@ -27,6 +27,13 @@
   --top-bar-height: 40px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 64px;
+    --top-bar-height: 40px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

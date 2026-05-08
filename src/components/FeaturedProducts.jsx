@@ -17,11 +17,11 @@ const FeaturedProducts = () => {
         </div>
 
         <h2 className="section-title">
-          Top Selling <span className="text-gradient-alt">Solar Packages</span>
+          Reliable <span className="text-gradient-alt">Solar Packages</span>
         </h2>
         <p className="section-subtitle">
-          Pricing and savings inspired by Royall Solar's marketing material, presented in a product-card format
-          similar to the reference website.
+          Explore our professionally designed solar solutions tailored for maximum energy savings 
+          and long-term reliability for your home or business.
         </p>
 
         <div className="featured-products-grid">
@@ -43,7 +43,7 @@ const FeaturedProducts = () => {
               </ul>
 
               <a href="/contact" className="btn btn-primary product-btn">
-                Request Details <ArrowRight size={18} />
+                Get Free Quote <ArrowRight size={18} />
               </a>
             </article>
           ))}

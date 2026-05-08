@@ -1,93 +1,64 @@
 export const bannerSlides = [
   {
     tone: 'home',
-    eyebrow: '3 kW home solar system',
-    title: 'Smart energy for smarter living',
-    copy: 'Switch to solar with subsidy guidance, professional installation, and net-metering support from Royall Solar.',
-  },
-  {
-    tone: 'subsidy',
-    eyebrow: 'PM Surya Ghar: Muft Bijli Yojana',
-    title: 'Subsidy-ready rooftop systems',
-    copy: 'Central and Assam state subsidy assistance for eligible residential solar projects.',
-  },
-  {
-    tone: 'green',
-    eyebrow: 'Clean energy today',
-    title: 'Greener tomorrow, better future',
-    copy: 'Lower bills, energy independence, and long-term performance with quality solar products.',
+    eyebrow: 'Smart Solar Solutions',
+    title: 'Cut Your Electricity Bills with Smart Solar Solutions',
+    copy: 'Reliable solar installation for homes and businesses. Save money, reduce power dependency, and enjoy uninterrupted energy with professionally installed solar systems.',
   },
 ];
 
 export const productCategories = [
   {
     id: 'rooftop',
-    navLabel: 'ROOFTOP SOLAR',
-    title: 'Rooftop Solar Solutions',
-    description: 'Complete on-grid rooftop systems for homes, shops, offices, schools, and small industries.',
-    features: ['1 kW to 10 kW planning', 'Net metering support', 'Subsidy documentation help'],
+    navLabel: 'RESIDENTIAL SOLAR',
+    title: 'Residential Solar',
+    description: 'Power your home with clean and cost-effective solar energy while reducing monthly electricity expenses.',
+    features: ['Electricity bill savings', 'Professional installation', 'Net metering support'],
     image: '/hero_solar.png',
-    subcategories: ['Home Solar System', 'Commercial Rooftop', 'Net Metering'],
+    subcategories: ['Home Solar System', 'Rooftop Planning', 'Savings Optimization'],
   },
   {
-    id: 'panels',
-    navLabel: 'SOLAR PANELS',
-    title: 'High Efficiency Solar Panels',
-    description: 'Premium panel options from trusted brands with long performance warranty coverage.',
-    features: ['25 years performance warranty', 'Adani, Waaree, ADM, Fujiyama', 'Structure and monorail options'],
+    id: 'commercial',
+    navLabel: 'COMMERCIAL SOLAR',
+    title: 'Commercial Solar',
+    description: 'Lower operational costs and improve energy efficiency for your business with scalable solar solutions.',
+    features: ['Operational cost reduction', 'Business energy efficiency', 'Scalable systems'],
     image: '/hero_solar.png',
-    subcategories: ['ADM Orient', 'Fujiyama', 'Adani and Waaree'],
+    subcategories: ['Office Solar', 'Industrial Rooftop', 'Energy Strategy'],
   },
   {
-    id: 'batteries',
-    navLabel: 'BATTERIES',
-    title: 'Solar and Inverter Batteries',
-    description: 'Battery and backup support for homes that need reliable evening and outage-time power.',
-    features: ['Solar battery options', 'Inverter battery pairing', 'Load-based guidance'],
+    id: 'hybrid',
+    navLabel: 'HYBRID SYSTEMS',
+    title: 'Hybrid Solar Systems',
+    description: 'Store energy and keep essential appliances running during power cuts with advanced battery backup systems.',
+    features: ['Energy storage', 'Backup power', 'Uninterrupted energy'],
     image: '/solar_battery.png',
-    subcategories: ['Solar Battery', 'Inverter Battery', 'Backup Planning'],
+    subcategories: ['Battery Backup', 'Energy Storage', 'Power Security'],
   },
   {
-    id: 'inverters',
-    navLabel: 'INVERTERS AND UPS',
-    title: 'Solar Inverters and UPS',
-    description: 'On-grid inverters, solar PCU, and backup systems selected for stable daily performance.',
-    features: ['Premium inverter brands', 'On-grid and hybrid systems', 'Professional wiring support'],
-    image: '/solar_battery.png',
-    subcategories: ['On-grid Inverter', 'Hybrid Inverter', 'UPS Backup'],
-  },
-  {
-    id: 'loan',
-    navLabel: 'LOAN AND EMI',
-    title: 'Loan, EMI, and Documentation',
-    description: 'Guidance for bank loan documents under PM Surya Ghar and easy EMI conversations.',
-    features: ['PAN and Aadhaar checklist', 'Bank statement and passbook copy', 'Electricity bill support'],
-    image: '/solar_battery.png',
-    subcategories: ['Bank Loan', 'EMI Facility', 'Document Check'],
-  },
-  {
-    id: 'care',
-    navLabel: 'INSTALLATION SUPPORT',
-    title: 'Installation and After-Sales Care',
-    description: 'End-to-end assistance from survey to installation, inspection, subsidy release, and service.',
-    features: ['Expert technical team', 'DISCOM coordination', 'Warranty and service desk'],
+    id: 'ongrid',
+    navLabel: 'ON-GRID SYSTEMS',
+    title: 'On-Grid Solar Systems',
+    description: 'Generate electricity during the day and reduce dependence on traditional power supply through net metering.',
+    features: ['Grid dependency reduction', 'Net metering', 'Efficient generation'],
     image: '/hero_solar.png',
-    subcategories: ['Site Survey', 'Installation', 'Service Support'],
+    subcategories: ['Net Metering', 'Grid Connection', 'Daytime Generation'],
   },
 ];
 
 export const heroHighlights = [
-  { value: 'Up to 90%', label: 'Electricity bill saving', detail: 'Reduce monthly bills with rooftop solar generation.' },
-  { value: 'Rs. 1,30,800', label: 'Subsidy guidance', detail: 'Indicative central plus Assam subsidy for eligible 3 kW systems.' },
-  { value: '25 years', label: 'Panel warranty', detail: 'Long performance warranty on premium solar panels.' },
-  { value: '2.7-3.3 yrs', label: 'Payback estimate', detail: 'Approximate recovery period from banner calculations.' },
+  { value: 'Up to 90%', label: 'Bill Savings', detail: 'Significant reduction in monthly electricity costs.' },
+  { value: 'Reliable', label: 'Solar Systems', detail: 'Professionally installed for long-term performance.' },
+  { value: 'Trusted', label: 'Local Partner', detail: 'Serving homes and businesses with practical solutions.' },
+  { value: '25 years', label: 'Panel Warranty', detail: 'Long-term value with high-quality components.' },
 ];
 
 export const trustPoints = [
-  { title: 'Registered Govt. Vendor', detail: 'PM Surya Ghar assistance with document and subsidy process guidance.' },
-  { title: 'Easy Loan and EMI', detail: 'Support for bank loan documentation and EMI conversations.' },
-  { title: 'Professional Installation', detail: 'Site survey, structure planning, wiring, and net-metering support.' },
-  { title: 'Premium Brands', detail: 'Panels and inverters from trusted names highlighted in Royall Solar material.' },
+  { title: 'Professional Installation', detail: 'Our expert team ensures every system is installed to the highest standards for safety and efficiency.' },
+  { title: 'High-Quality Solar Components', detail: 'We use only quality-tested equipment from trusted brands to ensure long-term reliability.' },
+  { title: 'Long-Term Savings', detail: 'Our customized solar solutions are designed to deliver real savings from day one.' },
+  { title: 'Reliable After-Sales Support', detail: 'We provide ongoing technical support to keep your solar system performing at its best.' },
+  { title: 'Customized Solar Solutions', detail: 'Every home and business is unique. We build systems tailored to your specific energy needs.' },
 ];
 
 export const featuredProducts = [
@@ -169,33 +140,31 @@ export const documentsRequired = [
 ];
 
 export const benefits = [
-  { title: 'Lower Electricity Bills', detail: 'Save up to 90% on monthly power costs.' },
-  { title: 'Clean and Green Energy', detail: 'Use renewable power and reduce carbon emissions.' },
-  { title: 'Energy Independence', detail: 'Generate your own power and reduce grid dependence.' },
-  { title: 'Increase Property Value', detail: 'Solar-ready homes carry stronger long-term appeal.' },
-  { title: 'Long-Term Investment', detail: 'Durable systems with 25 years performance warranty.' },
-  { title: 'Government Subsidy', detail: 'Avail eligible support under PM Surya Ghar Yojana.' },
+  { title: 'Start Saving from Day One', detail: 'A professionally designed solar system can significantly reduce your monthly electricity bills while increasing long-term property value.' },
+  { title: 'Smart Financial Decision', detail: 'With rising electricity costs, solar is no longer a luxury — it’s a smart financial decision for your home or business.' },
+  { title: 'Energy Independence', detail: 'Generate your own power, reduce grid dependency, and secure backup power during outages.' },
+  { title: 'Long-Term Property Value', detail: 'Investing in solar energy systems increases the long-term appeal and value of your property.' },
 ];
 
 export const aboutPillars = [
   {
-    title: 'Local Rooftop Expertise',
-    description: 'Royall Solar focuses on practical rooftop systems for households and businesses in Assam.',
+    title: 'Site Inspection & Consultation',
+    description: 'We help you choose the right system through detailed site assessments and expert consultation.',
   },
   {
-    title: 'Subsidy and Loan Assistance',
-    description: 'The team helps customers understand PM Surya Ghar eligibility, documents, and bank loan steps.',
+    title: 'Professional Installation Team',
+    description: 'Our focus is simple — deliver solar solutions that perform consistently and are installed to professional standards.',
   },
   {
-    title: 'End-to-End Service',
-    description: 'From consultation and survey to installation, net metering, warranty, and after-sales support.',
+    title: 'Quality-Tested Equipment',
+    description: 'We only use components that have been tested for quality and long-term durability in real-world conditions.',
   },
 ];
 
 export const aboutStats = [
-  { label: 'Ideal package', value: '3 kW home solar' },
-  { label: 'Estimated units', value: '360-430 / month' },
-  { label: 'Total savings', value: 'Rs. 5.5-6.5 lakh / 25 yrs' },
+  { label: 'System Design', value: 'Customized' },
+  { label: 'Installation', value: 'Professional' },
+  { label: 'Components', value: 'Quality-Tested' },
 ];
 
 export const testimonials = [
@@ -243,23 +212,23 @@ export const dealershipBenefits = [
 ];
 
 export const supportChannels = [
-  { isHeader: true, title: 'Customer Support Channels' },
-  { id: 1, eng: 'Solar Consultation', loc: 'System sizing for homes, shops, offices, schools, and industries.' },
-  { id: 2, eng: 'Subsidy Assistance', loc: 'PM Surya Ghar guidance for eligible rooftop solar customers.' },
-  { id: 3, eng: 'Loan and EMI Support', loc: 'Document checklist and bank loan preparation guidance.' },
-  { isHeader: true, title: 'After-Sales Help' },
-  { id: 4, eng: 'Installation Support', loc: 'Site survey, structure planning, inverter wiring, and safety checks.' },
-  { id: 5, eng: 'Net Metering Support', loc: 'Inspection and DISCOM approval coordination guidance.' },
-  { id: 6, eng: 'Warranty and Service', loc: 'Product warranty, complaint handling, and follow-up support.' },
+  { isHeader: true, title: 'Complete Solar Support' },
+  { id: 1, eng: 'Site Inspection', loc: 'Detailed evaluation to design the perfect system for your energy needs.' },
+  { id: 2, eng: 'Transparent Pricing', loc: 'Clear, upfront costs with no hidden fees for your peace of mind.' },
+  { id: 3, eng: 'Technical Support', loc: 'Ongoing assistance to ensure your solar system performs reliably for years.' },
+  { isHeader: true, title: 'Installation Services' },
+  { id: 4, eng: 'Professional Team', loc: 'Expert installers focused on safety, efficiency, and long-term performance.' },
+  { id: 5, eng: 'Quality Equipment', loc: 'High-quality solar components selected for maximum energy savings.' },
+  { id: 6, eng: 'Maintenance', loc: 'Regular support and maintenance to keep your investment delivering value.' },
 ];
 
 export const serviceResources = [
-  { id: 1, center: 'PM Surya Ghar Registration', loc: 'Portal registration and application guidance for eligible users.' },
-  { id: 2, center: 'Required Documents', loc: 'PAN, Aadhaar, bank passbook, photos, electricity bill, and bank statement.' },
-  { id: 3, center: 'Subsidy Release Process', loc: 'Inspection, approval, and bank-account subsidy release support.' },
-  { id: 4, center: 'Package Comparison', loc: 'Structure mount, tin-roof, monorail, and panel brand comparison.' },
-  { id: 5, center: 'Payment and EMI', loc: 'Loan conversations and easier payment planning for solar adoption.' },
-  { id: 6, center: 'Maintenance Guidance', loc: 'Basic care, cleaning, performance, and warranty follow-up.' },
+  { id: 1, center: 'Site Inspection & Consultation', loc: 'Detailed site evaluation and system design for homes and businesses.' },
+  { id: 2, center: 'Professional Installation', loc: 'Expert setup of solar panels, inverters, and battery systems.' },
+  { id: 3, center: 'Quality-Tested Equipment', loc: 'Premium components selected for performance and reliability.' },
+  { id: 4, center: 'Transparent Pricing', loc: 'Honest and upfront cost estimates for your solar project.' },
+  { id: 5, center: 'Technical Support', loc: 'Dedicated after-sales support and ongoing maintenance services.' },
+  { id: 6, center: 'Energy Efficiency', loc: 'Optimized solutions to maximize your electricity bill savings.' },
 ];
 
 export const certificationItems = [
