@@ -6,7 +6,7 @@ const TopBar = () => {
       <div className="top-bar-inner">
         <div className="top-bar-left">
           <span className="top-bar-dot" />
-          <span className="top-bar-text">India's trusted rooftop solar partner</span>
+          <span className="top-bar-text">Assam's trusted rooftop solar partner</span>
         </div>
         <div className="top-bar-brand">
           <span className="top-bar-label">A unit of</span>

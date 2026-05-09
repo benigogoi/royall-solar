@@ -13,6 +13,9 @@ import ContactPage from './pages/ContactPage';
 import ClientsPage from './pages/ClientsPage';
 import SupportPage from './pages/SupportPage';
 import CertificationsPage from './pages/CertificationsPage';
+import OnGridPage from './pages/OnGridPage';
+import OffGridPage from './pages/OffGridPage';
+import HybridPage from './pages/HybridPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,6 +42,9 @@ function App() {
         <Route path="/support" element={<SupportPage />} />
         <Route path="/certifications" element={<CertificationsPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/on-grid" element={<OnGridPage />} />
+        <Route path="/off-grid" element={<OffGridPage />} />
+        <Route path="/hybrid" element={<HybridPage />} />
       </Routes>
       <Footer />
     </Router>

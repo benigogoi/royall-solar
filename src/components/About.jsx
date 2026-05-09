@@ -12,16 +12,15 @@ const About = () => {
   const icons = [ShieldCheck, Target, Award];
 
   return (
-    <section id="about" className="section bg-alt">
+    <section id="about" className="section bg-subtle">
       <div className="container about-container">
         <div className="about-content">
           <h2 className="section-title text-left">
-            Smart Solar Solutions Built for <span className="text-gradient">Real Savings</span>
+            Assam's Trusted Partner for Solar Energy
           </h2>
           <div className="about-text">
-            <p>At Royall Solar, we help homes and businesses reduce electricity costs with efficient and reliable solar energy systems.</p>
-            <p>From consultation to installation and support, our focus is simple — deliver solar solutions that perform consistently and save money for years.</p>
-            <p>Whether you want to reduce monthly bills, secure backup power during outages, or invest in long-term energy independence, we build systems tailored to your needs.</p>
+            <p>At Royall Solar, we make it easy for Assamese families and business owners to switch to solar. We don't just sell panels; we provide a complete solution that includes subsidy help and local maintenance.</p>
+            <p>Based in Sonari, we are always available for on-ground support. Our team ensures that your system is installed correctly to withstand local weather conditions while providing maximum savings.</p>
           </div>
 
           <div className="about-features">
@@ -30,7 +29,9 @@ const About = () => {
 
               return (
                 <div key={pillar.title} className="about-feature">
-                  <Icon className="about-icon" size={24} />
+                  <div className="about-icon-box">
+                    <Icon className="about-icon" size={24} />
+                  </div>
                   <div>
                     <h4>{pillar.title}</h4>
                     <p>{pillar.description}</p>
@@ -52,7 +53,7 @@ const About = () => {
 
         <div className="about-visual">
           <div className="image-panel">
-            <img src="/hero_solar.png" alt="Royall Solar rooftop system and products" />
+            <img src="/assets/installations/home_solar.jpg" alt="Royall Solar installation" />
             <div className="floating-badge">
               <span>Registered Govt. Vendor</span>
             </div>
@@ -65,8 +66,8 @@ const About = () => {
           <div className="documents-heading">
             <FileText size={26} />
             <div>
-              <span>PM Surya loan checklist</span>
-              <h3>Required documents for bank loan</h3>
+              <span>PM Surya Ghar Checklist</span>
+              <h3>Required Documents for Application</h3>
             </div>
           </div>
           <ul>
@@ -77,24 +78,12 @@ const About = () => {
         </div>
 
         <div className="brand-card">
-          <span>We deal in premium brands</span>
+          <span className="brand-label">We Deal In Genuine Brands</span>
           <div className="brand-grid">
             {brandPartners.map((brand) => (
-              <strong key={brand}>{brand}</strong>
+              <div key={brand} className="brand-item">{brand}</div>
             ))}
           </div>
-        </div>
-      </div>
-
-      <div className="container testimonials-section">
-        <h3>Customer Support Customers Can Understand</h3>
-        <div className="testimonials-grid">
-          {testimonials.map((testimonial) => (
-            <blockquote key={testimonial.name}>
-              <p>{testimonial.text}</p>
-              <cite>{testimonial.name}</cite>
-            </blockquote>
-          ))}
         </div>
       </div>
     </section>

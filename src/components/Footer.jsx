@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
 import './Footer.css';
 import { contactDetails } from '../data/siteContent';
 
@@ -12,23 +12,25 @@ const Footer = () => {
             <img src="/logo-cropped.png" alt="Royall Solar" className="logo-image footer-logo-image" />
           </div>
           <p className="footer-desc">
-            Royall Solar, a unit of Royal Infratech, provides rooftop solar systems, subsidy guidance, loan support,
-            professional installation, and after-sales service from Sonari, Charaideo.
+            Royall Solar provides rooftop solar installation, government subsidy support, 
+            and after-sales maintenance across Assam. A unit of Royal Infratech, Sonari.
           </p>
-          <div className="social-links">
-            <a href="/" aria-label="Website"><Globe size={20} /></a>
-            <a href={`mailto:${contactDetails.email}`} aria-label="Email"><Mail size={20} /></a>
-            <a href={`tel:${contactDetails.carePhone.replace(/[^+\d]/g, '')}`} aria-label="Phone"><Phone size={20} /></a>
-            <a href="/contact" aria-label="Location"><MapPin size={20} /></a>
+          <div className="footer-cta-row">
+            <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="footer-cta-btn">
+              <Phone size={16} /> Call Now
+            </a>
+            <a href={`https://wa.me/${contactDetails.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="footer-cta-btn footer-cta-wa">
+              <MessageSquare size={16} /> WhatsApp
+            </a>
           </div>
         </div>
 
         <div className="footer-links">
           <h4>Products</h4>
           <Link to="/products">Rooftop Solar</Link>
-          <Link to="/products">Solar Panels</Link>
-          <Link to="/products">Batteries</Link>
-          <Link to="/products">Inverters and Batteries</Link>
+          <Link to="/products">Solar Water Pump</Link>
+          <Link to="/products">Solar Inverter</Link>
+          <Link to="/products">Solar Street Light</Link>
         </div>
 
         <div className="footer-links">
@@ -40,20 +42,22 @@ const Footer = () => {
         </div>
 
         <div className="footer-links">
-          <h4>Assurance</h4>
-          <Link to="/support">Shipping and Payments</Link>
-          <Link to="/support">Loan Documents</Link>
-          <Link to="/certifications">Premium Brands</Link>
+          <h4>Useful Info</h4>
+          <Link to="/support">PM Surya Ghar</Link>
+          <Link to="/support">Net Metering</Link>
+          <Link to="/certifications">Our Brands</Link>
           <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
         </div>
       </div>
+
       <div className="footer-contact-bar">
-        <span><Phone size={18} /> {contactDetails.carePhone}, {contactDetails.mobilePhone}</span>
-        <span><MapPin size={18} /> {contactDetails.office}</span>
-        <span><Globe size={18} /> {contactDetails.website}</span>
+        <span><Phone size={18} /> {contactDetails.carePhone} | {contactDetails.mobilePhone}</span>
+        <span><MapPin size={18} /> Sonari, Charaideo, Assam</span>
+        <span><Mail size={18} /> {contactDetails.email}</span>
       </div>
+
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Royall Solar. Real savings. Reliable power.</p>
+        <p>&copy; {new Date().getFullYear()} Royall Solar — Assam's Trusted Solar Partner</p>
       </div>
     </footer>
   );

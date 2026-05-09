@@ -4,22 +4,15 @@
   left: 0;
   width: 100%;
   z-index: 1100;
-  background: linear-gradient(90deg, #2d4a07 0%, #4d7c0f 50%, #2d4a07 100%);
-  background-size: 200% auto;
-  animation: shimmer 8s linear infinite;
-  height: 40px;
+  background: #166534;
+  height: var(--top-bar-height);
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
-}
-
-@keyframes shimmer {
-  to { background-position: 200% center; }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .top-bar-inner {
-  width: min(1680px, calc(100% - 96px));
+  width: min(1440px, calc(100% - 40px));
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -33,24 +26,17 @@
 }
 
 .top-bar-dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #f97316;
-  box-shadow: 0 0 8px rgba(249, 115, 22, 0.8);
-  animation: pulse-dot 2s ease-in-out infinite;
+  background: #22c55e;
   flex-shrink: 0;
 }
 
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.7); }
-}
-
 .top-bar-text {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.3px;
 }
 
@@ -65,7 +51,7 @@
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .top-bar-divider {
@@ -75,15 +61,10 @@
 }
 
 .top-bar-logo {
-  height: 30px;
+  height: 28px;
   width: auto;
   object-fit: contain;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.top-bar-logo:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -91,16 +72,7 @@
     width: calc(100% - 32px);
     justify-content: center;
   }
-
-  .top-bar-text {
-    display: none;
-  }
-
-  .top-bar-brand {
-    margin: 0;
-  }
-
-  .top-bar-logo {
-    height: 24px;
-  }
+  .top-bar-text { display: none; }
+  .top-bar-brand { margin: 0; }
+  .top-bar-logo { height: 22px; }
 }

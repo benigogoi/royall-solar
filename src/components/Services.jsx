@@ -1,54 +1,38 @@
-import { Activity, Battery, FileCheck2, HousePlus, PanelsTopLeft, ShieldCheck, Sun } from 'lucide-react';
+import { installationProcess } from '../data/siteContent';
+import { Search, FileText, Settings, Zap, Info } from 'lucide-react';
 import './Services.css';
-import { benefits, productCategories } from '../data/siteContent';
-
-const iconMap = {
-  rooftop: <Sun size={34} />,
-  panels: <PanelsTopLeft size={34} />,
-  batteries: <Battery size={34} />,
-  inverters: <HousePlus size={34} />,
-  loan: <FileCheck2 size={34} />,
-  care: <ShieldCheck size={34} />,
-  pcu: <Activity size={34} />,
-};
 
 const Services = () => {
-  return (
-    <section id="services" className="section services-section">
-      <div className="container">
-        <h2 className="section-title">Solar <span className="text-gradient-alt">Solutions</span></h2>
-        <p className="section-subtitle">
-          Explore our range of professionally installed solar energy systems designed to deliver 
-          maximum efficiency and long-term savings for your home or business.
-        </p>
+  const icons = [<Search />, <FileText />, <Settings />, <Zap />];
 
-        <div className="services-grid">
-          {productCategories.map((service) => (
-            <article key={service.id} className="service-card">
-              <div className="service-image">
-                <img src={service.image} alt={service.title} />
-              </div>
-              <div className="service-body">
-                <div className="service-icon-wrapper">{iconMap[service.id]}</div>
-                <h3 className="service-title">{service.title}</h3>
-                <p className="service-desc">{service.description}</p>
-                <ul className="service-features">
-                  {service.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-            </article>
+  return (
+    <section className="section" id="process">
+      <div className="container">
+        <div className="process-header">
+          <h2 className="section-title">How To Get Solar For Your Home</h2>
+          <p className="section-subtitle">A simple 4-step process to help you save on electricity bills with government support.</p>
+        </div>
+
+        <div className="process-grid">
+          {installationProcess.map((item, index) => (
+            <div key={index} className="process-card">
+              <div className="process-number">{item.step}</div>
+              <div className="process-icon">{icons[index]}</div>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
           ))}
         </div>
 
-        <div className="benefits-strip">
-          {benefits.map((benefit) => (
-            <div key={benefit.title} className="benefit-item">
-              <strong>{benefit.title}</strong>
-              <span>{benefit.detail}</span>
-            </div>
-          ))}
+        <div className="subsidy-info-box">
+          <div className="subsidy-icon">
+            <Info size={32} />
+          </div>
+          <div className="subsidy-text">
+            <h3>PM Surya Ghar: Muft Bijli Yojana</h3>
+            <p>Get up to <strong>₹78,000 subsidy</strong> from the Central Government for installing rooftop solar. We provide full assistance in applying for the scheme and getting your subsidy processed quickly.</p>
+          </div>
+          <button className="btn btn-secondary">Learn More</button>
         </div>
       </div>
     </section>
