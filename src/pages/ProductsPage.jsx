@@ -2,39 +2,98 @@ import PageHeader from '../components/PageHeader';
 import FeaturedProducts from '../components/FeaturedProducts';
 import Contact from '../components/Contact';
 import { productCategories } from '../data/siteContent';
-import { Check, Phone } from 'lucide-react';
-import { contactDetails } from '../data/siteContent';
+import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
 const ProductsPage = () => {
+  const brandsList = ['UTL', 'Luminous', 'Livguard', 'Exide', 'Microtek', 'Havells', 'Waaree', 'Adani Solar'];
+
+  const whyChoosePoints = [
+    'Genuine products from leading brands',
+    'Professional installation services',
+    'Customized system recommendations',
+    'Warranty and after-sales support',
+    'Solutions for homes, businesses and industries'
+  ];
+
   return (
     <div className="products-page">
-      <PageHeader title="Our Products" subtitle="Solar solutions for homes, farms, shops, and businesses in Assam" bgImage="/assets/installations/home_solar.jpg" />
+      <PageHeader 
+        title="Our Products & Solutions" 
+        subtitle="Reliable Solar & Power Solutions for Every Need" 
+        bgImage="/assets/installations/home_solar.jpg" 
+      />
       
+      {/* Introduction with SEO Keywords */}
+      <section className="section bg-subtle" style={{ padding: '40px 0', borderBottom: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
+          <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: 'var(--text-muted)' }}>
+            Royall Solar offers a complete range of high-quality <strong>Solar Products in Assam</strong>, including high-performance <strong>Solar Panels Assam</strong> and advanced <strong>Solar Inverters Assam</strong> for residential, commercial and industrial customers across the state. As a leading <strong>Solar EPC Company Assam</strong>, we partner with trusted brands to deliver customized <strong>Hybrid Solar Systems</strong>, efficient <strong>Solar Battery Solutions</strong>, and durable <strong>Solar Water Pumps</strong> backed by professional installation. Whether you need residential setups or scaled <strong>Commercial Solar Solutions Assam</strong>, our team is ready to deliver.
+          </p>
+        </div>
+      </section>
+
       {/* Product Categories */}
       <section className="section">
         <div className="container">
-          <h2 className="section-title">What We Offer</h2>
-          <p className="section-subtitle">We provide end-to-end solar solutions. From rooftop panels to water pumps — everything your home or business needs.</p>
+          <h2 className="section-title">Product Categories</h2>
+          <p className="section-subtitle">We offer complete solar EPC and power backup products tailored to deliver maximum efficiency and performance.</p>
           
           <div className="categories-grid">
             {productCategories.map((cat) => (
               <div key={cat.id} className="category-card">
                 <div className="category-image">
                   <img src={cat.image} alt={cat.title} />
-                  <div className="category-badge">{cat.navLabel}</div>
                 </div>
                 <div className="category-info">
                   <h3>{cat.title}</h3>
                   <p>{cat.description}</p>
                   <ul className="category-features">
-                    {cat.features.map((f, i) => <li key={i}><Check size={16} style={{ color: '#166534', flexShrink: 0 }} /> {f}</li>)}
+                    {cat.features.map((f, i) => (
+                      <li key={i}>
+                        <Check size={16} style={{ color: '#166534', flexShrink: 0 }} /> 
+                        {f}
+                      </li>
+                    ))}
                   </ul>
-                  <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="btn btn-primary" style={{ width: '100%', marginTop: '16px' }}>
-                    <Phone size={18} style={{ marginRight: '8px' }} />
-                    Enquire Now
-                  </a>
+                  <Link to="/contact" className="btn btn-primary" style={{ width: '100%', marginTop: '16px' }}>
+                    Request Details
+                  </Link>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Brands Section */}
+      <section className="section bg-subtle">
+        <div className="container">
+          <h2 className="section-title">Trusted Brands We Work With</h2>
+          <p className="section-subtitle">Royall Solar partners with some of the most respected names in the solar and power backup industry to deliver dependable performance and long-term value.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '20px', marginTop: '30px' }}>
+            {brandsList.map((brand) => (
+              <div key={brand} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '20px', textAlign: 'center', fontWeight: 'bold', fontSize: '1.1rem', color: '#0f172a' }}>
+                {brand}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Section */}
+      <section className="section bg-light">
+        <div className="container">
+          <h2 className="section-title">Quality Products Backed by Expert Support</h2>
+          <p className="section-subtitle">We don't just sell products; we deliver end-to-end solar solutions with lifetime value.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginTop: '40px' }}>
+            {whyChoosePoints.map((point, index) => (
+              <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '16px', padding: '24px', background: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0' }}>
+                <div style={{ width: '40px', height: '40px', background: '#fff', color: '#166534', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'var(--shadow-sm)', flexShrink: 0 }}>
+                  <Check size={20} />
+                </div>
+                <span style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a' }}>{point}</span>
               </div>
             ))}
           </div>
@@ -43,15 +102,16 @@ const ProductsPage = () => {
 
       <FeaturedProducts />
 
-      {/* CTA Section */}
+      {/* Final CTA Section */}
       <section className="section" style={{ background: '#0f172a', color: '#fff', textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="section-title" style={{ color: '#fff' }}>Need a Custom System for Your Building?</h2>
-          <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)' }}>Our engineers will visit your site, check your roof, and design the right system for your needs and budget.</p>
-          <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="btn btn-primary" style={{ marginTop: '16px' }}>
-            <Phone size={18} style={{ marginRight: '8px' }} />
-            Call For Free Site Visit
-          </a>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="section-title" style={{ color: '#fff' }}>Need Help Choosing the Right Solution?</h2>
+          <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px' }}>
+            Our experts will evaluate your energy requirements and recommend the most suitable solar or power backup solution for your property.
+          </p>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+            Request a Free Consultation
+          </Link>
         </div>
       </section>
 

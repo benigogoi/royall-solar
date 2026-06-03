@@ -98,40 +98,100 @@ export const solarSolutions = [
 
 export const productCategories = [
   {
-    id: 'rooftop',
-    title: 'Residential Solar Solutions',
-    description: 'Reduce electricity bills with efficient rooftop solar systems designed for homes and residential properties.',
-    image: '/assets/products/rooftop_cat.png'
-  },
-  {
-    id: 'panels',
-    title: 'Commercial Solar Systems',
-    description: 'Lower operating costs with scalable solar solutions for offices, retail spaces, hotels, and institutions.',
-    image: '/assets/products/mono_panel.png'
-  },
-  {
-    id: 'batteries',
-    title: 'Industrial Solar Projects',
-    description: 'High-capacity solar installations engineered for industrial facilities and large energy requirements.',
-    image: '/assets/products/battery.png'
+    id: 'solar-panels',
+    title: 'Solar Panels',
+    description: 'High-efficiency solar panels designed to maximize energy generation and long-term savings. Suitable for residential rooftops, commercial buildings and industrial facilities.',
+    image: '/assets/products/mono_panel.png',
+    features: [
+      'High energy output',
+      'Durable weather-resistant design',
+      'Long operational lifespan',
+      'Trusted industry brands'
+    ]
   },
   {
     id: 'solar-inverters',
-    title: 'Hybrid Solar Systems',
-    description: 'Combine solar generation, battery storage, and grid connectivity for dependable power.',
-    image: '/assets/products/shinex.png'
+    title: 'Solar Inverters',
+    description: 'Advanced solar inverters that efficiently convert solar energy into usable electricity while ensuring stable system performance.',
+    image: '/assets/products/shinex.png',
+    features: [
+      'Efficient energy conversion',
+      'Smart monitoring capabilities',
+      'Reliable performance',
+      'Residential and commercial applications'
+    ]
   },
   {
-    id: 'home-inverters',
+    id: 'hybrid-solar-inverters',
+    title: 'Hybrid Solar Inverters',
+    description: 'Intelligent hybrid systems combining solar energy, battery storage and grid power to provide uninterrupted electricity.',
+    image: '/assets/products/gamma_pcu.png',
+    features: [
+      'Solar plus battery integration',
+      'Backup during power outages',
+      'Energy optimization',
+      'Smart power management'
+    ]
+  },
+  {
+    id: 'solar-batteries',
+    title: 'Solar Batteries',
+    description: 'Reliable tubular and lithium battery solutions for energy storage and dependable backup power.',
+    image: '/assets/products/battery.png',
+    features: [
+      'Long backup duration',
+      'Deep cycle performance',
+      'Low maintenance',
+      'Enhanced reliability'
+    ]
+  },
+  {
+    id: 'online-ups',
+    title: 'Online UPS Systems',
+    description: 'Uninterrupted power supply solutions for homes, offices, hospitals, educational institutions and industrial facilities.',
+    image: '/assets/products/lithium_cat.png',
+    features: [
+      'Instant power backup',
+      'Equipment protection',
+      'Stable power delivery',
+      'Business continuity support'
+    ]
+  },
+  {
+    id: 'solar-pumps',
     title: 'Solar Water Pumps',
-    description: 'Reliable solar-powered pumping solutions for agriculture, farms, and rural applications.',
-    image: '/assets/products/gamma_pcu.png'
+    description: 'Energy-efficient solar-powered pumping systems designed for agriculture, irrigation and rural water supply applications.',
+    image: '/assets/products/gamma_pcu.png',
+    features: [
+      'Reduced operating costs',
+      'Sustainable water management',
+      'Reliable operation',
+      'Ideal for remote locations'
+    ]
   },
   {
-    id: 'lithium',
-    title: 'Maintenance & Support',
-    description: 'Professional maintenance services to ensure maximum system performance and long-term reliability.',
-    image: '/assets/products/lithium_cat.png' 
+    id: 'residential-solutions',
+    title: 'Residential Solar Solutions',
+    description: 'Customized rooftop solar systems designed to reduce electricity bills and increase energy independence for homeowners.',
+    image: '/assets/products/rooftop_cat.png',
+    features: [
+      'Save up to 90% on electricity bills',
+      'Government subsidy benefits',
+      '24/7 solar power backup options',
+      'Professional installation support'
+    ]
+  },
+  {
+    id: 'commercial-industrial-solutions',
+    title: 'Commercial & Industrial Solar Solutions',
+    description: 'Scalable solar projects engineered to help businesses reduce energy expenses and improve long-term operational efficiency.',
+    image: '/assets/products/mono_panel.png',
+    features: [
+      'Lower business operating expenses',
+      'High return on investment (ROI)',
+      'Custom project engineering',
+      'Accelerated depreciation benefits'
+    ]
   }
 ];
 
