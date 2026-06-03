@@ -1,9 +1,18 @@
 import Hero from '../components/Hero';
-import Services from '../components/Services';
-import FeaturedProducts from '../components/FeaturedProducts';
-import Contact from '../components/Contact';
-import { trustPoints } from '../data/siteContent';
-import { CheckCircle2, Zap, ShieldCheck, Headphones } from 'lucide-react';
+import ProductCategories from '../components/ProductCategories';
+import TrustBar from '../components/TrustBar';
+import FeaturedKits from '../components/FeaturedKits';
+import TopSellingInverters from '../components/TopSellingInverters';
+import SolutionsBanner from '../components/SolutionsBanner';
+import TopSellingPCUs from '../components/TopSellingPCUs';
+import AboutSection from '../components/AboutSection';
+import StatsBar from '../components/StatsBar';
+import Testimonials from '../components/Testimonials';
+import Clients from '../components/Clients';
+import InstallationProcess from '../components/InstallationProcess';
+import TrustPoints from '../components/TrustPoints';
+import ContactSection from '../components/ContactSection';
+import { Zap, ShieldCheck, Headphones } from 'lucide-react';
 import { contactDetails } from '../data/siteContent';
 
 const Home = () => {
@@ -16,68 +25,32 @@ const Home = () => {
         <div className="container" style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff' }}>
             <Zap size={20} style={{ color: '#f97316' }} />
-            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>90% Bill Savings</span>
+            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Residential Solar Solutions</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff' }}>
             <ShieldCheck size={20} style={{ color: '#f97316' }} />
-            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>PM Surya Ghar Subsidy</span>
+            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Commercial Solar Projects</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#fff' }}>
             <Headphones size={20} style={{ color: '#f97316' }} />
-            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Local Support Assam</span>
+            <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>Installation & Maintenance Support</span>
           </div>
         </div>
       </section>
 
-      <Services />
-
-      {/* Featured Packs */}
-      <section className="section" style={{ background: '#f8fafc' }}>
-        <div className="container">
-          <h2 className="section-title">Popular Solar Packages</h2>
-          <p className="section-subtitle">Choose the right capacity for your home or business. We handle everything from design to installation.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginTop: '40px' }}>
-            {[
-              { kw: '3kW', type: 'Residential', saving: '₹3,500/mo', ideal: 'Small Families', subsidy: '₹78,000' },
-              { kw: '5kW', type: 'Residential', saving: '₹6,000/mo', ideal: 'Large Families', subsidy: '₹78,000' },
-              { kw: '10kW', type: 'Commercial', saving: '₹12,000/mo', ideal: 'Shops & Offices', subsidy: 'Business ROI' },
-            ].map((pack, i) => (
-              <div key={i} style={{ background: '#fff', padding: '40px', borderRadius: '16px', border: '1px solid #e2e8f0', textAlign: 'center', transition: 'all 0.3s' }} className="pack-card">
-                <div style={{ fontSize: '3rem', fontWeight: 900, color: '#0f172a', marginBottom: '8px' }}>{pack.kw}</div>
-                <div style={{ color: '#f97316', fontWeight: 800, textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '1px', marginBottom: '24px' }}>{pack.type} Pack</div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '32px' }}>
-                  <div style={{ fontSize: '0.95rem', color: '#64748b' }}>Ideal for: <strong>{pack.ideal}</strong></div>
-                  <div style={{ fontSize: '0.95rem', color: '#64748b' }}>Monthly Saving: <strong style={{ color: '#166534' }}>{pack.saving}</strong></div>
-                  <div style={{ fontSize: '0.95rem', color: '#64748b' }}>Govt. Subsidy: <strong>{pack.subsidy}</strong></div>
-                </div>
-                <a href={`https://wa.me/${contactDetails.whatsapp.replace(/\D/g, '')}`} className="btn btn-primary" style={{ width: '100%' }}>Get Final Price</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <FeaturedProducts />
-
-      {/* Trust Points */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">Assam's Reliable Solar Partner</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '40px' }}>
-            {trustPoints.map((point, i) => (
-              <div key={i} style={{ display: 'flex', gap: '16px', padding: '24px', background: '#fff', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <CheckCircle2 size={24} style={{ color: '#166534', flexShrink: 0, marginTop: '2px' }} />
-                <div>
-                  <h4 style={{ marginBottom: '8px', fontSize: '1.1rem' }}>{point.title}</h4>
-                  <p style={{ color: '#64748b', fontSize: '0.9rem' }}>{point.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Contact />
+      <ProductCategories />
+      <TrustBar />
+      <FeaturedKits />
+      <TopSellingInverters />
+      <SolutionsBanner />
+      <TopSellingPCUs />
+      <AboutSection />
+      <StatsBar />
+      <Testimonials />
+      <Clients />
+      <InstallationProcess />
+      <TrustPoints />
+      <ContactSection />
 
       {/* Floating WhatsApp */}
       <a

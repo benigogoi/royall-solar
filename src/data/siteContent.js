@@ -1,9 +1,9 @@
 export const bannerSlides = [
   {
     tone: 'home',
-    eyebrow: 'Save Money on Electricity',
-    title: 'Install Rooftop Solar in Assam and Reduce Your Bills by 90%',
-    copy: 'Lower your monthly current bill with government-approved solar systems. We help you with PM Surya Ghar subsidy, local installation, and 25 years of service support.',
+    eyebrow: 'Solar Energy Solutions in Assam',
+    title: 'Powering Assam with Smart Solar Energy Solutions',
+    copy: 'Royall Solar delivers residential, commercial, and industrial solar systems across Assam, helping customers reduce electricity costs with reliable clean energy.',
   },
 ];
 
@@ -99,54 +99,54 @@ export const solarSolutions = [
 export const productCategories = [
   {
     id: 'rooftop',
-    navLabel: 'SOLAR SYSTEMS',
-    title: 'Solar Power Systems',
-    description: 'Complete On-grid, Off-grid, and Hybrid solar solutions for homes and businesses.',
-    features: ['Bill Savings', 'Battery Backup', 'Govt. Subsidy'],
-    image: '/assets/installations/home_solar.jpg',
-    subcategories: ['On-Grid Systems', 'Off-Grid Systems', 'Hybrid Systems'],
+    title: 'Residential Solar Solutions',
+    description: 'Reduce electricity bills with efficient rooftop solar systems designed for homes and residential properties.',
+    image: '/assets/products/rooftop_cat.png'
   },
   {
-    id: 'pumps',
-    navLabel: 'SOLAR PUMPS',
+    id: 'panels',
+    title: 'Commercial Solar Systems',
+    description: 'Lower operating costs with scalable solar solutions for offices, retail spaces, hotels, and institutions.',
+    image: '/assets/products/mono_panel.png'
+  },
+  {
+    id: 'batteries',
+    title: 'Industrial Solar Projects',
+    description: 'High-capacity solar installations engineered for industrial facilities and large energy requirements.',
+    image: '/assets/products/battery.png'
+  },
+  {
+    id: 'solar-inverters',
+    title: 'Hybrid Solar Systems',
+    description: 'Combine solar generation, battery storage, and grid connectivity for dependable power.',
+    image: '/assets/products/shinex.png'
+  },
+  {
+    id: 'home-inverters',
     title: 'Solar Water Pumps',
-    description: 'Ideal for agricultural and rural use in Assam. Reliable water supply without fuel costs.',
-    features: ['No Electricity Needed', 'Low Maintenance', 'High Water Yield'],
-    image: '/assets/installations/solar_pump.jpg',
-    subcategories: ['DC Surface Pumps', 'Submersible Pumps', 'Farming Solutions'],
+    description: 'Reliable solar-powered pumping solutions for agriculture, farms, and rural applications.',
+    image: '/assets/products/gamma_pcu.png'
   },
   {
-    id: 'lighting',
-    navLabel: 'STREET LIGHTS',
-    title: 'Solar Street Lights',
-    description: 'Automatic lighting for gardens, streets, and commercial premises.',
-    features: ['Auto On/Off', 'No Wiring Required', 'Weather Proof'],
-    image: '/assets/installations/street_light.jpg',
-    subcategories: ['All-in-One Lights', 'Semi-Integrated', 'Garden Lights'],
-  },
-  {
-    id: 'inverters',
-    navLabel: 'BACKUP SYSTEMS',
-    title: 'Inverters & Batteries',
-    description: 'High-quality solar inverters and batteries for long-lasting power backup.',
-    features: ['Instant Backup', 'Solar Charging', 'Long Life'],
-    image: '/assets/installations/backup_system.jpg',
-    subcategories: ['Solar Inverters', 'Tubular Batteries', 'SMU Units'],
-  },
+    id: 'lithium',
+    title: 'Maintenance & Support',
+    description: 'Professional maintenance services to ensure maximum system performance and long-term reliability.',
+    image: '/assets/products/lithium_cat.png' 
+  }
 ];
 
 export const heroHighlights = [
-  { value: '90%', label: 'Bill Savings', detail: 'Huge reduction in monthly current bills.' },
-  { value: 'Subsidy', label: 'Assistance', detail: 'Full help with PM Surya Ghar govt. schemes.' },
-  { value: 'Local', label: 'Support', detail: 'Based in Assam for fast service and repair.' },
-  { value: '25 Yrs', label: 'Panel Life', detail: 'High-quality panels built to last for decades.' },
+  { value: 'Homes', label: 'Residential Solar', detail: 'Rooftop systems for homes and residential properties.' },
+  { value: 'Business', label: 'Commercial Solar', detail: 'Scalable systems for offices, shops, hotels, and institutions.' },
+  { value: 'Industry', label: 'Industrial Solar', detail: 'High-capacity projects for large energy requirements.' },
+  { value: 'Support', label: 'Installation & Care', detail: 'End-to-end installation and maintenance across Assam.' },
 ];
 
 export const trustPoints = [
-  { title: 'Local Assam Team', detail: 'We are based in Sonari, Charaideo. We understand local conditions and provide fast on-ground service.' },
-  { title: 'Subsidy Assistance', detail: 'We handle the paperwork for PM Surya Ghar and other government schemes for your peace of mind.' },
-  { title: 'Genuine Products', detail: 'We only use top brands like Adani, Waaree, and Loom Solar to ensure long-term performance.' },
-  { title: 'Professional Fitting', detail: 'Our technicians ensure strong mounting structure that can withstand heavy Assam rains and wind.' },
+  { title: 'Quality Products', detail: 'We work with trusted manufacturers and proven technologies to ensure dependable performance.' },
+  { title: 'Customized Solutions', detail: 'Every solar system is designed around actual energy needs and future growth requirements.' },
+  { title: 'Professional Installation', detail: 'Experienced technicians ensure safe, efficient, and standards-compliant installations.' },
+  { title: 'End-to-End Support', detail: 'From planning to maintenance, we support customers throughout the entire project lifecycle.' },
 ];
 
 export const featuredProducts = [
@@ -169,10 +169,10 @@ export const featuredProducts = [
 ];
 
 export const installationProcess = [
-  { step: 1, title: 'Free Site Visit', desc: 'Our engineer visits your house to check roof space and energy needs.' },
-  { step: 2, title: 'Best Quotation', desc: 'We provide a clear price estimate including all subsidy benefits.' },
-  { step: 3, title: 'Quick Installation', desc: 'Professional setup by our expert team in just 2-3 days.' },
-  { step: 4, title: 'Subsidy & Metering', desc: 'We help you with net-metering and getting your subsidy back.' },
+  { step: 1, title: 'Energy Assessment', desc: 'Evaluate consumption patterns and site suitability.' },
+  { step: 2, title: 'System Design', desc: 'Create a customized solar solution tailored to customer requirements.' },
+  { step: 3, title: 'Installation', desc: 'Professional installation with strict quality and safety standards.' },
+  { step: 4, title: 'Monitoring & Support', desc: 'Ongoing support and maintenance to ensure peak system performance.' },
 ];
 
 export const contactDetails = {
@@ -216,11 +216,186 @@ export const documentsRequired = [
 
 export const testimonials = [
   {
-    name: 'Homeowner, Sonari',
-    text: 'My electricity bill came down from ₹3,500 to ₹400 after installing the 3kW system. Very happy with the service.',
+    name: 'Residential Customer, Jorhat',
+    text: 'Royall Solar designed a rooftop solar system for our home and explained every step clearly. Our monthly electricity cost has reduced, and the installation team was professional.',
   },
   {
-    name: 'Shop Owner, Sivasagar',
-    text: 'Royall Solar helped with everything — installation, subsidy papers, and net metering. Very professional team.',
+    name: 'Hotel Owner, Guwahati',
+    text: 'We needed a dependable commercial solar solution to control rising power expenses. Royall Solar delivered a neat installation and practical guidance for long-term savings.',
   },
+  {
+    name: 'Business Customer, Dibrugarh',
+    text: 'The team helped us choose the right hybrid solar setup with battery backup. Their support after installation has been responsive and reassuring.',
+  },
+];
+
+export const featuredKits = [
+  {
+    id: 1,
+    name: 'Residential rooftop solar systems for homes across Assam',
+    image: '/assets/products/shinex.png',
+    link: '#',
+    badge: 'Residential'
+  },
+  {
+    id: 2,
+    name: 'Commercial solar systems for offices, hotels, shops, and institutions',
+    image: '/assets/products/shinex.png',
+    link: '#',
+    badge: 'Commercial'
+  },
+  {
+    id: 3,
+    name: 'Industrial solar projects for high-capacity energy requirements',
+    image: '/assets/products/gamma_pcu.png',
+    link: '#',
+    tag: 'Custom project planning'
+  },
+  {
+    id: 4,
+    name: 'Hybrid solar systems with batteries and grid connectivity',
+    image: '/assets/products/shinex.png',
+    link: '#',
+    tag: 'Reliable backup power'
+  },
+  {
+    id: 5,
+    name: 'Solar water pumps for agriculture and rural applications',
+    image: '/assets/products/gamma_pcu.png',
+    link: '#',
+    tag: 'Agricultural solutions'
+  },
+  {
+    id: 6,
+    name: 'Solar inverters, batteries, and online UPS power backup',
+    image: '/assets/products/shinex.png',
+    link: '#',
+    discount: 'Support',
+    tag: 'Leading brand options'
+  }
+];
+export const topSellingInverters = [
+  {
+    id: 1,
+    name: 'On-grid solar inverter solutions for rooftop solar systems',
+    image: '/assets/products/gamma_pcu.png',
+    originalPrice: 'Grid connected',
+    price: 'Call for proposal',
+    discount: 'Solar',
+    tag: 'Designed for energy savings'
+  },
+  {
+    id: 2,
+    name: 'Off-grid solar inverter systems for independent power',
+    image: '/assets/products/shinex.png',
+    originalPrice: 'Battery backed',
+    price: 'Call for proposal',
+    discount: 'Backup',
+    tag: 'Useful for remote and low-grid areas'
+  },
+  {
+    id: 3,
+    name: 'Hybrid solar inverter systems for uninterrupted power',
+    image: '/assets/products/gamma_pcu.png',
+    originalPrice: 'Solar + grid + battery',
+    price: 'Call for proposal',
+    discount: 'Hybrid',
+    tag: 'Balanced savings and reliability'
+  },
+  {
+    id: 4,
+    name: 'Residential solar power backup with batteries',
+    image: '/assets/products/shinex.png',
+    originalPrice: 'Home power',
+    price: 'Call for proposal',
+    discount: 'Home',
+    tag: 'Reliable backup for everyday use'
+  },
+  {
+    id: 5,
+    name: 'Commercial inverter and UPS power continuity solutions',
+    image: '/assets/products/gamma_pcu.png',
+    originalPrice: 'Business power',
+    price: 'Call for proposal',
+    discount: 'UPS',
+    tag: 'Built for offices and institutions'
+  },
+  {
+    id: 6,
+    name: 'Battery storage options from trusted power brands',
+    image: '/assets/products/gamma_pcu.png',
+    originalPrice: 'Storage',
+    price: 'Call for proposal',
+    discount: 'Battery',
+    tag: 'Tubular, lithium, and backup options'
+  },
+  {
+    id: 7,
+    name: 'High-capacity industrial solar inverter planning',
+    image: '/assets/products/shinex.png',
+    originalPrice: 'Industrial',
+    price: 'Call for proposal',
+    discount: 'Project',
+    tag: 'Engineered for large energy loads'
+  },
+  {
+    id: 8,
+    name: 'Solar maintenance and performance support services',
+    image: '/assets/products/lithium_cat.png',
+    originalPrice: 'After-sales',
+    price: 'Call for support',
+    discount: 'Care',
+    tag: 'Keep systems running efficiently'
+  }
+];
+
+export const topSellingPCUs = [
+  {
+    id: 1,
+    name: 'UTL solar inverters and power backup products',
+    image: '/assets/products/gamma_pcu.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 2,
+    name: 'Luminous inverters, batteries, and UPS solutions',
+    image: '/assets/products/gamma_pcu.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 3,
+    name: 'Livguard solar and power storage solutions',
+    image: '/assets/products/gamma_pcu.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 4,
+    name: 'Exide batteries for dependable backup performance',
+    image: '/assets/products/gamma_pcu.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 5,
+    name: 'Microtek online UPS and inverter systems',
+    image: '/assets/products/shinex.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 6,
+    name: 'Havells solar and electrical power products',
+    image: '/assets/products/shinex.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 7,
+    name: 'Waaree solar panels and rooftop solar components',
+    image: '/assets/products/gamma_pcu.png',
+    tag: 'Leading brand'
+  },
+  {
+    id: 8,
+    name: 'Adani Solar panels and other trusted manufacturers',
+    image: '/assets/products/gamma_pcu.png',
+    tag: 'Leading brand'
+  }
 ];

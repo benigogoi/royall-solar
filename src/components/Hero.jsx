@@ -10,19 +10,19 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-badge">
             <CheckCircle2 size={16} />
-            <span>Assam's Trusted Solar Provider</span>
+            <span>Solar EPC Company Serving All Assam</span>
           </div>
-          <h1>Save Up To 90% On Your Monthly Electricity Bill</h1>
-          <p>Install high-quality rooftop solar with <strong>Government Subsidy (PM Surya Ghar)</strong> support. Reduce your expenses and enjoy 24/7 free energy.</p>
+          <h1>Powering Assam with Smart Solar Energy Solutions</h1>
+          <p>Royall Solar delivers complete <strong>residential, commercial, and industrial solar solutions</strong> across Assam. From rooftop solar systems and hybrid installations to batteries, inverters, and power backup solutions, we help customers reduce electricity costs and achieve energy independence.</p>
           
           <div className="hero-ctas">
             <a href={`tel:${contactDetails.mobilePhone}`} className="btn btn-primary">
               <Phone size={20} style={{ marginRight: '10px' }} />
-              Call Now: {contactDetails.mobilePhone}
+              Get Free Consultation
             </a>
             <a href={`https://wa.me/${contactDetails.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               <MessageSquare size={20} style={{ marginRight: '10px' }} />
-              WhatsApp Us
+              Request a Quote
             </a>
           </div>
 
@@ -37,11 +37,11 @@ const Hero = () => {
         </div>
         
         <div className="hero-image-side">
-          <img src="/assets/hero_family.png" alt="Rooftop Solar Installation in Assam" className="hero-main-img" />
+          <img src="/assets/royall_solar_hero.png" alt="Residential and commercial solar installation in Assam" className="hero-main-img" />
           <div className="subsidy-sticker">
-            <span>GET GOVT.</span>
-            <strong>SUBSIDY</strong>
-            <span>AVAILABLE NOW</span>
+            <span>ALL ASSAM</span>
+            <strong>SOLAR EPC</strong>
+            <span>CONSULTATION</span>
           </div>
         </div>
       </div>
