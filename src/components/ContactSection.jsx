@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ContactSection.css';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { contactDetails } from '../data/siteContent';
@@ -91,6 +92,11 @@ const ContactSection = () => {
                 <button type="submit" className="form-submit-btn">
                   GET STARTED TODAY <Send size={18} />
                 </button>
+                <div style={{ textAlign: 'center', marginTop: '16px' }}>
+                  <Link to="/projects" style={{ color: 'var(--accent-primary)', fontWeight: 700, textDecoration: 'underline', fontSize: '0.95rem' }}>
+                    Explore Our Projects
+                  </Link>
+                </div>
               </form>
             </div>
           </div>

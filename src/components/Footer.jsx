@@ -34,12 +34,14 @@ const Footer = () => {
         </div>
 
         <div className="footer-links">
-          <h4>Company</h4>
+          <h4>Quick Links</h4>
+          <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
-          <Link to="/projects">Our Projects</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/projects">Projects</Link>
           <Link to="/dealership">Dealership</Link>
           <Link to="/support">Support</Link>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         <div className="footer-links">

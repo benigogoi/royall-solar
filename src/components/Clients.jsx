@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Clients.css';
 
 const Clients = () => {
@@ -77,6 +78,12 @@ const Clients = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <Link to="/projects" className="btn btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+            View All Projects
+          </Link>
         </div>
 
       </div>
