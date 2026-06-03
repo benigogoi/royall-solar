@@ -62,3 +62,11 @@
 .cta-whatsapp svg {
   color: #16a34a;
 }
+
+@media (max-width: 768px) {
+  .support-split-section {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+

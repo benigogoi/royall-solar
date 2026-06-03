@@ -10,6 +10,25 @@
   align-items: center;
 }
 
+/* Benefits section 2-col layout */
+.benefits-two-col {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.adv-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 40px;
+}
+
 .solution-description {
   font-size: 1.2rem;
   color: var(--text-muted);
@@ -1003,5 +1022,45 @@
   .solar-data-table td {
     padding: 12px 16px;
     font-size: 0.85rem;
+  }
+
+  .intro-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefits-two-col {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ongrid-intro-banner,
+  .offgrid-intro-banner,
+  .hybrid-intro-banner {
+    padding: 100px 0 60px;
+  }
+
+  .banner-title {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  .peace-main-box {
+    padding: 24px;
+  }
+
+  .subsidy-guide-card {
+    padding: 24px;
+  }
+
+  .horizontal-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-card img {
+    border-radius: 16px;
+  }
+
+  .large-icon-faded {
+    display: none;
   }
 }

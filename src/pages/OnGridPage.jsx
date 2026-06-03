@@ -1,28 +1,108 @@
 import PageHeader from '../components/PageHeader';
 import Contact from '../components/Contact';
 import { solarSolutions } from '../data/siteContent';
-import { CheckCircle2, Zap, Shield, TrendingDown, Sun, Globe, Award, HelpCircle, ClipboardCheck, Settings, ChevronRight } from 'lucide-react';
+import { CheckCircle2, Zap, Shield, TrendingDown, Sun, Globe, Award, HelpCircle, ClipboardCheck, Settings, ChevronRight, HardHat, FileCheck, Users, Wrench } from 'lucide-react';
 import './SolarSolutionPage.css';
 
 const OnGridPage = () => {
   const data = solarSolutions.find(s => s.id === 'on-grid');
+
+  const benefits = [
+    {
+      title: 'Lower Electricity Bills',
+      desc: 'Generate your own power and reduce monthly energy expenses.',
+      icon: <TrendingDown size={32} className="adv-icon" />
+    },
+    {
+      title: 'Maximum Return on Investment',
+      desc: 'Achieve long-term savings through efficient energy generation.',
+      icon: <Award size={32} className="adv-icon" />
+    },
+    {
+      title: 'Low Maintenance',
+      desc: 'Modern solar systems require minimal maintenance while delivering reliable performance.',
+      icon: <ClipboardCheck size={32} className="adv-icon" />
+    },
+    {
+      title: 'Environmentally Friendly',
+      desc: 'Reduce carbon emissions and contribute to a cleaner future.',
+      icon: <Globe size={32} className="adv-icon" />
+    },
+    {
+      title: 'Increased Property Value',
+      desc: 'Solar-equipped properties often enjoy higher market value.',
+      icon: <Settings size={32} className="adv-icon" />
+    },
+    {
+      title: 'Government Incentives',
+      desc: 'Eligible customers may benefit from available solar energy programs and policies.',
+      icon: <CheckCircle2 size={32} className="adv-icon" />
+    }
+  ];
+
+  const targetAudiences = [
+    {
+      title: 'Residential Homes',
+      desc: 'Reduce household electricity costs and gain greater energy independence with residential solar Assam.',
+      icon: <Users size={32} className="peace-icon" />
+    },
+    {
+      title: 'Commercial Buildings',
+      desc: 'Lower operational expenses for offices, retail spaces and institutions with scalable commercial solar Assam.',
+      icon: <FileCheck size={32} className="peace-icon" />
+    },
+    {
+      title: 'Hotels and Hospitality',
+      desc: 'Reduce energy costs while supporting sustainability goals and reliable operations.',
+      icon: <Award size={32} className="peace-icon" />
+    },
+    {
+      title: 'Industrial Facilities',
+      desc: 'Offset large electricity consumption and improve profitability with high-capacity setups.',
+      icon: <Settings size={32} className="peace-icon" />
+    }
+  ];
+
+  const whyChoosePoints = [
+    { title: 'Professional Site Assessment', icon: <FileCheck size={32} className="peace-icon" /> },
+    { title: 'Customized System Design', icon: <Wrench size={32} className="peace-icon" /> },
+    { title: 'Quality Components', icon: <Shield size={32} className="peace-icon" /> },
+    { title: 'Certified Installation Practices', icon: <HardHat size={32} className="peace-icon" /> },
+    { title: 'After-Sales Support', icon: <HelpCircle size={32} className="peace-icon" /> },
+    { title: 'Trusted Brands', icon: <Award size={32} className="peace-icon" /> }
+  ];
+
+  const installationSteps = [
+    { step: 1, title: 'Site Survey & Energy Assessment', desc: 'Detailed assessment of your roof, layout, and current electrical load.' },
+    { step: 2, title: 'System Design & Proposal', desc: 'Engineering a custom solar design along with cost and payback period estimates.' },
+    { step: 3, title: 'Equipment Selection', desc: 'Selecting genuine, high-performance solar panels and inverters from leading brands.' },
+    { step: 4, title: 'Professional Installation', desc: 'Flawless execution by our certified installation technicians.' },
+    { step: 5, title: 'Testing & Commissioning', desc: 'Thorough electrical testing and seamless grid integration via net metering.' },
+    { step: 6, title: 'Ongoing Support', desc: 'Proactive system monitoring and dedicated maintenance services.' }
+  ];
+
+  const commonFeatures = [
+    'High Efficiency Solar Panels',
+    'Smart Solar Inverters',
+    'Remote Monitoring Options',
+    'Weather Resistant Components',
+    'Scalable System Design',
+    'Long Product Life'
+  ];
 
   return (
     <div className="solution-page ongrid-page-wrapper">
       {/* Main Intro Banner */}
       <section className="section ongrid-intro-banner">
         <div className="container text-center">
-          <h2 className="banner-title">RoyallSolar On-Grid Solar Solution</h2>
+          <h2 className="banner-title">On-Grid Solar Solutions</h2>
           <p className="banner-text">
-            Looking for a reliable way to cut down your electricity bills and take advantage of government solar subsidies?
-            <strong> RoyallSolar On-Grid Solar System</strong> is your complete solution — combining
-            <strong> high-efficiency solar panels</strong>, <strong>BIS certified MPPT on grid solar inverter</strong>,
-            and <strong>installation accessories</strong> in a single powerful combo.
+            An <strong>On Grid Solar System Assam</strong> allows you to generate electricity from sunlight and use it directly in your home or business while remaining connected to the utility grid. By producing your own power during the day with a high-performance <strong>rooftop solar installation Assam</strong>, you can significantly reduce electricity expenses and maximize long-term savings through premier <strong>solar energy solutions Assam</strong>.
           </p>
         </div>
       </section>
 
-      {/* Section 1: What is On-Grid? */}
+      {/* Section 1: How On-Grid Solar Works */}
       <section className="section bg-white">
         <div className="container">
           <div className="technical-info-grid">
@@ -30,30 +110,30 @@ const OnGridPage = () => {
               <img src="/assets/products/ongrid_flow.png" alt="How On-grid solar works" className="tech-diagram" />
             </div>
             <div className="tech-text">
-              <div className="section-badge">Technology Overview</div>
-              <h2 className="section-title text-left">What Is an On-Grid Solar System?</h2>
-              <p className="tech-p">An On-grid solar system is a grid-connected solar power plant that works in sync with your local electricity provider (APDCL). During the day, the panels generate power for your home; any excess energy is automatically sent to the main grid through a <strong>Net-Meter</strong>.</p>
+              <div className="section-badge">System Overview</div>
+              <h2 className="section-title text-left">How On-Grid Solar Works</h2>
+              <p className="tech-p">Solar panels generate electricity during daylight hours. The solar inverter converts this energy into usable power for your property. Any excess electricity can be exported to the utility grid through a <strong>net metering solar system</strong> installed by a certified <strong>solar EPC company Assam</strong>, helping offset future electricity consumption.</p>
 
               <div className="tech-feature-list">
                 <div className="tech-feature">
                   <Sun className="tech-icon" />
                   <div>
-                    <h4>Best for Stable Grids</h4>
-                    <p>Ideal for areas where power cuts are rare and you want to focus on bill reduction.</p>
+                    <h4>Solar Generation</h4>
+                    <p>High-efficiency solar panels absorb sunlight to generate direct current (DC) electricity.</p>
                   </div>
                 </div>
                 <div className="tech-feature">
                   <TrendingDown className="tech-icon" />
                   <div>
-                    <h4>Maximum Savings</h4>
-                    <p>The fastest ROI (Return on Investment) of any solar technology available today.</p>
+                    <h4>Conversion & Use</h4>
+                    <p>An advanced solar inverter converts DC power to AC power, supplying your building's load directly.</p>
                   </div>
                 </div>
                 <div className="tech-feature">
                   <Award className="tech-icon" />
                   <div>
-                    <h4>Subsidy Approved</h4>
-                    <p>Fully compliant with PM Surya Ghar scheme for direct government cashback.</p>
+                    <h4>Grid Export & Credits</h4>
+                    <p>Excess power flows to the utility grid via net metering, earning you billing credits automatically.</p>
                   </div>
                 </div>
               </div>
@@ -62,48 +142,112 @@ const OnGridPage = () => {
         </div>
       </section>
 
-      {/* NEW: Advantages Section */}
+      {/* Benefits Section */}
       <section className="section bg-subtle advantages-section-wrapper">
         <div className="container">
           <div className="text-center">
-            <h2 className="section-title">Why Choose an On-Grid System?</h2>
-            <p className="section-subtitle">Experience the most cost-effective way to transition to renewable energy.</p>
+            <h2 className="section-title">Key Benefits</h2>
+            <p className="section-subtitle">Discover how grid-connected solar power transforms your monthly expenses and environment.</p>
           </div>
 
-          <div className="advantages-grid">
-            <div className="advantage-card">
-              <div className="adv-icon-wrapper">
-                <TrendingDown size={32} className="adv-icon" />
+          <div className="advantages-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+            {benefits.map((benefit, i) => (
+              <div key={i} className="advantage-card">
+                <div className="adv-icon-wrapper">
+                  {benefit.icon}
+                </div>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.desc}</p>
               </div>
-              <h3>Zero Electricity Bills</h3>
-              <p>Generate your own power and drop your monthly electricity bills to near zero through the net-metering system.</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who Should Install Section */}
+      <section className="section peace-of-mind-section">
+        <div className="container">
+          <div className="peace-main-box">
+            <div className="text-center">
+              <h2 className="section-title">Who Should Install On-Grid Solar</h2>
+              <p className="tech-p" style={{ maxWidth: '800px', margin: '0 auto 40px' }}>
+                On-grid solar systems are best suited for grid-connected properties looking to dramatically lower their utility bills.
+              </p>
             </div>
-            <div className="advantage-card">
-              <div className="adv-icon-wrapper">
-                <ClipboardCheck size={32} className="adv-icon" />
-              </div>
-              <h3>Low Maintenance</h3>
-              <p>Since there are no batteries involved, the system requires virtually no maintenance other than occasional panel cleaning.</p>
-            </div>
-            <div className="advantage-card">
-              <div className="adv-icon-wrapper">
-                <Zap size={32} className="adv-icon" />
-              </div>
-              <h3>High ROI (Fast Payback)</h3>
-              <p>With government subsidies and massive bill savings, recover your entire investment in just 3 to 5 years.</p>
-            </div>
-            <div className="advantage-card">
-              <div className="adv-icon-wrapper">
-                <Globe size={32} className="adv-icon" />
-              </div>
-              <h3>Eco-Friendly</h3>
-              <p>Reduce your carbon footprint immediately. A 3kW system saves as much CO2 as planting 100+ trees annually.</p>
+
+            <div className="peace-features-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
+              {targetAudiences.map((audience, i) => (
+                <div key={i} className="peace-feature-card">
+                  {audience.icon}
+                  <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem' }}>{audience.title}</h3>
+                  <p>{audience.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* NEW: Pricing and Sizing Table */}
+      {/* Why Choose Royall Solar */}
+      <section className="section bg-subtle peace-of-mind-section">
+        <div className="container">
+          <div className="peace-main-box" style={{ background: '#f8fafc', border: '1px solid #e2e8f0' }}>
+            <div className="text-center">
+              <h2 className="section-title">Why Choose Royall Solar</h2>
+              <p className="tech-p" style={{ maxWidth: '800px', margin: '0 auto 40px' }}>
+                We provide complete end-to-end solar solutions, executing every phase with top-tier technical precision.
+              </p>
+            </div>
+
+            <div className="peace-features-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
+              {whyChoosePoints.map((point, i) => (
+                <div key={i} className="peace-feature-card" style={{ background: '#ffffff', border: '1px solid #e2e8f0' }}>
+                  {point.icon}
+                  <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem', marginBottom: '0' }}>{point.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Installation Process */}
+      <section className="section subsidy-guide-section">
+        <div className="container">
+          <div className="subsidy-guide-card">
+            <h2 className="section-title">Our Installation Process</h2>
+            <p className="section-subtitle">We follow a structured 6-step path to deliver a seamless transition to solar power.</p>
+
+            <div className="advantages-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
+              {installationSteps.map((step) => (
+                <div key={step.step} className="advantage-card" style={{ background: '#f8fafc', padding: '30px', textAlign: 'center' }}>
+                  <div className="step-icon-box" style={{ width: '50px', height: '50px', fontSize: '1.4rem', marginBottom: '20px' }}>
+                    {step.step}
+                  </div>
+                  <h3 style={{ fontSize: '1.15rem', textTransform: 'none', letterSpacing: 'normal' }}>{step.title}</h3>
+                  <p style={{ fontSize: '0.9rem' }}>{step.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="subsidy-footer text-center" style={{ marginTop: '60px' }}>
+              <div className="eligibility-box">
+                <h4 className="eligibility-title">Common Features</h4>
+                <ul className="subsidy-highlights" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', display: 'grid', gap: '16px' }}>
+                  {commonFeatures.map((feat, i) => (
+                    <li key={i} style={{ fontSize: '0.95rem', fontWeight: 700 }}>
+                      <CheckCircle2 size={18} className="text-success" style={{ flexShrink: 0 }} /> 
+                      {feat}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* System Estimates Table */}
       <section className="section bg-white">
         <div className="container">
           <div className="pricing-table-container">
@@ -158,10 +302,10 @@ const OnGridPage = () => {
         </div>
       </section>
 
-      {/* Section 2: Recommended Products */}
+      {/* Recommended Products */}
       <section className="section bg-subtle product-showcase">
         <div className="container">
-          <h2 className="section-title">RECOMMENDED PRODUCTS</h2>
+          <h2 className="section-title">Recommended Products</h2>
           <p className="section-subtitle">We use high-performance RoyallSolar components for maximum reliability.</p>
           <div className="product-grid-detailed">
             {data.products.map((product, i) => (
@@ -178,187 +322,16 @@ const OnGridPage = () => {
         </div>
       </section>
 
-      {/* Section 3: Subsidy Guide */}
-      <section className="section subsidy-guide-section">
-        <div className="container">
-          <div className="subsidy-guide-card">
-            <h2 className="section-title">How to Claim Your Subsidy in 3 Simple Steps</h2>
-            <p className="section-subtitle">We handle everything — registration, net metering, installation, and subsidy claim — so you can enjoy a smooth and stress-free solar journey.</p>
-
-            <div className="subsidy-steps-grid">
-              <div className="subsidy-step-card">
-                <div className="step-icon-box">1</div>
-                <h3>Apply Online</h3>
-                <p>Apply online on the National Rooftop Solar Portal with our assistance.</p>
-              </div>
-              <div className="step-arrow-container">
-                <ChevronRight className="step-arrow" size={48} />
-              </div>
-              <div className="subsidy-step-card">
-                <div className="step-icon-box">2</div>
-                <h3>Select Vendor</h3>
-                <p>Select RoyallSolar from the approved vendor list for trusted installation.</p>
-              </div>
-              <div className="step-arrow-container">
-                <ChevronRight className="step-arrow" size={48} />
-              </div>
-              <div className="subsidy-step-card">
-                <div className="step-icon-box">3</div>
-                <h3>Get Subsidy</h3>
-                <p>Install your system and receive the subsidy directly in your bank account.</p>
-              </div>
-            </div>
-
-            <div className="subsidy-footer text-center">
-              <div className="eligibility-box">
-                <h4 className="eligibility-title">Eligibility Requirements</h4>
-                <ul className="subsidy-highlights">
-                  <li><CheckCircle2 size={18} className="text-success" /> Only <strong>residential rooftop systems</strong> are eligible</li>
-                  <li><CheckCircle2 size={18} className="text-success" /> Only <strong>On-Grid and Hybrid</strong> solar systems qualify</li>
-                  <li><CheckCircle2 size={18} className="text-success" /> <strong>No subsidy</strong> for systems above 10 kW</li>
-                </ul>
-              </div>
-              
-              <p className="subsidy-bottom-note">We handle everything — registration, net metering, installation, and subsidy claim — so you can enjoy a smooth and stress-free solar journey.</p>
-              
-              <button className="btn btn-primary subsidy-cta">Learn About Subsidies</button>
-            </div>
-          </div>
-
-          <div className="subsidy-structure-box has-image">
-            <div className="structure-content">
-              <div className="text-center">
-                <div className="section-badge" style={{ marginBottom: '16px', display: 'inline-block' }}>PM Surya Ghar: Muft Bijli Yojana</div>
-                <h3 className="structure-title">Latest Subsidy Structure (2025)</h3>
-                <p className="structure-desc" style={{ maxWidth: '850px', margin: '0 auto 40px' }}>The Government of India aims to empower homes with solar energy and provide up to 300 units of free electricity every month.</p>
-              </div>
-
-              <div className="structure-list">
-                <div className="structure-list-item">
-                  <CheckCircle2 className="check-icon" />
-                  <div>
-                    <strong>₹30,000 per kW</strong> for systems up to 2 kW
-                  </div>
-                </div>
-                <div className="structure-list-item">
-                  <CheckCircle2 className="check-icon" />
-                  <div>
-                    <strong>₹18,000 per kW</strong> for the next 1 kW (up to 3kW)
-                  </div>
-                </div>
-                <div className="structure-list-item highlight-item">
-                  <CheckCircle2 className="check-icon" />
-                  <div>
-                    <strong>Maximum Subsidy: ₹78,000</strong> for systems 3 kW and above
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="structure-image">
-              <img src="/assets/modiJi.png" alt="PM Surya Ghar Yojana Subsidy" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: One-Stop Solution / Peace of Mind */}
-      <section className="section peace-of-mind-section">
-        <div className="container">
-          <div className="peace-main-box">
-            <div className="text-center">
-              <h2 className="section-title">Complete On-Grid Solution Under One Roof</h2>
-              <p className="tech-p" style={{ maxWidth: '800px', margin: '0 auto 40px' }}>Why deal with multiple vendors? At RoyallSolar, we provide a single point of responsibility for your entire solar journey.</p>
-            </div>
-
-            <div className="peace-features-grid">
-              <div className="peace-feature-card">
-                <ClipboardCheck size={32} className="peace-icon" />
-                <h3>End-to-End Execution</h3>
-                <p>From paperwork to commissioning, we handle the entire process.</p>
-              </div>
-              <div className="peace-feature-card">
-                <Settings size={32} className="peace-icon" />
-                <h3>Optimized Components</h3>
-                <p>High-efficiency panels and inverters perfectly matched for performance.</p>
-              </div>
-              <div className="peace-feature-card">
-                <HelpCircle size={32} className="peace-icon" />
-                <h3>Single Point Service</h3>
-                <p>One dedicated number for all your technical and maintenance needs.</p>
-              </div>
-            </div>
-
-            <div className="peace-cta-row">
-              <div className="cta-box">
-                <strong>25 Years</strong>
-                <span>Panel Warranty</span>
-              </div>
-              <div className="cta-box">
-                <strong>100%</strong>
-                <span>Subsidy Assistance</span>
-              </div>
-            </div>
-
-            <div className="peace-visual">
-              <img src="/assets/products/peace_of_mind_anime.png" alt="Happy customer with RoyallSolar" className="peace-img" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5: Assam State Subsidy Advantage */}
-      <section className="section assam-subsidy-section bg-subtle">
-        <div className="container">
-          <div className="text-center mb-5">
-            <div className="section-badge" style={{ marginBottom: '16px', display: 'inline-block' }}>Exclusive Assam Benefit</div>
-            <h2 className="section-title">Double Subsidy Advantage for Assam Homes</h2>
-            <p className="section-subtitle" style={{ maxWidth: '800px', margin: '0 auto' }}>
-              RoyallSolar customers in Assam benefit from both **Central Govt. (MNRE)** and **Govt. of Assam** subsidies, making solar installation more affordable than ever.
-            </p>
-          </div>
-
-          <div className="subsidy-table-wrapper">
-            <table className="assam-subsidy-table">
-              <thead>
-                <tr>
-                  <th>Solar Plant Capacity</th>
-                  <th>Central Subsidy (MNRE)</th>
-                  <th>State Subsidy (Assam)</th>
-                  <th className="total-col">Total Subsidy Benefit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>1 KW System</strong></td>
-                  <td>₹33,000</td>
-                  <td>₹15,000</td>
-                  <td className="total-val">₹48,000</td>
-                </tr>
-                <tr>
-                  <td><strong>2 KW System</strong></td>
-                  <td>₹66,000</td>
-                  <td>₹35,000</td>
-                  <td className="total-val">₹96,000</td>
-                </tr>
-                <tr>
-                  <td><strong>3 KW System</strong></td>
-                  <td>₹85,800</td>
-                  <td>₹45,000</td>
-                  <td className="total-val">₹1,30,800</td>
-                </tr>
-                <tr>
-                  <td><strong>Above 3 KW</strong></td>
-                  <td>₹85,800 (Max)</td>
-                  <td>₹45,000 (Max)</td>
-                  <td className="total-val">₹1,30,800</td>
-                </tr>
-              </tbody>
-            </table>
-            
-            <div className="subsidy-footer-note text-center mt-4">
-              <p>Prices and subsidies are subject to the latest government notifications. We handle the entire application process for both subsidies for you.</p>
-            </div>
-          </div>
+      {/* Final CTA Section */}
+      <section className="section" style={{ background: '#0f172a', color: '#fff', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="section-title" style={{ color: '#fff' }}>Ready to Start Saving with Solar?</h2>
+          <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px' }}>
+            Let our experts design the ideal on-grid solar solution for your home, business or industrial facility.
+          </p>
+          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+            Get a Free Solar Consultation
+          </a>
         </div>
       </section>
 

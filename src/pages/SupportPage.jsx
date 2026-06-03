@@ -1,24 +1,121 @@
 import PageHeader from '../components/PageHeader';
-import { PhoneCall, Mail, MapPin, Headset, Wrench, ShieldCheck, Clock, Phone, MessageSquare } from 'lucide-react';
+import { 
+  PhoneCall, Mail, MessageSquare, Wrench, ShieldCheck, 
+  Clock, Headset, MapPin, Phone, HelpCircle, 
+  FileCheck, Battery, Zap, ChevronRight, CheckCircle2 
+} from 'lucide-react';
 import './SupportPage.css';
 import { contactDetails } from '../data/siteContent';
 
-const faqItems = [
-  { q: 'How much can I save with solar?', a: 'Most families save 80-90% on their monthly electricity bill after installing a rooftop solar system.' },
-  { q: 'What is PM Surya Ghar subsidy?', a: 'The government provides up to ₹78,000 subsidy for installing rooftop solar on residential buildings. We help with the entire application process.' },
-  { q: 'How long does installation take?', a: 'Typically 2-3 days for residential systems. Commercial systems may take 5-7 days depending on size.' },
-  { q: 'Do solar panels work in Assam rains?', a: "Yes. Solar panels work in cloudy and rainy weather too, though output is reduced. Systems are designed to handle Assam's climate." },
-  { q: 'What maintenance is needed?', a: 'Just periodic cleaning of panels (every 2-3 months). We offer maintenance packages for regular check-ups.' },
-  { q: 'What brands do you use?', a: 'We use top-quality panels from Adani, Waaree, Vikram Solar and inverters from reputed manufacturers.' },
-];
-
 const SupportPage = () => {
+  const supportServices = [
+    {
+      title: 'Free Consultation',
+      desc: 'Our experts evaluate your energy requirements and recommend the most suitable solar or power backup solution for your property.',
+      icon: <HelpCircle size={24} />
+    },
+    {
+      title: 'Site Survey & Assessment',
+      desc: 'Professional site inspections help determine system sizing, installation feasibility and expected energy generation.',
+      icon: <FileCheck size={24} />
+    },
+    {
+      title: 'Installation Services',
+      desc: 'Certified installation teams ensure safe, efficient and standards-compliant project execution with dedicated solar installation support.',
+      icon: <Wrench size={24} />
+    },
+    {
+      title: 'System Monitoring Support',
+      desc: 'Guidance and assistance to help customers track system performance and energy production.',
+      icon: <Zap size={24} />
+    },
+    {
+      title: 'Maintenance Services',
+      desc: 'Preventive solar maintenance services Assam programs designed to maximize system efficiency and equipment lifespan.',
+      icon: <Clock size={24} />
+    },
+    {
+      title: 'Troubleshooting Assistance',
+      desc: 'Prompt solar technical assistance for diagnosing and resolving performance issues, inverter alerts and operational concerns.',
+      icon: <Headset size={24} />
+    },
+    {
+      title: 'Warranty Support',
+      desc: 'Assistance with solar warranty claims, manufacturer coordination and product support.',
+      icon: <ShieldCheck size={24} />
+    },
+    {
+      title: 'System Upgrades',
+      desc: 'Expand or upgrade existing solar installations as energy requirements grow.',
+      icon: <Battery size={24} />
+    }
+  ];
+
+  const whyChoosePoints = [
+    'Dedicated customer assistance',
+    'Fast response times',
+    'Experienced technical team',
+    'Long-term maintenance support',
+    'Trusted product brands',
+    'Professional project management'
+  ];
+
+  const processSteps = [
+    { step: '01', title: 'Contact Our Team', desc: 'Reach out to our support channel.' },
+    { step: '02', title: 'Issue Assessment', desc: 'Initial understanding of requirements.' },
+    { step: '03', title: 'Technical Evaluation', desc: 'In-depth assessment of the system.' },
+    { step: '04', title: 'Recommended Solution', desc: 'Tailored action plan for the issue.' },
+    { step: '05', title: 'Service Execution', desc: 'Implementation of the resolution.' },
+    { step: '06', title: 'Follow-Up Support', desc: 'Ensuring long-term performance.' }
+  ];
+
+  const faqItems = [
+    { 
+      q: 'Solar System Maintenance', 
+      a: 'We provide regular solar system maintenance including panel cleaning, electrical safety testing, and performance analysis. Periodic maintenance ensures your system operates at peak efficiency.' 
+    },
+    { 
+      q: 'Battery Replacement Guidance', 
+      a: 'If you have an off-grid or hybrid system, our experts can guide you when your batteries need replacement. We supply high-quality, durable solar battery solutions.' 
+    },
+    { 
+      q: 'Inverter Troubleshooting', 
+      a: 'If your inverter shows alert indicators, our team is equipped to diagnose and troubleshoot errors, restoring your system back to normal operation.' 
+    },
+    { 
+      q: 'Performance Optimization', 
+      a: 'We evaluate existing systems to identify shading, dust accumulation, or wiring issues to optimize generation and increase your daily solar savings.' 
+    },
+    { 
+      q: 'Warranty Assistance', 
+      a: 'We assist with solar warranty support, coordinating directly with top brand manufacturers to process repairs or replacement of panels, inverters, or batteries.' 
+    },
+    { 
+      q: 'System Expansion Planning', 
+      a: 'As your energy needs grow, we can plan and execute expansions by adding more solar panels or upgrading your hybrid/off-grid inverters.' 
+    }
+  ];
+
   return (
     <div className="support-page">
-      <PageHeader title="Support" subtitle="We are here to help — before, during, and after installation" bgImage="/assets/installations/home_solar.jpg" />
+      <PageHeader 
+        title="Customer Support & Services" 
+        subtitle="Expert Support for Every Stage of Your Solar Journey" 
+        bgImage="/assets/installations/home_solar.jpg" 
+      />
       
       <div className="container support-content">
         
+        {/* Introduction */}
+        <div style={{ maxWidth: '800px', margin: '0 auto 50px', textAlign: 'center' }}>
+          <p style={{ color: '#475569', fontSize: '1.15rem', lineHeight: '1.8' }}>
+            At <strong>Royall Solar</strong>, our commitment extends beyond installation. As a trusted <strong>solar EPC company Assam</strong>, we provide comprehensive <strong>solar support Assam</strong> services to help customers maximize system performance, maintain reliability and achieve long-term energy savings.
+          </p>
+          <p style={{ color: '#475569', fontSize: '1.15rem', lineHeight: '1.8', marginTop: '16px' }}>
+            Whether you need consultation, <strong>solar system maintenance</strong>, troubleshooting or <strong>solar warranty support</strong>, our team is ready to help.
+          </p>
+        </div>
+
         {/* Quick Contact Cards */}
         <div className="support-contact-grid">
           <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="support-cta-card cta-call">
@@ -44,28 +141,21 @@ const SupportPage = () => {
           </a>
         </div>
 
-        {/* Services Grid */}
-        <section style={{ marginTop: '60px' }}>
+        {/* Support Services Grid */}
+        <section style={{ marginTop: '80px' }}>
           <h2 className="section-title">Our Support Services</h2>
-          <p className="section-subtitle">From installation to maintenance — we are with you at every step.</p>
+          <p className="section-subtitle">Comprehensive solar support Assam for residential, commercial and industrial setups.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '40px' }}>
-            {[
-              { icon: <Wrench size={24} />, title: 'Installation Support', desc: 'Professional setup by trained technicians with proper structure and wiring.' },
-              { icon: <ShieldCheck size={24} />, title: 'Warranty Handling', desc: 'We manage all warranty claims directly with manufacturers on your behalf.' },
-              { icon: <Clock size={24} />, title: 'Regular Maintenance', desc: 'Scheduled cleaning and inspection to keep your system at peak performance.' },
-              { icon: <Headset size={24} />, title: 'Technical Help', desc: 'Having issues with your system? Call us anytime for quick troubleshooting.' },
-              { icon: <MapPin size={24} />, title: 'On-Site Visits', desc: 'Our team will come to your location for any repair or inspection work.' },
-              { icon: <Phone size={24} />, title: 'Subsidy Follow-Up', desc: 'Not received your subsidy yet? We help track and follow up with authorities.' },
-            ].map((item, i) => (
+            {supportServices.map((item, i) => (
               <div key={i} style={{
                 display: 'flex', gap: '16px', padding: '28px', background: '#fff',
-                border: '1px solid #e2e8f0', borderRadius: '8px'
+                border: '1px solid #e2e8f0', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)'
               }}>
                 <div style={{ width: '48px', height: '48px', background: '#f8fafc', color: '#166534', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   {item.icon}
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '1.1rem', marginBottom: '8px' }}>{item.title}</h3>
+                  <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: 800, color: '#0f172a' }}>{item.title}</h3>
                   <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5 }}>{item.desc}</p>
                 </div>
               </div>
@@ -73,23 +163,70 @@ const SupportPage = () => {
           </div>
         </section>
 
+        {/* Why Our Support Matters & Process Section */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', marginTop: '80px', alignItems: 'start' }} className="support-split-section">
+          {/* Why Our Support Matters */}
+          <section>
+            <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 16px 0' }}>Reliable Service You Can Count On</h2>
+            <p style={{ color: '#64748b', marginBottom: '32px' }}>We provide professional support before, during and after installation to build trust and improve conversion confidence.</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
+              {whyChoosePoints.map((point, index) => (
+                <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <CheckCircle2 size={20} style={{ color: '#166534', flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.95rem', color: '#334155', fontWeight: 500 }}>{point}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Process Section */}
+          <section>
+            <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 16px 0' }}>Service Process</h2>
+            <p style={{ color: '#64748b', marginBottom: '32px' }}>A streamlined approach to resolve queries and handle maintenance requests efficiently.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {processSteps.map((step, index) => (
+                <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '16px', background: '#f8fafc', padding: '16px 20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                  <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>{step.step}</span>
+                  <div>
+                    <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>{step.title}</h4>
+                    <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '2px 0 0' }}>{step.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+
         {/* FAQ Section */}
         <section style={{ marginTop: '80px' }}>
-          <h2 className="section-title">Frequently Asked Questions</h2>
-          <p className="section-subtitle">Common questions from our customers in Assam.</p>
+          <h2 className="section-title">Frequent Customer Requests</h2>
+          <p className="section-subtitle">Common technical assistance and maintenance queries from our clients in Assam.</p>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             {faqItems.map((faq, i) => (
               <div key={i} style={{
                 padding: '24px', borderBottom: '1px solid #e2e8f0'
               }}>
-                <h4 style={{ fontSize: '1.05rem', marginBottom: '10px', color: '#0f172a' }}>{faq.q}</h4>
-                <p style={{ color: '#64748b', lineHeight: 1.6 }}>{faq.a}</p>
+                <h4 style={{ fontSize: '1.05rem', marginBottom: '10px', color: '#0f172a', fontWeight: 700 }}>{faq.q}</h4>
+                <p style={{ color: '#64748b', lineHeight: 1.6, fontSize: '0.95rem' }}>{faq.a}</p>
               </div>
             ))}
           </div>
         </section>
 
       </div>
+
+      {/* Final CTA Section */}
+      <section className="section text-center" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="section-title" style={{ marginBottom: '16px' }}>Need Assistance with Your Solar System?</h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
+            Our experienced support team is ready to help with consultation, maintenance, troubleshooting and technical guidance.
+          </p>
+          <a href="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px', textDecoration: 'none', display: 'inline-block' }}>
+            Contact Support Team
+          </a>
+        </div>
+      </section>
     </div>
   );
 };

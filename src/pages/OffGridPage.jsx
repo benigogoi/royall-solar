@@ -1,22 +1,64 @@
 import PageHeader from '../components/PageHeader';
 import Contact from '../components/Contact';
 import { solarSolutions } from '../data/siteContent';
-import { CheckCircle2, Battery, Cpu, Sun, ZapOff, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Battery, Cpu, Sun, ZapOff, ArrowRight, Shield, Settings, Wrench, HardHat, HelpCircle, Users, FileCheck, Award, Zap } from 'lucide-react';
 import './SolarSolutionPage.css';
 
 const OffGridPage = () => {
   const data = solarSolutions.find(s => s.id === 'off-grid');
+
+  const componentsList = [
+    { title: 'Solar Panels', desc: 'Generate clean electricity from sunlight.' },
+    { title: 'Solar Charge Controller', desc: 'Regulates charging and protects batteries.' },
+    { title: 'Battery Bank', desc: 'Stores energy for use when sunlight is unavailable.' },
+    { title: 'Inverter System', desc: 'Converts stored energy into usable AC electricity.' },
+    { title: 'Monitoring & Protection Systems', desc: 'Ensure safe and efficient operation.' }
+  ];
+
+  const benefits = [
+    { title: 'Complete Energy Independence', desc: 'Generate and store your own electricity without relying on the utility grid.' },
+    { title: 'Reliable Power Supply', desc: 'Enjoy dependable electricity even in remote locations.' },
+    { title: 'Lower Long-Term Energy Costs', desc: 'Reduce dependence on fuel-based generators and rising electricity costs.' },
+    { title: 'Environmentally Friendly', desc: 'Produce clean renewable energy with minimal environmental impact.' },
+    { title: 'Suitable for Remote Areas', desc: 'Ideal for villages, farms, tea estates and locations with limited grid access.' },
+    { title: 'Scalable Solutions', desc: 'Expand system capacity as energy requirements increase.' }
+  ];
+
+  const idealApplications = [
+    { name: 'Residential Homes', desc: 'Reliable electricity for homes located in remote or underserved areas.' },
+    { name: 'Agricultural Operations', desc: 'Power irrigation systems, water pumps and farm equipment. Ideal for solar power for farms and solar water pump solutions.' },
+    { name: 'Tea Gardens & Estates', desc: 'Provide dependable electricity for operations and worker facilities.' },
+    { name: 'Remote Businesses', desc: 'Maintain uninterrupted operations without grid dependency.' },
+    { name: 'Educational Institutions', desc: 'Reliable energy for schools and training centers.' },
+    { name: 'Healthcare Facilities', desc: 'Support critical equipment and services in remote locations.' }
+  ];
+
+  const whyChoosePoints = [
+    { title: 'Professional Site Assessment', icon: <FileCheck size={32} className="peace-icon" /> },
+    { title: 'Customized Off-Grid Design', icon: <Wrench size={32} className="peace-icon" /> },
+    { title: 'High Quality Solar Components', icon: <Shield size={32} className="peace-icon" /> },
+    { title: 'Reliable Battery Storage Systems', icon: <Battery size={32} className="peace-icon" /> },
+    { title: 'Expert Installation', icon: <HardHat size={32} className="peace-icon" /> },
+    { title: 'Long-Term Technical Support', icon: <HelpCircle size={32} className="peace-icon" /> }
+  ];
+
+  const processSteps = [
+    { step: 1, title: 'Site Survey', desc: 'Comprehensive geographic and rooftop feasibility evaluation.' },
+    { step: 2, title: 'Energy Requirement Analysis', desc: 'Detailed calculation of daily electrical load and backup duration requirements.' },
+    { step: 3, title: 'Custom System Design', desc: 'Engineering battery bank capacity and solar panel arrays for self-sustenance.' },
+    { step: 4, title: 'Equipment Selection', desc: 'Selecting certified batteries, PCUs, and durable structural hardware.' },
+    { step: 5, title: 'Professional Installation', desc: 'Expert mounting and wiring for optimized off-grid efficiency.' },
+    { step: 6, title: 'Testing & Ongoing Support', desc: 'Full testing, commissioning, and setup of system protection safeguards.' }
+  ];
 
   return (
     <div className="solution-page">
       {/* New Intro Section */}
       <section className="section offgrid-intro-banner">
         <div className="container text-center">
-          <h2 className="banner-title">RoyallSolar Off-Grid Solar System</h2>
+          <h2 className="banner-title">Off-Grid Solar Solutions</h2>
           <p className="banner-text">
-            Tired of frequent power cuts? <strong>RoyallSolar Off-Grid Solar Systems</strong> provide complete energy independence. 
-            By combining <strong>high-capacity tubular batteries</strong> with <strong>intelligent PCUs</strong>, 
-            we ensure your home or business runs smoothly even during total grid failure.
+            Complete Energy Independence with Off-Grid Solar Systems
           </p>
         </div>
       </section>
@@ -25,20 +67,26 @@ const OffGridPage = () => {
       <section className="section solution-intro">
         <div className="container intro-container">
           <div className="intro-content">
-            <div className="section-badge">How It Works</div>
-            <h2 className="section-title text-left">24/7 Energy Security</h2>
-            <p className="solution-description">{data.description}</p>
+            <div className="section-badge">System Overview</div>
+            <h2 className="section-title text-left">How Off-Grid Solar Works</h2>
+            <p className="solution-description" style={{ marginBottom: '20px' }}>
+              An <strong>Off Grid Solar System Assam</strong> operates independently of the utility grid, generating and storing electricity through solar panels and batteries.
+            </p>
+            <p className="solution-description" style={{ marginBottom: '32px' }}>
+              These systems provide reliable <strong>solar energy solutions Assam</strong> for homes, businesses, farms and remote facilities where grid access is limited or unavailable. For locations requiring a <strong>remote solar installation Assam</strong>, installing a dependable <strong>solar battery system Assam</strong> ensures you have electricity day and night. We offer specialized layouts including <strong>solar power for farms</strong> and dedicated <strong>solar water pump solutions</strong> to run critical machinery. Contact us for complete <strong>off grid solar installation</strong> services.
+            </p>
             
+            <h3 style={{ fontSize: '1.4rem', marginBottom: '24px', textTransform: 'none' }}>System Components:</h3>
             <div className="infographic-container vertical-steps">
-              {data.howItWorks.map((item, i) => (
+              {componentsList.map((item, i) => (
                 <div key={i} className="info-step-vertical">
                   <div className="step-marker">
                     <div className="step-circle">{i + 1}</div>
-                    {i < data.howItWorks.length - 1 && <div className="step-line"></div>}
+                    {i < componentsList.length - 1 && <div className="step-line"></div>}
                   </div>
                   <div className="step-content">
-                    <h4>{item.title}</h4>
-                    <p>{item.desc}</p>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 800 }}>{item.title}</h4>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -47,25 +95,25 @@ const OffGridPage = () => {
           
           <div className="intro-visual">
             <div className="visual-card">
-              <img src="/assets/installations/backup_system.jpg" alt="Off-grid solar installation" />
+              <img src="/assets/installations/backup_system.jpg" alt="Off-grid solar installation" style={{ width: '100%', height: 'auto', borderRadius: '24px', display: 'block', boxShadow: 'var(--shadow-lg)' }} />
               <div className="visual-badge">Independent Power</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Product Grid Section */}
+      {/* Recommended Products */}
       <section className="section bg-dark text-white product-showcase">
         <div className="container">
-          <h2 className="section-title" style={{ color: '#fff' }}>The Off-Grid Ecosystem</h2>
-          <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)' }}>Engineered for areas with high power cuts or no grid connectivity.</p>
+          <h2 className="section-title" style={{ color: '#fff' }}>Recommended Hardware</h2>
+          <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)' }}>Engineered for areas with high power cuts or complete lack of grid connectivity.</p>
           <div className="product-grid-detailed">
             {data.products.map((product, i) => (
               <div key={i} className="product-card-solution dark-card">
                 <div className="product-image-box">
                   <img src={product.icon === 'cpu' ? '/assets/products/gamma_pcu.png' : product.icon === 'battery' ? '/assets/products/battery.png' : '/assets/products/mono_panel.png'} alt={product.name} />
                 </div>
-                <h3>{product.name}</h3>
+                <h3 style={{ color: '#ffffff' }}>{product.name}</h3>
                 <div className="product-spec" style={{ color: 'var(--accent-primary)' }}>{product.spec}</div>
                 <p style={{ color: 'rgba(255,255,255,0.7)' }}>{product.ideal}</p>
               </div>
@@ -74,40 +122,115 @@ const OffGridPage = () => {
         </div>
       </section>
 
-      {/* Key Advantages */}
+      {/* Key Benefits */}
       <section className="section advantages-section">
         <div className="container">
-          <div className="advantages-grid">
-            <div className="advantage-image">
+          <div className="benefits-two-col">
+            <div className="advantage-image" style={{ display: 'flex', justifyContent: 'center' }}>
                <ZapOff size={120} className="large-icon-faded" />
             </div>
             <div className="advantage-text">
-              <h2 className="section-title text-left">Why Go Off-Grid?</h2>
+              <h2 className="section-title text-left">Key Benefits</h2>
               <div className="advantage-items">
-                <div className="adv-item">
-                  <CheckCircle2 size={24} />
-                  <div>
-                    <h4>Reliable Backup</h4>
-                    <p>Unlike simple inverters, Solar PCUs keep your batteries charged via sun even when the grid fails for days.</p>
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="adv-item" style={{ marginBottom: '24px' }}>
+                    <CheckCircle2 size={24} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />
+                    <div>
+                      <h4 style={{ fontSize: '1.1rem', fontWeight: 800 }}>{benefit.title}</h4>
+                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{benefit.desc}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="adv-item">
-                  <CheckCircle2 size={24} />
-                  <div>
-                    <h4>Cost Predictability</h4>
-                    <p>No more rising electricity rates. Your energy cost is fixed once you install an Off-grid system.</p>
-                  </div>
-                </div>
-                <div className="adv-item">
-                  <CheckCircle2 size={24} />
-                  <div>
-                    <h4>Eco-Friendly Lifestyle</h4>
-                    <p>Reduce your carbon footprint by running entirely on renewable energy from RoyallSolar panels.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Ideal Applications */}
+      <section className="section bg-subtle modes-section">
+        <div className="container">
+          <h2 className="section-title">Ideal Applications</h2>
+          <p className="section-subtitle">Reliable electricity for sectors requiring absolute power isolation and operational self-sustenance.</p>
+          <div className="modes-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+            {idealApplications.map((app, i) => (
+              <div key={i} className="mode-card" style={{ padding: '30px' }}>
+                <CheckCircle2 className="mode-icon" size={32} />
+                <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem', margin: '12px 0' }}>{app.name}</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>{app.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Royall Solar */}
+      <section className="section peace-of-mind-section">
+        <div className="container">
+          <div className="peace-main-box">
+            <div className="text-center">
+              <h2 className="section-title">Why Choose Royall Solar</h2>
+              <p className="tech-p" style={{ maxWidth: '800px', margin: '0 auto 40px' }}>
+                We design custom systems with robust safety standards, providing continuous support across Assam.
+              </p>
+            </div>
+
+            <div className="peace-features-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
+              {whyChoosePoints.map((point, i) => (
+                <div key={i} className="peace-feature-card" style={{ background: '#f8fafc', border: '1px solid #e2e8f0' }}>
+                  {point.icon}
+                  <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem', marginBottom: '0' }}>{point.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="section bg-subtle subsidy-guide-section">
+        <div className="container">
+          <div className="subsidy-guide-card" style={{ background: '#ffffff' }}>
+            <h2 className="section-title">Our Process</h2>
+            <p className="section-subtitle">A structured process built on engineering analysis to deploy absolute off-grid efficiency.</p>
+
+            <div className="advantages-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px' }}>
+              {processSteps.map((step) => (
+                <div key={step.step} className="advantage-card" style={{ background: '#f8fafc', padding: '30px', textAlign: 'center' }}>
+                  <div className="step-icon-box" style={{ width: '50px', height: '50px', fontSize: '1.4rem', marginBottom: '20px' }}>
+                    {step.step}
+                  </div>
+                  <h3 style={{ fontSize: '1.15rem', textTransform: 'none', letterSpacing: 'normal' }}>{step.title}</h3>
+                  <p style={{ fontSize: '0.9rem' }}>{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Off-Grid Solar Matters in Assam Section */}
+      <section className="section bg-dark text-white summary-section">
+        <div className="container summary-grid" style={{ gridTemplateColumns: '1fr' }}>
+          <div className="summary-text" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 className="section-title" style={{ color: '#fff', marginBottom: '24px' }}>Why Off-Grid Solar Matters in Assam</h2>
+            <p className="solution-description" style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.15rem', lineHeight: '1.8' }}>
+              Many regions across Assam experience grid limitations, remote geography and seasonal power disruptions. Off-grid solar systems provide a dependable and sustainable energy source that supports homes, businesses, farms and institutions regardless of grid availability.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="section text-center" style={{ padding: '80px 0', background: '#ffffff' }}>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="section-title" style={{ marginBottom: '16px' }}>Take Control of Your Energy Future</h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
+            Let Royall Solar design a reliable off-grid solar solution tailored to your power requirements and location.
+          </p>
+          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+            Get a Free Consultation
+          </a>
         </div>
       </section>
 
