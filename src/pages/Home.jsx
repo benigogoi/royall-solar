@@ -9,6 +9,7 @@ import AboutSection from '../components/AboutSection';
 import StatsBar from '../components/StatsBar';
 import Testimonials from '../components/Testimonials';
 import Clients from '../components/Clients';
+import Partners from '../components/Partners';
 import InstallationProcess from '../components/InstallationProcess';
 import TrustPoints from '../components/TrustPoints';
 import ContactSection from '../components/ContactSection';
@@ -48,6 +49,7 @@ const Home = () => {
       <StatsBar />
       <Testimonials />
       <Clients />
+      <Partners />
       <InstallationProcess />
       <TrustPoints />
       <ContactSection />
