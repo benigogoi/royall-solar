@@ -15,6 +15,10 @@ const Hero = () => {
           <h1>Powering Assam with Smart Solar Energy Solutions</h1>
           <p>Royall Solar delivers complete <strong>residential, commercial, and industrial solar solutions</strong> across Assam. From rooftop solar systems and hybrid installations to batteries, inverters, and power backup solutions, we help customers reduce electricity costs and achieve energy independence.</p>
           
+          <div style={{ fontSize: '1rem', fontWeight: 600, color: 'rgba(255,255,255,0.9)', margin: '16px 0 24px', letterSpacing: '0.2px' }}>
+            Trusted Solar EPC Partner Serving Homes, Businesses & Industries Across Assam
+          </div>
+          
           <div className="hero-ctas">
             <a href={`tel:${contactDetails.mobilePhone}`} className="btn btn-primary">
               <Phone size={20} style={{ marginRight: '10px' }} />

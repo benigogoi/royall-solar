@@ -1,10 +1,5 @@
 import Hero from '../components/Hero';
 import ProductCategories from '../components/ProductCategories';
-import TrustBar from '../components/TrustBar';
-import FeaturedKits from '../components/FeaturedKits';
-import TopSellingInverters from '../components/TopSellingInverters';
-import SolutionsBanner from '../components/SolutionsBanner';
-import TopSellingPCUs from '../components/TopSellingPCUs';
 import AboutSection from '../components/AboutSection';
 import StatsBar from '../components/StatsBar';
 import Testimonials from '../components/Testimonials';
@@ -13,12 +8,14 @@ import Partners from '../components/Partners';
 import InstallationProcess from '../components/InstallationProcess';
 import TrustPoints from '../components/TrustPoints';
 import ContactSection from '../components/ContactSection';
+import AssamCoverage from '../components/AssamCoverage';
 import { Zap, ShieldCheck, Headphones } from 'lucide-react';
 import { contactDetails } from '../data/siteContent';
 
 const Home = () => {
   return (
     <>
+      {/* 1. Hero */}
       <Hero />
       
       {/* Quick Trust Bar */}
@@ -39,20 +36,35 @@ const Home = () => {
         </div>
       </section>
 
-      <ProductCategories />
-      <TrustBar />
-      <FeaturedKits />
-      <TopSellingInverters />
-      <SolutionsBanner />
-      <TopSellingPCUs />
+      {/* 2. About */}
       <AboutSection />
-      <StatsBar />
-      <Testimonials />
-      <Clients />
-      <Partners />
-      <InstallationProcess />
+
+      {/* 3. Primary Product/Solution Section */}
+      <ProductCategories />
+
+      {/* 4. Why Choose Royall Solar */}
       <TrustPoints />
+
+      {/* 5. Trusted Brands We Work With */}
+      <Partners />
+
+      {/* 6. Our Simple Process */}
+      <InstallationProcess />
+
+      {/* 7. Customer Testimonials */}
+      <Testimonials />
+
+      {/* 8. Project Showcase */}
+      <Clients />
+
+      {/* 9. Statistics */}
+      <StatsBar />
+
+      {/* 10. Consultation Form / CTA */}
       <ContactSection />
+
+      {/* 11. Assam Coverage Section */}
+      <AssamCoverage />
 
       {/* Floating WhatsApp */}
       <a
