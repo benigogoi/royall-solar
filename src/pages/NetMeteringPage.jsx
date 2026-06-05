@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
-import Contact from '../components/Contact';
 import { CheckCircle2, ChevronDown, BarChart3, HelpCircle, FileCheck, ShieldCheck, Settings, Users, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const NetMeteringPage = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -77,9 +77,9 @@ const NetMeteringPage = () => {
           <p style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.8', fontWeight: 600, marginBottom: '24px' }}>
             Net metering allows solar system owners to send excess electricity back to the utility grid and receive credits that help reduce future electricity bills.
           </p>
-          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -233,13 +233,17 @@ const NetMeteringPage = () => {
       </section>
 
       {/* Final CTA */}
-      <Contact 
-        title="Start Maximizing Your Solar Investment"
-        desc="Talk to our experts and learn how net metering can help increase savings from your solar system."
-        formTitle="Request a Free Consultation"
-        formDesc="Get in touch to check net metering eligibility for your property profile."
-        successMessage="Thank you. A solar EPC company Assam grid engineer will contact you shortly."
-      />
+      <section className="section text-center" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="section-title" style={{ marginBottom: '16px' }}>Start Maximizing Your Solar Investment</h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
+            Talk to our experts and learn how net metering can help increase savings from your solar system. Get in touch to check net metering eligibility for your property profile.
+          </p>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+            Request a Free Consultation
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

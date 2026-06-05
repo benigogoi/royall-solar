@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader';
-import Contact from '../components/Contact';
 import { solarSolutions } from '../data/siteContent';
 import { CheckCircle2, Battery, Cpu, Sun, ZapOff, ArrowRight, Shield, Settings, Wrench, HardHat, HelpCircle, Users, FileCheck, Award, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './SolarSolutionPage.css';
 
 const OffGridPage = () => {
@@ -228,13 +228,11 @@ const OffGridPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Let Royall Solar design a reliable off-grid solar solution tailored to your power requirements and location.
           </p>
-          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get a Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
-
-      <Contact />
     </div>
   );
 };

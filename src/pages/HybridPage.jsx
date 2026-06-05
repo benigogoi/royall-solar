@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader';
-import Contact from '../components/Contact';
 import { solarSolutions } from '../data/siteContent';
 import { CheckCircle2, Settings, Zap, Shield, Activity, Users, FileCheck, Award, Heart, ClipboardCheck, Wrench, HardHat, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './SolarSolutionPage.css';
 
 const HybridPage = () => {
@@ -262,13 +262,11 @@ const HybridPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Let Royall Solar design a hybrid solar solution that delivers energy savings, reliable backup and long-term performance.
           </p>
-          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
-
-      <Contact />
     </div>
   );
 };

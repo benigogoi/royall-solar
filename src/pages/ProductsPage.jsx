@@ -1,6 +1,5 @@
 import PageHeader from '../components/PageHeader';
 import FeaturedProducts from '../components/FeaturedProducts';
-import Contact from '../components/Contact';
 import { productCategories } from '../data/siteContent';
 import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -114,8 +113,6 @@ const ProductsPage = () => {
           </Link>
         </div>
       </section>
-
-      <Contact />
     </div>
   );
 };

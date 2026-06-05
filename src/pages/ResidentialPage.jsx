@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
-import Contact from '../components/Contact';
 import { CheckCircle2, ShieldCheck, Sun, Zap, Sparkles, TrendingUp, Users, Settings } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ResidentialPage = () => {
   const benefits = [
@@ -60,9 +60,9 @@ const ResidentialPage = () => {
           <p style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.8', fontWeight: 600, marginBottom: '24px' }}>
             Reduce electricity bills, increase energy independence and enjoy reliable power with customized residential solar solutions designed for homes across Assam.
           </p>
-          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -190,14 +190,18 @@ const ResidentialPage = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <Contact 
-        title="Ready to Reduce Your Electricity Bills?"
-        desc="Speak with our experts and discover the ideal residential solar solution for your home."
-        formTitle="Request a Free Home Solar Assessment"
-        formDesc="Submit details to coordinate a home load analysis and rooftop survey visit."
-        successMessage="Thank you. An engineering representative will contact you shortly."
-      />
+      {/* Final CTA Section */}
+      <section className="section text-center" style={{ padding: '80px 0', background: '#f8fafc', borderTop: '1px solid #e2e8f0' }}>
+        <div className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 className="section-title" style={{ marginBottom: '16px' }}>Ready to Reduce Your Electricity Bills?</h2>
+          <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
+            Speak with our experts and discover the ideal residential solar solution for your home. Submit details to coordinate a home load analysis and rooftop survey visit.
+          </p>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+            Request a Free Assessment
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader';
-import Contact from '../components/Contact';
 import { solarSolutions } from '../data/siteContent';
 import { CheckCircle2, Zap, Shield, TrendingDown, Sun, Globe, Award, HelpCircle, ClipboardCheck, Settings, ChevronRight, HardHat, FileCheck, Users, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './SolarSolutionPage.css';
 
 const OnGridPage = () => {
@@ -329,13 +329,11 @@ const OnGridPage = () => {
           <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px' }}>
             Let our experts design the ideal on-grid solar solution for your home, business or industrial facility.
           </p>
-          <a href="#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get a Free Solar Consultation
-          </a>
+          </Link>
         </div>
       </section>
-
-      <Contact />
     </div>
   );
 };
