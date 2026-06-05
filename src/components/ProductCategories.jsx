@@ -3,7 +3,7 @@ import './ProductCategories.css';
 
 const ProductCategories = () => {
   return (
-    <section className="section product-categories-section">
+    <section className="section product-categories-section" id="solutions">
       <div className="container">
         <div className="text-center">
           <h2 className="section-title">Solar Solutions for Every Energy Need</h2>
@@ -20,7 +20,9 @@ const ProductCategories = () => {
                 <h3>{cat.title}</h3>
                 <p>{cat.description}</p>
                 <div className="category-footer">
-                   <button className="view-btn">Request Details</button>
+                   <a href="#contact" className="view-btn" style={{ textDecoration: 'none', display: 'block', textAlign: 'center' }}>
+                     Request Details
+                   </a>
                 </div>
               </div>
             </div>

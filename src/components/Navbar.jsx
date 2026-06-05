@@ -43,15 +43,17 @@ const Navbar = () => {
           
           <div className="nav-dropdown-container">
             <button 
-              className={`nav-dropdown-trigger ${(location.pathname.includes('/on-grid') || location.pathname.includes('/off-grid') || location.pathname.includes('/hybrid')) ? 'active' : ''}`}
+              className={`nav-dropdown-trigger ${(location.pathname.includes('/on-grid') || location.pathname.includes('/off-grid') || location.pathname.includes('/hybrid') || location.pathname.includes('/net-metering') || location.pathname.includes('/residential-solar')) ? 'active' : ''}`}
               onClick={() => toggleDropdown('solutions')}
             >
               Solar Solutions <ChevronDown size={14} />
             </button>
             <div className={`nav-dropdown ${activeDropdown === 'solutions' ? 'show' : ''}`}>
-              <Link to="/on-grid">On-Grid Solar System</Link>
-              <Link to="/off-grid">Off-Grid Solar System</Link>
-              <Link to="/hybrid">Hybrid Solar System</Link>
+              <Link to="/residential-solar">Residential Solar</Link>
+              <Link to="/on-grid">On-Grid Solar</Link>
+              <Link to="/hybrid">Hybrid Solar</Link>
+              <Link to="/off-grid">Off-Grid Solar</Link>
+              <Link to="/net-metering">Net Metering</Link>
             </div>
           </div>
 

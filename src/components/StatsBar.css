@@ -20,17 +20,17 @@
 }
 
 .stat-value {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #1e293b;
+  font-size: 3.25rem;
+  font-weight: 900;
+  color: var(--accent-primary);
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .stat-label {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: #ef4444; /* UTL red */
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #475569;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }

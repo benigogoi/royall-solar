@@ -203,10 +203,10 @@ export const heroHighlights = [
 ];
 
 export const trustPoints = [
-  { title: 'Quality Products', detail: 'We work with trusted manufacturers and proven technologies to ensure dependable performance.' },
-  { title: 'Customized Solutions', detail: 'Every solar system is designed around actual energy needs and future growth requirements.' },
-  { title: 'Professional Installation', detail: 'Experienced technicians ensure safe, efficient, and standards-compliant installations.' },
-  { title: 'End-to-End Support', detail: 'From planning to maintenance, we support customers throughout the entire project lifecycle.' },
+  { title: 'Quality Products', detail: 'We source only high-efficiency panels and certified components from leading global manufacturers to ensure maximum power generation.' },
+  { title: 'Certified Installation', detail: 'Our experienced, certified solar technicians design and install standard-compliant systems with strict quality control.' },
+  { title: 'Reliable Support', detail: 'Enjoy peace of mind with 24/7 client assistance, active monitoring, and local maintenance support whenever you need it.' },
+  { title: 'Customized Energy Solutions', detail: 'We engineer custom rooftop, off-grid, and hybrid configurations tailored to your specific monthly energy loads and budget.' },
 ];
 
 export const featuredProducts = [

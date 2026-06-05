@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import SolarSavingsCalculator from '../components/SolarSavingsCalculator';
 import ProductCategories from '../components/ProductCategories';
 import AboutSection from '../components/AboutSection';
 import StatsBar from '../components/StatsBar';
@@ -8,7 +9,7 @@ import Partners from '../components/Partners';
 import InstallationProcess from '../components/InstallationProcess';
 import TrustPoints from '../components/TrustPoints';
 import ContactSection from '../components/ContactSection';
-import AssamCoverage from '../components/AssamCoverage';
+import HomeFAQ from '../components/HomeFAQ';
 import { Zap, ShieldCheck, Headphones } from 'lucide-react';
 import { contactDetails } from '../data/siteContent';
 
@@ -36,35 +37,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. About */}
+      {/* 2. Solar Savings Calculator Placeholder */}
+      <SolarSavingsCalculator />
+
+      {/* 3. About */}
       <AboutSection />
 
-      {/* 3. Primary Product/Solution Section */}
+      {/* 4. Primary Product/Solution Section */}
       <ProductCategories />
 
-      {/* 4. Why Choose Royall Solar */}
+      {/* 5. Why Choose Royall Solar */}
       <TrustPoints />
 
-      {/* 5. Trusted Brands We Work With */}
+      {/* 6. Trusted Brands We Work With */}
       <Partners />
 
-      {/* 6. Our Simple Process */}
+      {/* 7. Our Simple Process */}
       <InstallationProcess />
 
-      {/* 7. Customer Testimonials */}
+      {/* 8. Customer Testimonials */}
       <Testimonials />
 
-      {/* 8. Project Showcase */}
+      {/* 9. Project Showcase */}
       <Clients />
 
-      {/* 9. Statistics */}
+      {/* 10. Statistics */}
       <StatsBar />
 
-      {/* 10. Consultation Form / CTA */}
-      <ContactSection />
+      {/* FAQ Section */}
+      <HomeFAQ />
 
-      {/* 11. Assam Coverage Section */}
-      <AssamCoverage />
+      {/* 11. Consultation Form / CTA */}
+      <ContactSection />
 
       {/* Floating WhatsApp */}
       <a

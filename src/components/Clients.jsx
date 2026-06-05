@@ -5,17 +5,20 @@ import './Clients.css';
 const Clients = () => {
   const projects = [
     {
-      title: 'Residential Solar Projects',
+      type: 'Residential Rooftop',
+      location: 'Jorhat, Assam',
       desc: 'Customized rooftop solar installations helping homeowners reduce electricity costs and increase energy independence.',
       image: '/assets/installations/home_solar.jpg'
     },
     {
-      title: 'Commercial Solar Projects',
+      type: 'Commercial Grid-Tie',
+      location: 'Guwahati, Assam',
       desc: 'Scalable solar solutions for offices, retail spaces, hotels and institutions across Assam.',
       image: '/assets/installations/backup_system.jpg'
     },
     {
-      title: 'Industrial Solar Projects',
+      type: 'Industrial Solar Plant',
+      location: 'Dibrugarh, Assam',
       desc: 'Large-scale solar installations engineered for high energy demand and long-term savings.',
       image: '/assets/office_building.png'
     }
@@ -64,14 +67,19 @@ const Clients = () => {
               <div style={{ width: '100%', height: '220px', overflow: 'hidden' }}>
                 <img 
                   src={proj.image} 
-                  alt={proj.title} 
+                  alt={proj.type} 
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 />
               </div>
               <div style={{ padding: '24px' }}>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>
-                  {proj.title}
-                </h3>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '8px', flexWrap: 'wrap', marginBottom: '12px', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 800, padding: '4px 10px', background: 'rgba(22, 101, 52, 0.1)', color: 'var(--accent-secondary)', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    {proj.type}
+                  </span>
+                  <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--accent-primary)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                    📍 {proj.location}
+                  </span>
+                </div>
                 <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.6', margin: 0 }}>
                   {proj.desc}
                 </p>
@@ -82,7 +90,7 @@ const Clients = () => {
 
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
           <Link to="/projects" className="btn btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
-            View All Projects
+            View More Projects
           </Link>
         </div>
 

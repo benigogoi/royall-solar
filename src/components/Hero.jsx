@@ -1,5 +1,5 @@
 import { contactDetails, heroHighlights } from '../data/siteContent';
-import { Phone, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { Phone, CheckCircle2 } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -12,22 +12,25 @@ const Hero = () => {
             <CheckCircle2 size={16} />
             <span>Solar EPC Company Serving All Assam</span>
           </div>
-          <h1>Powering Assam with Smart Solar Energy Solutions</h1>
+          <h1>Save money on electricity with trusted solar solutions across Assam.</h1>
           <p>Royall Solar delivers complete <strong>residential, commercial, and industrial solar solutions</strong> across Assam. From rooftop solar systems and hybrid installations to batteries, inverters, and power backup solutions, we help customers reduce electricity costs and achieve energy independence.</p>
           
-          <div style={{ fontSize: '1rem', fontWeight: 600, color: 'rgba(255,255,255,0.9)', margin: '16px 0 24px', letterSpacing: '0.2px' }}>
-            Trusted Solar EPC Partner Serving Homes, Businesses & Industries Across Assam
-          </div>
-          
-          <div className="hero-ctas">
-            <a href={`tel:${contactDetails.mobilePhone}`} className="btn btn-primary">
-              <Phone size={20} style={{ marginRight: '10px' }} />
-              Get Free Consultation
-            </a>
-            <a href={`https://wa.me/${contactDetails.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              <MessageSquare size={20} style={{ marginRight: '10px' }} />
-              Request a Quote
-            </a>
+          <div className="hero-ctas-container">
+            <div className="hero-ctas">
+              <a href="#contact" className="btn btn-primary">
+                <Phone size={20} style={{ marginRight: '10px' }} />
+                Get Free Consultation
+              </a>
+              <a href="#solutions" className="btn btn-secondary">
+                Explore Solutions
+              </a>
+            </div>
+            
+            <div className="hero-trust-strip">
+              <span className="trust-item"><CheckCircle2 size={14} /> Trusted Across Assam</span>
+              <span className="trust-item"><CheckCircle2 size={14} /> Residential & Commercial Solutions</span>
+              <span className="trust-item"><CheckCircle2 size={14} /> Quality Installation & Support</span>
+            </div>
           </div>
 
           <div className="hero-features">

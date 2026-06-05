@@ -5,7 +5,7 @@ import { contactDetails } from '../data/siteContent';
 
 const ContactSection = () => {
   return (
-    <section className="section contact-enhanced-section">
+    <section className="section contact-enhanced-section" id="contact">
       <div className="container">
         <div className="contact-flex-container">
           {/* Left Side: Info */}
@@ -58,15 +58,15 @@ const ContactSection = () => {
           <div className="contact-form-panel">
             <div className="form-wrapper">
               <h3>Get Started Today</h3>
-              <form className="quote-form">
+              <form className="quote-form" onSubmit={(e) => e.preventDefault()}>
                 <div className="form-row">
                   <div className="form-group">
                     <label>Your Name</label>
-                    <input type="text" placeholder="Full name" />
+                    <input type="text" placeholder="Full name" required />
                   </div>
                   <div className="form-group">
                     <label>Phone Number</label>
-                    <input type="text" placeholder="9707670101" />
+                    <input type="text" placeholder="9707670101" required />
                   </div>
                 </div>
 
@@ -90,7 +90,7 @@ const ContactSection = () => {
                 </div>
 
                 <button type="submit" className="form-submit-btn">
-                  GET STARTED TODAY <Send size={18} />
+                  Get My Free Solar Proposal <Send size={18} />
                 </button>
                 <div style={{ textAlign: 'center', marginTop: '16px' }}>
                   <Link to="/projects" style={{ color: 'var(--accent-primary)', fontWeight: 700, textDecoration: 'underline', fontSize: '0.95rem' }}>

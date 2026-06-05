@@ -17,6 +17,8 @@ import OnGridPage from './pages/OnGridPage';
 import OffGridPage from './pages/OffGridPage';
 import HybridPage from './pages/HybridPage';
 import ProjectsPage from './pages/ProjectsPage';
+import NetMeteringPage from './pages/NetMeteringPage';
+import ResidentialPage from './pages/ResidentialPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +49,8 @@ function App() {
         <Route path="/off-grid" element={<OffGridPage />} />
         <Route path="/hybrid" element={<HybridPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/net-metering" element={<NetMeteringPage />} />
+        <Route path="/residential-solar" element={<ResidentialPage />} />
       </Routes>
       <Footer />
     </Router>

@@ -100,10 +100,10 @@ const Partners = () => {
             Our Partners
           </span>
           <h2 className="section-title" style={{ marginTop: '12px', marginBottom: '20px' }}>
-            Trusted Brands We Work With
+            Official Partners & Trusted Solar Brands
           </h2>
           <p style={{ color: '#64748b', maxWidth: '800px', margin: '0 auto', fontSize: '1.1rem', lineHeight: '1.7' }}>
-            Royall Solar partners with leading solar and power backup manufacturers to deliver reliable, high-performance energy solutions across Assam. We carefully select trusted brands known for quality, durability and long-term performance.
+            We work with industry-leading manufacturers to deliver reliable, high-performance solar solutions.
           </p>
         </div>
 

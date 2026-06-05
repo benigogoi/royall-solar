@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="footer-links">
           <h4>Useful Info</h4>
           <Link to="/support">PM Surya Ghar</Link>
-          <Link to="/support">Net Metering</Link>
+          <Link to="/net-metering">Net Metering</Link>
           <Link to="/certifications">Our Brands</Link>
           <a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a>
         </div>

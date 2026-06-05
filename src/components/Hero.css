@@ -49,10 +49,33 @@
   color: var(--accent-primary);
 }
 
+.hero-ctas-container {
+  margin-bottom: 40px;
+}
+
 .hero-ctas {
   display: flex;
   gap: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 16px;
+}
+
+.hero-trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero-trust-strip .trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-trust-strip .trust-item svg {
+  color: #16a34a;
 }
 
 .hero-features {
