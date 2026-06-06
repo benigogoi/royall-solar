@@ -52,9 +52,16 @@
   margin-bottom: 0;
 }
 
-.trust-check {
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap; /* Prevents icon and text from wrapping to separate lines */
+}
+
+.trust-icon {
   color: var(--accent-primary);
-  font-weight: 800;
+  fill: var(--accent-primary);
 }
 
 .dot-divider {
