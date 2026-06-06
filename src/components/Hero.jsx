@@ -1,5 +1,4 @@
-import { contactDetails, heroHighlights } from '../data/siteContent';
-import { Phone, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -7,49 +6,38 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-overlay"></div>
       <div className="container hero-container">
+        {/* Left Content Side */}
         <div className="hero-content">
           <div className="hero-badge">
-            <CheckCircle2 size={16} />
-            <span>Solar EPC Company Serving All Assam</span>
+            <CheckCircle2 size={14} />
+            <span>Assam's Trusted Rooftop Solar Partner</span>
           </div>
-          <h1>Save money on electricity with trusted solar solutions across Assam.</h1>
-          <p>Royall Solar delivers complete <strong>residential, commercial, and industrial solar solutions</strong> across Assam. From rooftop solar systems and hybrid installations to batteries, inverters, and power backup solutions, we help customers reduce electricity costs and achieve energy independence.</p>
+          <h1>Lower Your Electricity Bills With Rooftop Solar</h1>
+          <p className="hero-subheadline">
+            Trusted solar solutions for homes, businesses, and industries across Assam.
+          </p>
           
-          <div className="hero-ctas-container">
+          <div className="hero-actions-panel">
             <div className="hero-ctas">
-              <a href="#contact" className="btn btn-primary">
-                <Phone size={20} style={{ marginRight: '10px' }} />
+              <a href="#contact" className="btn btn-primary hero-primary-btn">
                 Get Free Consultation
               </a>
-              <a href="#solutions" className="btn btn-secondary">
-                Explore Solutions
+              <a href="#solutions" className="hero-secondary-link">
+                Explore Solutions <ArrowRight size={16} />
               </a>
             </div>
             
             <div className="hero-trust-strip">
-              <span className="trust-item"><CheckCircle2 size={14} /> Trusted Across Assam</span>
-              <span className="trust-item"><CheckCircle2 size={14} /> Residential & Commercial Solutions</span>
-              <span className="trust-item"><CheckCircle2 size={14} /> Quality Installation & Support</span>
+              <span className="trust-item">✓ Trusted Across Assam</span>
+              <span className="trust-item">✓ Residential & Commercial Solutions</span>
+              <span className="trust-item">✓ Professional Installation & Support</span>
             </div>
-          </div>
-
-          <div className="hero-features">
-            {heroHighlights.map((item, index) => (
-              <div key={index} className="hero-feat-item">
-                <span className="feat-value">{item.value}</span>
-                <span className="feat-label">{item.label}</span>
-              </div>
-            ))}
           </div>
         </div>
         
+        {/* Right Visual Side */}
         <div className="hero-image-side">
-          <img src="/assets/royall_solar_hero.png" alt="Residential and commercial solar installation in Assam" className="hero-main-img" />
-          <div className="subsidy-sticker">
-            <span>ALL ASSAM</span>
-            <strong>SOLAR EPC</strong>
-            <span>CONSULTATION</span>
-          </div>
+          <img src="/assets/installations/home_solar.jpg" alt="Residential rooftop solar setup in Assam" className="hero-main-img" />
         </div>
       </div>
     </section>
