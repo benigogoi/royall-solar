@@ -14,13 +14,13 @@ const Clients = () => {
       type: 'Commercial Grid-Tie',
       location: 'Guwahati, Assam',
       desc: 'Scalable solar solutions for offices, retail spaces, hotels and institutions across Assam.',
-      image: '/assets/installations/backup_system.jpg'
+      image: '/assets/installations/guwahati_commercial.png'
     },
     {
       type: 'Industrial Solar Plant',
       location: 'Dibrugarh, Assam',
       desc: 'Large-scale solar installations engineered for high energy demand and long-term savings.',
-      image: '/assets/office_building.png'
+      image: '/assets/installations/dibrugarh_industrial.png'
     }
   ];
 

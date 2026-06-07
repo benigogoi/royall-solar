@@ -234,9 +234,9 @@ const HybridPage = () => {
               Hybrid solar systems are becoming increasingly popular across Assam because they provide reliable power during outages while reducing electricity expenses. They are particularly suitable for homes, businesses and institutions that require uninterrupted operation.
             </p>
             <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: '24px 0 16px', textTransform: 'none' }}>Who Should Install Hybrid Solar:</h3>
-            <ul className="summary-list">
+            <ul className="summary-list" style={{ listStyleType: 'none', paddingLeft: 0 }}>
               {targetAudiences.map((audience, i) => (
-                <li key={i} style={{ alignItems: 'flex-start', marginBottom: '16px' }}>
+                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '16px', gap: '12px' }}>
                   <CheckCircle2 size={20} style={{ color: 'var(--accent-primary)', flexShrink: 0, marginTop: '2px' }} />
                   <div>
                     <strong style={{ color: '#fff', display: 'block' }}>{audience.name}</strong>
@@ -246,11 +246,12 @@ const HybridPage = () => {
               ))}
             </ul>
           </div>
-          <div className="summary-visual">
-            <div className="roi-badge" style={{ padding: '30px' }}>
-              <strong style={{ fontSize: '2.5rem' }}>100%</strong>
-              <span>Solar Energy Storage Solutions</span>
-            </div>
+          <div className="summary-visual" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/8/80/Official_portrait_of_Narendra_Modi%2C_2022.jpg" 
+              alt="PM Narendra Modi" 
+              style={{ width: '100%', maxWidth: '350px', height: 'auto', borderRadius: '16px', boxShadow: 'var(--shadow-lg)', objectFit: 'cover' }} 
+            />
           </div>
         </div>
       </section>

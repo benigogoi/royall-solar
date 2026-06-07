@@ -41,9 +41,9 @@ const ResidentialPage = () => {
   ];
 
   const systemOptions = [
-    { capacity: '3kW Residential Solar', desc: 'Suitable for smaller households with baseline cooling and lighting requirements.' },
-    { capacity: '5kW Residential Solar', desc: 'Ideal for average family homes running ACs, refrigerators, and pumps.' },
-    { capacity: '10kW Residential Solar', desc: 'Perfect for larger households with higher energy usage and multiple heavy appliances.' }
+    { capacity: '3kW Residential Solar', desc: 'Suitable for smaller households with baseline cooling and lighting requirements.', image: '/assets/installations/assam_3kw_solar.png' },
+    { capacity: '5kW Residential Solar', desc: 'Ideal for average family homes running ACs, refrigerators, and pumps.', image: '/assets/installations/assam_5kw_solar.png' },
+    { capacity: '10kW Residential Solar', desc: 'Perfect for larger households with higher energy usage and multiple heavy appliances.', image: '/assets/installations/assam_10kw_solar.png' }
   ];
 
   return (
@@ -51,7 +51,7 @@ const ResidentialPage = () => {
       <PageHeader 
         title="Residential Solar Solutions" 
         subtitle="Power Your Home with Clean Solar Energy" 
-        bgImage="/assets/installations/home_solar.jpg" 
+        bgImage="/assets/assam_home_solar.png" 
       />
 
       {/* Intro section */}
@@ -67,15 +67,27 @@ const ResidentialPage = () => {
       </section>
 
       {/* Introduction */}
-      <section className="section bg-subtle" style={{ borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0', padding: '60px 0' }}>
-        <div className="container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 className="section-title">Smart Solar Solutions for Modern Homes</h2>
-          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '16px' }}>
-            Royall Solar helps homeowners across Assam reduce energy costs through professionally designed <strong>rooftop solar installation Assam</strong> systems. Our <strong>home solar solutions Assam</strong> are customized to match your household energy needs while maximizing long-term savings.
-          </p>
-          <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '16px' }}>
-            As a leading <strong>residential solar company Assam</strong> and trusted <strong>solar EPC company Assam</strong>, we source only tier-1 <strong>solar panels for homes</strong> to ensure reliable and efficient generation for decades.
-          </p>
+      <section className="section bg-subtle" style={{ borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0', padding: '80px 0' }}>
+        <div className="container">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '50px',
+            alignItems: 'center'
+          }} className="residential-intro-grid">
+            <div style={{ textAlign: 'left' }}>
+              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '20px' }}>Smart Solar Solutions for Modern Homes</h2>
+              <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '16px' }}>
+                Royall Solar helps homeowners across Assam reduce energy costs through professionally designed <strong>rooftop solar installation Assam</strong> systems. Our <strong>home solar solutions Assam</strong> are customized to match your household energy needs while maximizing long-term savings.
+              </p>
+              <p style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8', marginTop: '16px' }}>
+                As a leading <strong>residential solar company Assam</strong> and trusted <strong>solar EPC company Assam</strong>, we source only tier-1 <strong>solar panels for homes</strong> to ensure reliable and efficient generation for decades.
+              </p>
+            </div>
+            <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 15px 30px rgba(0,0,0,0.08)' }} className="residential-intro-image">
+              <img src="/assets/installations/assamese_family.png" alt="Happy Assamese family with solar home" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -131,15 +143,18 @@ const ResidentialPage = () => {
                 background: '#fff',
                 border: '1px solid #e2e8f0',
                 borderRadius: '16px',
-                padding: '30px 24px',
-                textAlign: 'center',
+                overflow: 'hidden',
+                display: 'flex',
+                flexDirection: 'column',
                 boxShadow: '0 4px 12px rgba(0,0,0,0.02)'
-              }}>
-                <div style={{ width: '50px', height: '50px', background: '#f8fafc', color: '#166534', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px' }}>
-                  <Sun size={24} />
+              }} className="system-option-card">
+                <div style={{ width: '100%', height: '200px', overflow: 'hidden' }}>
+                  <img src={option.image} alt={option.capacity} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>{option.capacity}</h3>
-                <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>{option.desc}</p>
+                <div style={{ padding: '24px', textAlign: 'center', flexGrow: 1 }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>{option.capacity}</h3>
+                  <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>{option.desc}</p>
+                </div>
               </div>
             ))}
           </div>

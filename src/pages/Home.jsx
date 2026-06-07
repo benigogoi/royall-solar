@@ -40,6 +40,9 @@ const Home = () => {
       {/* 2. Solar Savings Calculator Placeholder */}
       <SolarSavingsCalculator />
 
+      {/* 7. Our Simple Process */}
+      <InstallationProcess />
+
       {/* 3. About */}
       <AboutSection />
 
@@ -51,9 +54,6 @@ const Home = () => {
 
       {/* 6. Trusted Brands We Work With */}
       <Partners />
-
-      {/* 7. Our Simple Process */}
-      <InstallationProcess />
 
       {/* 8. Customer Testimonials */}
       <Testimonials />

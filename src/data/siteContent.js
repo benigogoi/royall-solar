@@ -170,6 +170,18 @@ export const productCategories = [
     ]
   },
   {
+    id: 'solar-street-lights',
+    title: 'Solar Street Lights',
+    description: 'Eco-friendly, integrated, and all-in-one solar street lighting systems for pathways, parks, roads, and security lighting across Assam.',
+    image: '/assets/products/street_light.png',
+    features: [
+      'Auto dusk-to-dawn operation',
+      'High-brightness LED output',
+      'Maintenance-free lithium battery',
+      'Weatherproof IP65/IP66 enclosure'
+    ]
+  },
+  {
     id: 'residential-solutions',
     title: 'Residential Solar Solutions',
     description: 'Customized rooftop solar systems designed to reduce electricity bills and increase energy independence for homeowners.',

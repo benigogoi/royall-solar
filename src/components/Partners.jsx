@@ -4,8 +4,15 @@ const Partners = () => {
   const brands = [
     {
       name: 'Waaree',
-      type: 'image',
-      src: '/assets/brands/waaree.png'
+      type: 'svg',
+      svg: (
+        <svg viewBox="0 0 180 50" width="100%" height="100%">
+          <circle cx="22" cy="24" r="7" fill="#F37021" />
+          <circle cx="22" cy="24" r="4" fill="#FFC20E" />
+          <path d="M22 10 L22 14 M22 34 L22 38 M10 24 L14 24 M34 24 L38 24 M14 16 L17 19 M27 29 L30 32 M14 32 L17 29 M27 19 L30 16" stroke="#F37021" strokeWidth="2.2" strokeLinecap="round" />
+          <text x="46" y="32" fill="#0B3C5D" fontSize="21" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.8">WAAREE</text>
+        </svg>
+      )
     },
     {
       name: 'Adani Solar',
@@ -15,9 +22,15 @@ const Partners = () => {
     },
     {
       name: 'UTL',
-      type: 'image',
-      src: '/assets/brands/utl.png',
-      customStyle: { maxHeight: '75px' }
+      type: 'svg',
+      svg: (
+        <svg viewBox="0 0 180 50" width="100%" height="100%">
+          <path d="M12 25 L20 33 L36 17" stroke="#ED1C24" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+          <circle cx="24" cy="25" r="14" stroke="#005CA9" strokeWidth="3" fill="none" strokeDasharray="6 3" />
+          <text x="48" y="33" fill="#005CA9" fontSize="25" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">UTL</text>
+          <text x="106" y="31" fill="#ED1C24" fontSize="13" fontWeight="800" fontFamily="sans-serif" letterSpacing="1">SOLAR</text>
+        </svg>
+      )
     },
     {
       name: 'Luminous',

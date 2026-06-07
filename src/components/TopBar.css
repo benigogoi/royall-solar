@@ -67,6 +67,14 @@
   opacity: 0.9;
 }
 
+.top-bar-brand-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
   .top-bar-inner {
     width: calc(100% - 32px);

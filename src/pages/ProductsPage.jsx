@@ -6,7 +6,16 @@ import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
 const ProductsPage = () => {
-  const brandsList = ['UTL', 'Luminous', 'Livguard', 'Exide', 'Microtek', 'Havells', 'Waaree', 'Adani Solar'];
+  const brandsList = [
+    { name: 'UTL', logo: '/assets/brands/utl.png' },
+    { name: 'Luminous', logo: '/assets/brands/luminous.jpg' },
+    { name: 'Livguard', logo: '/assets/brands/livguard.png' },
+    { name: 'Exide', logo: '/assets/brands/exide.svg' },
+    { name: 'Microtek', logo: '/assets/brands/microtek.png' },
+    { name: 'Havells', logo: '/assets/brands/havells.svg' },
+    { name: 'Waaree', logo: '/assets/brands/waaree.png' },
+    { name: 'Adani Solar', logo: '/assets/brands/adani.png' }
+  ];
 
   const whyChoosePoints = [
     'Genuine products from leading brands',
@@ -71,10 +80,13 @@ const ProductsPage = () => {
         <div className="container">
           <h2 className="section-title">Trusted Brands We Work With</h2>
           <p className="section-subtitle">Royall Solar partners with some of the most respected names in the solar and power backup industry to deliver dependable performance and long-term value.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '20px', marginTop: '30px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '20px', marginTop: '30px' }}>
             {brandsList.map((brand) => (
-              <div key={brand} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '20px', textAlign: 'center', fontWeight: 'bold', fontSize: '1.1rem', color: '#0f172a' }}>
-                {brand}
+              <div key={brand.name} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '24px 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px', minHeight: '120px', boxShadow: 'var(--shadow-sm)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }} className="brand-card-interactive">
+                <div style={{ width: '100%', height: '55px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src={brand.logo} alt={`${brand.name} logo`} style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+                </div>
+                <span style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#475569', textAlign: 'center' }}>{brand.name}</span>
               </div>
             ))}
           </div>

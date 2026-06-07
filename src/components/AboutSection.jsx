@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './AboutSection.css';
 
 const AboutSection = () => {
@@ -17,7 +18,7 @@ const AboutSection = () => {
               Our team works with leading solar and power backup brands to deliver customized systems 
               that maximize energy savings and long-term performance.
             </p>
-            <button className="about-btn">Learn About Royall Solar</button>
+            <Link to="/about" className="about-btn">Learn About Royall Solar</Link>
           </div>
           <div className="about-brand-image">
             <img src="/assets/office_building.png" alt="Royall Solar solar energy office in Assam" />

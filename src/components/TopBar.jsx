@@ -12,6 +12,7 @@ const TopBar = () => {
           <span className="top-bar-label">A unit of</span>
           <div className="top-bar-divider" />
           <img src="/parentBrand.png" alt="Royal Infratech" className="top-bar-logo" />
+          <span className="top-bar-brand-name">Royal Infratech</span>
         </div>
       </div>
     </div>

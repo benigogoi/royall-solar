@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { productCategories } from '../data/siteContent';
 import './ProductCategories.css';
 
@@ -11,7 +12,7 @@ const ProductCategories = () => {
         </div>
 
         <div className="categories-grid">
-          {productCategories.map((cat) => (
+          {productCategories.slice(0, 3).map((cat) => (
             <div key={cat.id} className="category-card">
               <div className="category-image">
                 <img src={cat.image} alt={cat.title} />
@@ -27,6 +28,12 @@ const ProductCategories = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center" style={{ marginTop: '48px' }}>
+          <Link to="/products" className="view-all-products-btn">
+            View All Products
+          </Link>
         </div>
       </div>
     </section>

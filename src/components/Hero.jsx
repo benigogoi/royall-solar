@@ -31,22 +31,22 @@ const Hero = () => {
         <div className="hero-get-solar-for">
           <div className="get-solar-cards">
             <div className="solar-card">
-              <div className="solar-icon-wrapper home-icon">
-                <Home size={28} />
+              <div className="solar-image-circle">
+                <img src="/assets/assam_home_solar.png" alt="Solar for Homes in Assam" className="solar-circle-img" />
               </div>
               <h4>Homes</h4>
               <p>Save up to 90% on electricity bills</p>
             </div>
             <div className="solar-card">
-              <div className="solar-icon-wrapper society-icon">
-                <Building2 size={28} />
+              <div className="solar-image-circle">
+                <img src="/assets/assam_society_solar.png" alt="Solar for Housing Societies in Assam" className="solar-circle-img" />
               </div>
               <h4>Housing Societies</h4>
               <p>Reduce common-area power costs</p>
             </div>
             <div className="solar-card">
-              <div className="solar-icon-wrapper commercial-icon">
-                <Factory size={28} />
+              <div className="solar-image-circle">
+                <img src="/assets/assam_commercial_solar.png" alt="Solar for Commercial in Assam" className="solar-circle-img" />
               </div>
               <h4>Commercial</h4>
               <p>Power your business with green energy</p>
