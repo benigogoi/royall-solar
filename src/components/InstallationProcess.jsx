@@ -30,20 +30,14 @@ const InstallationProcess = () => {
           ))}
         </div>
 
-        <div className="subsidy-alert-card">
-          <div className="subsidy-info">
-            <div className="subsidy-icon">
-              <div className="pulse"></div>
-              <span>i</span>
-            </div>
-            <div className="subsidy-text">
-              <h3>READY TO SWITCH TO SOLAR?</h3>
-              <p>Take control of your energy costs with reliable solar solutions from Royall Solar. Contact our team today for a free consultation and customized proposal.</p>
-            </div>
+        <div className="modern-cta-card">
+          <div className="cta-content">
+            <h3>READY TO SWITCH TO SOLAR?</h3>
+            <p>Take control of your energy costs with reliable solar solutions from Royall Solar. Contact our team today for a free consultation and customized proposal.</p>
           </div>
-          <button className="subsidy-btn">
-            GET STARTED TODAY <ArrowRight size={18} />
-          </button>
+          <a href="#contact" className="btn modern-cta-btn">
+            GET STARTED TODAY <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+          </a>
         </div>
       </div>
     </section>

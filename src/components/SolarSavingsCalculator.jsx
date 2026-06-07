@@ -6,6 +6,7 @@ const SolarSavingsCalculator = () => {
   const [pinCode, setPinCode] = useState('');
   const [monthlyBill, setMonthlyBill] = useState('3000');
   const [showResults, setShowResults] = useState(false);
+  const [error, setError] = useState('');
   const resultsRef = useRef(null);
 
   const billVal = parseFloat(monthlyBill) || 0;
@@ -18,6 +19,17 @@ const SolarSavingsCalculator = () => {
 
   const handleCalculate = (e) => {
     e.preventDefault();
+    if (pinCode.length !== 6) {
+      setError('Please enter a valid 6-digit PIN code.');
+      setShowResults(false);
+      return;
+    }
+    if (!pinCode.startsWith('78')) {
+      setError('We only serve Assam at the moment.');
+      setShowResults(false);
+      return;
+    }
+    setError('');
     setShowResults(true);
     setTimeout(() => {
       if (resultsRef.current) {
@@ -65,9 +77,13 @@ const SolarSavingsCalculator = () => {
                   id="pin-code" 
                   placeholder="e.g. 781001" 
                   value={pinCode}
-                  onChange={(e) => setPinCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
+                  onChange={(e) => {
+                    setError('');
+                    setPinCode(e.target.value.replace(/\D/g, '').slice(0, 6));
+                  }}
                   required
                 />
+                {error && <span className="calc-error-msg">{error}</span>}
               </div>
 
               <div className="calc-form-group">
@@ -96,19 +112,12 @@ const SolarSavingsCalculator = () => {
           </div>
 
           {/* Right Side: Clean Solar Visual */}
-          <div className="calculator-visual-panel">
-            <div className="visual-graphic">
-              <div className="visual-grid-bg">
-                <LayoutGrid size={120} className="grid-icon-bg" />
-              </div>
-              <div className="visual-hero-circle">
-                <Calculator size={48} className="calc-hero-icon" />
-              </div>
-            </div>
-            <div className="visual-caption">
-              <h4>Switch to Solar, Save Instantly</h4>
-              <p>Rooftop solar systems convert clean sunlight into high-performance electricity for homes and businesses across Assam.</p>
-            </div>
+          <div className="calculator-visual-panel" style={{ padding: 0, justifyContent: 'center' }}>
+            <img 
+              src="/assets/surya_ghar_subsidy.png" 
+              alt="PM Surya Ghar Yojana Banner" 
+              style={{ width: '100%', height: 'auto', borderRadius: '16px', objectFit: 'contain', maxHeight: '350px' }} 
+            />
           </div>
         </div>
 

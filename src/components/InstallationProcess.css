@@ -71,84 +71,109 @@
   z-index: 1;
 }
 
-/* Subsidy Card */
-.subsidy-alert-card {
+/* Modern CTA Card */
+.modern-cta-card {
   margin-top: 60px;
-  background: #fffdf5;
-  border: 1px solid #fef3c7;
-  border-radius: 8px;
-  padding: 30px 40px;
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, #064e3b 100%);
+  border-radius: 16px;
+  padding: 40px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
+  box-shadow: 0 20px 40px rgba(6, 78, 59, 0.15);
+  position: relative;
+  overflow: hidden;
 }
 
-.subsidy-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.subsidy-icon {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  color: #d97706;
-  border: 2px solid #fcd34d;
+.modern-cta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+  transform: translate(30%, -30%);
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  flex-shrink: 0;
+  pointer-events: none;
 }
 
-.subsidy-text h3 {
-  font-size: 1.1rem;
+.cta-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h3 {
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #92400e;
-  margin-bottom: 4px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.subsidy-text p {
-  font-size: 0.95rem;
-  color: #b45309;
+.cta-content p {
+  font-size: 1.05rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0;
 }
 
-.subsidy-btn {
-  background: #064e3b;
+.modern-cta-btn {
+  background: var(--accent-primary);
   color: #ffffff;
   border: none;
-  padding: 12px 24px;
-  font-size: 0.85rem;
+  padding: 16px 36px;
+  font-size: 1rem;
   font-weight: 800;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
   text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
-.subsidy-btn:hover {
-  background: #065f46;
+.modern-cta-btn:hover {
+  background: var(--accent-primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(249, 115, 22, 0.4);
 }
 
 @media (max-width: 1024px) {
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .subsidy-alert-card {
+  .modern-cta-card {
     flex-direction: column;
     text-align: center;
+    padding: 40px 30px;
   }
-  .subsidy-info {
-    flex-direction: column;
+  .cta-content p {
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 640px) {
   .process-grid {
     grid-template-columns: 1fr;
+  }
+  .modern-cta-card {
+    padding: 30px 20px;
+  }
+  .cta-content h3 {
+    font-size: 1.25rem;
+  }
+  .modern-cta-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

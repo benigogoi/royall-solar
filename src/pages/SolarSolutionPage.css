@@ -1043,7 +1043,8 @@
     font-size: 0.85rem;
   }
 
-  .intro-container {
+  .intro-container,
+  .technical-info-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }

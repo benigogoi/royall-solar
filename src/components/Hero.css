@@ -22,11 +22,15 @@
 .hero-text-content h1 {
   font-size: clamp(2rem, 4.5vw, 3.5rem); /* Significantly reduced font size */
   font-weight: 800; /* Slightly less heavy than 900 */
-  color: #0f172a;
   line-height: 1.2;
   margin-bottom: 12px;
   text-transform: none;
   letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
 }
 
 .hero-subheadline {
@@ -38,6 +42,11 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero-text-content .hero-subheadline {
+  font-size: 1.15rem;
+  max-width: 900px;
 }
 
 .hero-ratings-strip {

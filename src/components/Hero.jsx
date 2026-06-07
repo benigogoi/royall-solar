@@ -6,7 +6,8 @@ const Hero = () => {
     <section className="hero">
       <div className="container hero-container">
         <div className="hero-text-content">
-          <h1>Lower Your Electricity Bills<br />With Rooftop Solar</h1>
+          <h1>Built for the North East.<br />Powered by the Sun.</h1>
+          <p className="hero-subheadline">Trusted rooftop solar solutions for homes and businesses across the region.</p>
         </div>
       </div>
       
@@ -50,20 +51,6 @@ const Hero = () => {
               </div>
               <h4>Commercial</h4>
               <p>Power your business with green energy</p>
-            </div>
-          </div>
-
-          <div className="hero-bottom-text" style={{ marginTop: '50px', paddingBottom: '30px' }}>
-            <p className="hero-subheadline">
-              Trusted solar solutions for homes, businesses, and industries across Assam.
-            </p>
-            
-            <div className="hero-ratings-strip">
-              <span className="trust-item"><Star size={14} className="trust-icon" /> Trusted Across Assam</span>
-              <span className="dot-divider">|</span> 
-              <span className="trust-item"><Star size={14} className="trust-icon" /> Residential & Commercial Solutions</span>
-              <span className="dot-divider">|</span> 
-              <span className="trust-item"><Star size={14} className="trust-icon" /> Professional Support</span>
             </div>
           </div>
         </div>
