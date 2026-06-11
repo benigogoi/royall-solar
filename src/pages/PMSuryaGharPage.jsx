@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PageHeader from '../components/PageHeader';
+import { contactDetails } from '../data/siteContent';
 import { 
   CheckCircle2, 
   ChevronDown, 
@@ -144,11 +144,68 @@ const PMSuryaGharPage = () => {
 
   return (
     <div className="surya-ghar-page">
-      <PageHeader 
-        title="PM Surya Ghar Yojana" 
-        subtitle="Government Solar Subsidy Scheme for Homes in Assam" 
-        bgImage="/assets/assam_solar_hero.png" 
-      />
+      {/* Custom Hero — PM Surya Ghar Scheme */}
+      <section className="pmsg-hero">
+        <div className="pmsg-tricolor-bar">
+          <span className="tc-saffron"></span>
+          <span className="tc-white"></span>
+          <span className="tc-green"></span>
+        </div>
+        <div className="pmsg-hero-inner container">
+          {/* LEFT: Text Content */}
+          <div className="pmsg-hero-text">
+            <div className="pmsg-scheme-badge">
+              <span className="scheme-dot"></span>
+              Government of India — Flagship Scheme
+            </div>
+            <h1 className="pmsg-hero-title">
+              PM <span className="pmsg-accent">Surya Ghar</span>
+              <br />Muft Bijli Yojana
+            </h1>
+            <p className="pmsg-hero-subtitle">
+              Get rooftop solar installed with up to <strong>₹78,000 direct subsidy</strong> from the Government of India. Available for homes in Assam through MNRE-approved partners.
+            </p>
+            <div className="pmsg-hero-stats">
+              <div className="pmsg-stat">
+                <span className="pmsg-stat-value">₹78,000</span>
+                <span className="pmsg-stat-label">Max Subsidy</span>
+              </div>
+              <div className="pmsg-stat-divider"></div>
+              <div className="pmsg-stat">
+                <span className="pmsg-stat-value">300 Units</span>
+                <span className="pmsg-stat-label">Free/Month</span>
+              </div>
+              <div className="pmsg-stat-divider"></div>
+              <div className="pmsg-stat">
+                <span className="pmsg-stat-value">25 Years</span>
+                <span className="pmsg-stat-label">Panel Life</span>
+              </div>
+            </div>
+            <div className="pmsg-hero-actions">
+              <Link to="/contact" className="btn btn-primary">Apply Now — It's Free</Link>
+              <a href="#subsidy-table" className="btn btn-outline">View Subsidy Rates</a>
+            </div>
+          </div>
+
+          {/* RIGHT: Modi Image — No masking, bold frame */}
+          <div className="pmsg-hero-image-col">
+            <div className="pmsg-image-frame">
+              <div className="pmsg-image-corner pmsg-corner-tl"></div>
+              <div className="pmsg-image-corner pmsg-corner-tr"></div>
+              <div className="pmsg-image-corner pmsg-corner-bl"></div>
+              <div className="pmsg-image-corner pmsg-corner-br"></div>
+              <img
+                src="/assets/modiJi.png"
+                alt="PM Narendra Modi — PM Surya Ghar Yojana"
+                className="pmsg-modi-img"
+              />
+              <div className="pmsg-image-badge">
+                <span>🇮🇳</span> PM Narendra Modi
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Intro Section */}
       <section className="section bg-light">
@@ -389,7 +446,7 @@ const PMSuryaGharPage = () => {
           </p>
           <div className="cta-btn-group">
             <Link to="/contact" className="btn btn-primary btn-large">Get Free Solar Quote</Link>
-            <a href="tel:+919707670101" className="btn btn-secondary btn-large">Call Us: +91 9707670101</a>
+            <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="btn btn-secondary btn-large">Call Us: {contactDetails.mobilePhone}</a>
           </div>
         </div>
       </section>

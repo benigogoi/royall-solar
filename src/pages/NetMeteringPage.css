@@ -1,0 +1,356 @@
+/* NetMeteringPage.css — Custom Hero */
+
+/* ============================================
+   NET METERING CUSTOM HERO
+   ============================================ */
+.netmeter-hero {
+  margin-top: calc(var(--nav-height) + var(--top-bar-height));
+  background: linear-gradient(135deg, #0d1f13 0%, #0f2d1c 55%, #091a0f 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle dot-grid pattern */
+.netmeter-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(22, 163, 74, 0.12) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+}
+
+/* Green glow top-left */
+.netmeter-hero::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(22, 163, 74, 0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Sliding green accent bar */
+.netmeter-accent-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #166534, #16a34a, #4ade80, #16a34a, #166534);
+  background-size: 200% 100%;
+  animation: nm-bar-slide 3.5s linear infinite;
+}
+@keyframes nm-bar-slide {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Hero layout */
+.netmeter-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 60px;
+  align-items: center;
+  padding: 64px 0 72px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Left: text */
+.netmeter-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.3);
+  color: #4ade80;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+}
+.netmeter-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 8px #4ade80;
+  animation: nm-dot-pulse 2s infinite;
+}
+@keyframes nm-dot-pulse {
+  0%, 100% { box-shadow: 0 0 4px #4ade80; opacity: 1; }
+  50%       { box-shadow: 0 0 14px #4ade80; opacity: 0.5; }
+}
+
+.netmeter-hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.netmeter-title-accent {
+  color: #4ade80;
+}
+
+.netmeter-hero-subtitle {
+  font-size: 1.05rem;
+  color: #6b9e7a;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 500px;
+}
+.netmeter-hero-subtitle strong {
+  color: #d1fae5;
+}
+
+/* Stats */
+.netmeter-stats-row {
+  display: flex;
+  align-items: stretch;
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+.netmeter-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 26px;
+  gap: 4px;
+}
+.netmeter-stat:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+.netmeter-stat-val {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: #4ade80;
+  line-height: 1;
+}
+.netmeter-stat-lbl {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* CTA */
+.netmeter-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Right: Flow diagram card */
+.netmeter-hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.netmeter-flow-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+  border-radius: 20px;
+  padding: 36px 30px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(22, 163, 74, 0.1);
+  position: relative;
+}
+
+.netmeter-flow-card-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #4ade80;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Flow diagram */
+.nm-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.nm-node {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px 20px;
+  width: 100%;
+  transition: background 0.2s;
+}
+.nm-node:hover {
+  background: rgba(22, 163, 74, 0.08);
+  border-color: rgba(22, 163, 74, 0.3);
+}
+
+.nm-node-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.nm-icon-solar  { background: rgba(250, 204, 21, 0.12); }
+.nm-icon-home   { background: rgba(99, 102, 241, 0.12); }
+.nm-icon-meter  { background: rgba(22, 163, 74, 0.12); }
+.nm-icon-grid   { background: rgba(239, 68, 68, 0.12); }
+
+.nm-node-text strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #f1f5f9;
+  font-weight: 700;
+}
+.nm-node-text span {
+  font-size: 0.72rem;
+  color: #475569;
+}
+
+/* Animated arrow connectors */
+.nm-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 36px;
+  position: relative;
+  width: 2px;
+  margin: 0;
+}
+.nm-connector-line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, rgba(22,163,74,0.3), rgba(22,163,74,0.8));
+  position: relative;
+  overflow: hidden;
+}
+.nm-connector-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to bottom, transparent, #4ade80, transparent);
+  animation: nm-flow-down 1.4s linear infinite;
+}
+@keyframes nm-flow-down {
+  0%   { top: -60%; }
+  100% { top: 110%; }
+}
+
+.nm-connector-arrow {
+  color: #4ade80;
+  font-size: 1rem;
+  line-height: 1;
+  animation: nm-pulse-arrow 1.4s ease-in-out infinite;
+}
+@keyframes nm-pulse-arrow {
+  0%, 100% { opacity: 0.5; transform: translateY(0); }
+  50%       { opacity: 1;   transform: translateY(2px); }
+}
+
+/* Bidirectional label on meter connector */
+.nm-bidir-label {
+  position: absolute;
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(22, 163, 74, 0.15);
+  border: 1px solid rgba(22, 163, 74, 0.4);
+  color: #4ade80;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Savings badge */
+.netmeter-savings-badge {
+  margin-top: 20px;
+  background: rgba(22, 163, 74, 0.1);
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.netmeter-savings-badge .savings-num {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #4ade80;
+  font-family: var(--font-heading);
+  line-height: 1;
+}
+.netmeter-savings-badge .savings-text {
+  font-size: 0.8rem;
+  color: #6b9e7a;
+  line-height: 1.4;
+}
+.netmeter-savings-badge .savings-text strong {
+  color: #d1fae5;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1060px) {
+  .netmeter-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 52px 0 60px;
+    text-align: center;
+  }
+  .netmeter-hero-right {
+    order: -1;
+  }
+  .netmeter-stats-row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .netmeter-hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .netmeter-hero-actions {
+    justify-content: center;
+  }
+  .netmeter-flow-card {
+    max-width: 380px;
+  }
+  .nm-bidir-label {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .netmeter-stat {
+    padding: 14px 16px;
+  }
+  .netmeter-stat-val {
+    font-size: 1.2rem;
+  }
+}

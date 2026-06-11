@@ -130,7 +130,7 @@
 
 /* Get Solar For Section */
 .hero-get-solar-for {
-  max-width: 1080px;
+  max-width: 100%;
   margin: -40px auto 0; /* Tucked slightly under the fade */
   padding: 0 20px;
   position: relative;

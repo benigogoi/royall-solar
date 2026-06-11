@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PageHeader from '../components/PageHeader';
 import { CheckCircle2, ChevronDown, BarChart3, HelpCircle, FileCheck, ShieldCheck, Settings, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import './NetMeteringPage.css';
 
 const NetMeteringPage = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -65,11 +65,106 @@ const NetMeteringPage = () => {
 
   return (
     <div style={{ background: '#fff' }}>
-      <PageHeader 
-        title="Net Metering Solutions" 
-        subtitle="Maximize Solar Savings with Net Metering" 
-        bgImage="/assets/assam_solar_hero.png" 
-      />
+      {/* Custom Net Metering Hero */}
+      <section className="netmeter-hero">
+        <div className="netmeter-accent-bar"></div>
+        <div className="netmeter-hero-inner container">
+          {/* Left: Text */}
+          <div className="netmeter-hero-text">
+            <div className="netmeter-eyebrow">
+              <span className="netmeter-eyebrow-dot"></span>
+              APDCL Grid Integration — Assam
+            </div>
+            <h1 className="netmeter-hero-title">
+              Net <span className="netmeter-title-accent">Metering</span>
+              <br />Solutions Assam
+            </h1>
+            <p className="netmeter-hero-subtitle">
+              Send surplus solar energy back to the <strong>APDCL grid</strong> and earn credits that slash your electricity bill by up to 90%.
+            </p>
+            <div className="netmeter-stats-row">
+              <div className="netmeter-stat">
+                <span className="netmeter-stat-val">90%</span>
+                <span className="netmeter-stat-lbl">Bill Savings</span>
+              </div>
+              <div className="netmeter-stat">
+                <span className="netmeter-stat-val">2-Way</span>
+                <span className="netmeter-stat-lbl">Energy Flow</span>
+              </div>
+              <div className="netmeter-stat">
+                <span className="netmeter-stat-val">APDCL</span>
+                <span className="netmeter-stat-lbl">Approved</span>
+              </div>
+            </div>
+            <div className="netmeter-hero-actions">
+              <Link to="/contact" className="btn btn-primary">Get Free Consultation</Link>
+              {/* <a href="#how-it-works" className="btn btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.25)' }}>How It Works</a> */}
+            </div>
+          </div>
+
+          {/* Right: Animated Flow Diagram */}
+          <div className="netmeter-hero-right">
+            <div className="netmeter-flow-card">
+              <div className="netmeter-flow-card-title">⚡ Live Energy Flow — Net Metering</div>
+              <div className="nm-flow">
+                {/* Solar Panels */}
+                <div className="nm-node">
+                  <div className="nm-node-icon nm-icon-solar">☀️</div>
+                  <div className="nm-node-text">
+                    <strong>Solar Panels</strong>
+                    <span>Generating clean electricity</span>
+                  </div>
+                </div>
+                <div className="nm-connector">
+                  <div className="nm-connector-line"></div>
+                  <span className="nm-connector-arrow">▼</span>
+                </div>
+                {/* Home */}
+                <div className="nm-node">
+                  <div className="nm-node-icon nm-icon-home">🏠</div>
+                  <div className="nm-node-text">
+                    <strong>Your Property</strong>
+                    <span>Consumes solar energy first</span>
+                  </div>
+                </div>
+                <div className="nm-connector">
+                  <div className="nm-connector-line"></div>
+                  <span className="nm-connector-arrow">▼</span>
+                </div>
+                {/* Smart Meter */}
+                <div className="nm-node" style={{ borderColor: 'rgba(22,163,74,0.4)' }}>
+                  <div className="nm-node-icon nm-icon-meter">📊</div>
+                  <div className="nm-node-text">
+                    <strong>Smart Bidirectional Meter</strong>
+                    <span>Tracks import &amp; export precisely</span>
+                  </div>
+                </div>
+                <div className="nm-connector" style={{ position: 'relative' }}>
+                  <div className="nm-connector-line"></div>
+                  <span className="nm-connector-arrow">▼</span>
+                  <span className="nm-bidir-label">↕ 2-Way Flow</span>
+                </div>
+                {/* Grid */}
+                <div className="nm-node">
+                  <div className="nm-node-icon nm-icon-grid">🔌</div>
+                  <div className="nm-node-text">
+                    <strong>APDCL Utility Grid</strong>
+                    <span>Surplus exported → credits earned</span>
+                  </div>
+                </div>
+              </div>
+              {/* Savings badge */}
+              <div className="netmeter-savings-badge">
+                <span className="savings-num">₹0</span>
+                <div className="savings-text">
+                  <strong>Net Bill Goal</strong>
+                  Export surplus, earn credits, pay nothing
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Hero / Intro section */}
       <section className="section" style={{ padding: '60px 0 40px' }}>

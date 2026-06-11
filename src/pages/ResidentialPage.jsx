@@ -14,12 +14,12 @@ const ResidentialPage = () => {
   ];
 
   const idealFor = [
-    'Independent Homes',
-    'Duplex Homes',
-    'Apartment Rooftops',
-    'Residential Complexes',
-    'Farm Houses',
-    'Holiday Homes'
+    { title: 'Independent Homes', image: '/assets/installations/independenthomes.webp' },
+    { title: 'Duplex Homes', image: '/assets/installations/duplex.webp' },
+    { title: 'Apartment Rooftops', image: '/assets/assam_society_solar.png' },
+    { title: 'Residential Complexes', image: '/assets/housing_societies_solar.png' },
+    { title: 'Farm Houses', image: '/assets/installations/assamese_family.png' },
+    { title: 'Holiday Homes', image: '/assets/installations/home_solar.jpg' }
   ];
 
   const processSteps = [
@@ -54,17 +54,7 @@ const ResidentialPage = () => {
         bgImage="/assets/assam_home_solar.png" 
       />
 
-      {/* Intro section */}
-      <section className="section" style={{ padding: '60px 0 40px' }}>
-        <div className="container" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.8', fontWeight: 600, marginBottom: '24px' }}>
-            Reduce electricity bills, increase energy independence and enjoy reliable power with customized residential solar solutions designed for homes across Assam.
-          </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
-            Get Free Consultation
-          </Link>
-        </div>
-      </section>
+
 
       {/* Introduction */}
       <section className="section bg-subtle" style={{ borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0', padding: '80px 0' }}>
@@ -85,7 +75,7 @@ const ResidentialPage = () => {
               </p>
             </div>
             <div style={{ borderRadius: '24px', overflow: 'hidden', boxShadow: '0 15px 30px rgba(0,0,0,0.08)' }} className="residential-intro-image">
-              <img src="/assets/installations/assamese_family.png" alt="Happy Assamese family with solar home" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
+              <img src="/assets/installations/assam_residential_couple.jpg" alt="Happy Assamese couple with solar home" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }} />
             </div>
           </div>
         </div>
@@ -116,15 +106,28 @@ const ResidentialPage = () => {
 
       {/* Ideal For */}
       <section className="section bg-subtle" style={{ borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0', padding: '80px 0' }}>
-        <div className="container" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+        <div className="container" style={{ margin: '0 auto', textAlign: 'center' }}>
           <h2 className="section-title">Ideal For</h2>
           <p className="section-subtitle">Custom solar integration suited for diverse property configurations.</p>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginTop: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px', marginTop: '40px' }} className="ideal-for-grid">
             {idealFor.map((item, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', background: '#fff', padding: '16px 20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                <CheckCircle2 size={18} style={{ color: '#166534', flexShrink: 0 }} />
-                <span style={{ fontSize: '0.95rem', color: '#334155', fontWeight: 600, textAlign: 'left' }}>{item}</span>
+              <div key={i} style={{ 
+                background: '#fff', 
+                borderRadius: '16px', 
+                border: '1px solid #e2e8f0',
+                overflow: 'hidden',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
+                display: 'flex',
+                flexDirection: 'column'
+              }}>
+                <div style={{ width: '100%', height: '180px', overflow: 'hidden' }}>
+                  <img src={item.image} alt={item.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <div style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <CheckCircle2 size={18} style={{ color: '#166534', flexShrink: 0 }} />
+                  <span style={{ fontSize: '1rem', color: '#0f172a', fontWeight: 700, textAlign: 'left' }}>{item.title}</span>
+                </div>
               </div>
             ))}
           </div>

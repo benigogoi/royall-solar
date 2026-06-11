@@ -21,7 +21,7 @@ const AboutSection = () => {
             <Link to="/about" className="about-btn">Learn About Royall Solar</Link>
           </div>
           <div className="about-brand-image">
-            <img src="/assets/office_building.png" alt="Royall Solar solar energy office in Assam" />
+            <img src="/assets/generated_building.png" alt="Royall Solar solar energy office in Assam" />
           </div>
         </div>
       </div>

@@ -1,31 +1,81 @@
-.page-header {
-  height: 320px;
-  background-size: cover;
-  background-position: center;
+.page-header-v2 {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background-color: #ffffff;
   margin-top: calc(var(--nav-height) + var(--top-bar-height));
+  padding: 40px 0 0 0; /* Push text down below navbar with margin, then add padding */
+  overflow: hidden;
+  text-align: center;
 }
 
-.page-header-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85));
+.page-header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
 }
 
-.page-title {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: #fff;
+.page-header-text {
+  max-width: 900px;
+  margin-bottom: 15px;
 }
 
-.page-subtitle {
-  color: rgba(255,255,255,0.7);
+.page-header-title {
+  font-size: clamp(2rem, 4vw, 3rem); /* Slightly smaller than homepage hero */
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.page-header-subtitle {
   font-size: 1.1rem;
-  margin-top: 12px;
-  max-width: 600px;
+  color: #1e293b;
+  line-height: 1.4;
+  font-weight: 500;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Wide Banner Image Below */
+.page-header-banner {
+  width: 100%;
+  max-width: 100%;
+  margin: -30px auto 0; /* Pull image up underneath the text */
+  position: relative;
+  z-index: 1;
+}
+
+.page-header-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Vertically smaller than homepage banner */
+  object-fit: cover;
+  display: block;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+  .page-header-v2 {
+    padding-top: 100px;
+  }
+
+  .page-header-title {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+  }
+
+  .page-header-subtitle {
+    font-size: 1rem;
+  }
+
+  .page-header-img {
+    max-height: 200px;
+  }
 }

@@ -1,6 +1,6 @@
 .solution-page {
   background: #fff;
-  padding-top: calc(var(--nav-height) + var(--top-bar-height));
+  padding-top: 0;
 }
 
 .solution-page .container {

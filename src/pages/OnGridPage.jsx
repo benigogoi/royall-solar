@@ -92,15 +92,11 @@ const OnGridPage = () => {
 
   return (
     <div className="solution-page ongrid-page-wrapper">
-      {/* Main Intro Banner */}
-      <section className="section ongrid-intro-banner">
-        <div className="container text-center">
-          <h2 className="banner-title">On-Grid Solar Solutions</h2>
-          <p className="banner-text">
-            An <strong>On Grid Solar System Assam</strong> allows you to generate electricity from sunlight and use it directly in your home or business while remaining connected to the utility grid. By producing your own power during the day with a high-performance <strong>rooftop solar installation Assam</strong>, you can significantly reduce electricity expenses and maximize long-term savings through premier <strong>solar energy solutions Assam</strong>.
-          </p>
-        </div>
-      </section>
+      <PageHeader 
+        title="On-Grid Solar Solutions" 
+        subtitle="Save up to 90% on Electricity Bills with Grid-Connected Solar" 
+        bgImage="/assets/installations/home_solar.jpg" 
+      />
 
       {/* Section 1: How On-Grid Solar Works */}
       <section className="section bg-white">

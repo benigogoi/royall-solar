@@ -116,7 +116,7 @@ const SolarSavingsCalculator = () => {
             <img 
               src="/assets/surya_ghar_subsidy.png" 
               alt="PM Surya Ghar Yojana Banner" 
-              style={{ width: '100%', height: 'auto', borderRadius: '16px', objectFit: 'contain', maxHeight: '350px' }} 
+              style={{ width: '100%', height: 'auto', borderRadius: '16px', objectFit: 'contain', maxHeight: '480px' }} 
             />
           </div>
         </div>

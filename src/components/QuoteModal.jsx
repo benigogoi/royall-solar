@@ -29,7 +29,7 @@ const QuoteModal = ({ isOpen, onClose }) => {
           
           <div className="form-group">
             <label>Phone Number</label>
-            <input type="tel" placeholder="+91 9707670101" required />
+            <input type="tel" placeholder="+91 8135986518" required />
           </div>
           
           <div className="form-group">

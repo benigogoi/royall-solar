@@ -78,15 +78,11 @@ const HybridPage = () => {
 
   return (
     <div className="solution-page">
-      {/* New Intro Section */}
-      <section className="section hybrid-intro-banner">
-        <div className="container text-center">
-          <h2 className="banner-title">Hybrid Solar Solutions</h2>
-          <p className="banner-text">
-            Enjoy Solar Savings with Reliable Power Backup
-          </p>
-        </div>
-      </section>
+      <PageHeader 
+        title="Hybrid Solar Solutions" 
+        subtitle="Enjoy Solar Savings with Reliable Power Backup" 
+        bgImage="/assets/installations/home_solar.jpg" 
+      />
 
       {/* Logic Intro */}
       <section className="section solution-intro">

@@ -78,7 +78,7 @@ const Contact = ({
                 </div>
                 <div className="form-group">
                   <label htmlFor="phone">Phone Number</label>
-                  <input type="tel" id="phone" placeholder="9707670101" required />
+                  <input type="tel" id="phone" placeholder="8135986518" required />
                 </div>
               </div>
 

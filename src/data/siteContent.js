@@ -249,8 +249,8 @@ export const installationProcess = [
 
 export const contactDetails = {
   carePhone: '03772-325190',
-  mobilePhone: '+91 9707670101',
-  whatsapp: '+91 9707670101',
+  mobilePhone: '+91 8135986518',
+  whatsapp: '+91 8135986518',
   email: 'royalinfratech28@gmail.com',
   office: 'c/o Borah Bhavan, Sonari Town, Near ASTC Bus Terminus, P.O. Sonari, Charaideo, Assam - 785690',
 };

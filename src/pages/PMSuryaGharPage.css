@@ -6,6 +6,280 @@
   overflow-x: hidden;
 }
 
+/* ============================================
+   CUSTOM PM SURYA GHAR HERO SECTION
+   ============================================ */
+.pmsg-hero {
+  margin-top: calc(var(--nav-height) + var(--top-bar-height));
+  background: linear-gradient(120deg, #0c1a2e 0%, #12243d 55%, #0d2035 100%);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+/* Subtle glowing circles in background */
+.pmsg-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: 30%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(255, 153, 51, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.pmsg-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(19, 136, 8, 0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Tricolor accent bar at the very top */
+.pmsg-tricolor-bar {
+  display: flex;
+  height: 5px;
+  width: 100%;
+}
+.tc-saffron { flex: 1; background: #FF9933; }
+.tc-white    { flex: 1; background: #FFFFFF; }
+.tc-green    { flex: 1; background: #138808; }
+
+/* Inner layout */
+.pmsg-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  padding-top: 60px;
+}
+
+/* Left: Text */
+.pmsg-scheme-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 153, 51, 0.12);
+  border: 1px solid rgba(255, 153, 51, 0.3);
+  color: #ffb347;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.scheme-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FF9933;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+}
+
+.pmsg-hero-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.pmsg-accent {
+  color: #FF9933;
+}
+
+.pmsg-hero-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+.pmsg-hero-subtitle strong {
+  color: #fff;
+}
+
+/* Stats row */
+.pmsg-hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 20px 28px;
+  margin-bottom: 32px;
+  width: fit-content;
+}
+.pmsg-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 28px;
+}
+.pmsg-stat-value {
+  font-size: 1.55rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: #FF9933;
+  line-height: 1;
+}
+.pmsg-stat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 4px;
+}
+.pmsg-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* Actions */
+.pmsg-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Right: Image Column */
+.pmsg-hero-image-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pmsg-image-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Corner bracket decorators */
+.pmsg-image-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  z-index: 3;
+}
+.pmsg-corner-tl {
+  top: -6px; left: -6px;
+  border-top: 3px solid #FF9933;
+  border-left: 3px solid #FF9933;
+  border-radius: 4px 0 0 0;
+}
+.pmsg-corner-tr {
+  top: -6px; right: -6px;
+  border-top: 3px solid #138808;
+  border-right: 3px solid #138808;
+  border-radius: 0 4px 0 0;
+}
+.pmsg-corner-bl {
+  bottom: 42px; left: -6px;
+  border-bottom: 3px solid #138808;
+  border-left: 3px solid #138808;
+  border-radius: 0 0 0 4px;
+}
+.pmsg-corner-br {
+  bottom: 42px; right: -6px;
+  border-bottom: 3px solid #FF9933;
+  border-right: 3px solid #FF9933;
+  border-radius: 0 0 4px 0;
+}
+
+/* The actual photo — NO mask, NO ghost */
+.pmsg-modi-img {
+  width: 100%;
+  max-width: 380px;
+  height: 480px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,153,51,0.2);
+}
+
+/* Name badge below image */
+.pmsg-image-badge {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pmsg-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding-top: 48px;
+  }
+  .pmsg-hero-stats {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pmsg-hero-actions {
+    justify-content: center;
+  }
+  .pmsg-hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pmsg-hero-image-col {
+    order: -1;
+  }
+  .pmsg-modi-img {
+    height: 360px;
+    max-width: 300px;
+  }
+  .pmsg-corner-bl, .pmsg-corner-br {
+    bottom: 42px;
+  }
+}
+@media (max-width: 600px) {
+  .pmsg-hero-stats {
+    padding: 14px 12px;
+    gap: 0;
+  }
+  .pmsg-stat {
+    padding: 0 14px;
+  }
+  .pmsg-stat-value {
+    font-size: 1.15rem;
+  }
+  .pmsg-modi-img {
+    height: 300px;
+  }
+}
+
+
 .surya-ghar-page .container {
   width: min(1200px, calc(100% - 40px));
 }

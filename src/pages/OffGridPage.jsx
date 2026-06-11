@@ -1,8 +1,8 @@
-import PageHeader from '../components/PageHeader';
 import { solarSolutions } from '../data/siteContent';
 import { CheckCircle2, Battery, Cpu, Sun, ZapOff, ArrowRight, Shield, Settings, Wrench, HardHat, HelpCircle, Users, FileCheck, Award, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './SolarSolutionPage.css';
+import './OffGridPage.css';
 
 const OffGridPage = () => {
   const data = solarSolutions.find(s => s.id === 'off-grid');
@@ -53,13 +53,69 @@ const OffGridPage = () => {
 
   return (
     <div className="solution-page">
-      {/* New Intro Section */}
-      <section className="section offgrid-intro-banner">
-        <div className="container text-center">
-          <h2 className="banner-title">Off-Grid Solar Solutions</h2>
-          <p className="banner-text">
-            Complete Energy Independence with Off-Grid Solar Systems
-          </p>
+      {/* Custom Off-Grid Hero */}
+      <section className="offgrid-hero">
+        <div className="offgrid-accent-bar"></div>
+        <div className="offgrid-hero-glow-r"></div>
+        <div className="offgrid-hero-inner container">
+          {/* Left: Text */}
+          <div className="offgrid-hero-text">
+            <div className="offgrid-eyebrow">
+              <span className="offgrid-eyebrow-dot"></span>
+              Independent Energy — No Grid Needed
+            </div>
+            <h1 className="offgrid-hero-title">
+              Off-Grid <span className="offgrid-title-accent">Solar</span>
+              <br />Solutions Assam
+            </h1>
+            <p className="offgrid-hero-subtitle">
+              Complete energy independence with <strong>solar + battery storage</strong> for homes, farms, tea estates and remote facilities across Assam.
+            </p>
+            <div className="offgrid-stats-row">
+              <div className="offgrid-stat-item">
+                <span className="offgrid-stat-num">24/7</span>
+                <span className="offgrid-stat-lbl">Power Supply</span>
+              </div>
+              <div className="offgrid-stat-item">
+                <span className="offgrid-stat-num">0 Grid</span>
+                <span className="offgrid-stat-lbl">Dependency</span>
+              </div>
+              <div className="offgrid-stat-item">
+                <span className="offgrid-stat-num">25 Yr</span>
+                <span className="offgrid-stat-lbl">Panel Life</span>
+              </div>
+            </div>
+            <div className="offgrid-hero-actions">
+              <Link to="/contact" className="btn btn-primary">Get a Free Site Survey</Link>
+              <Link to="/products" className="btn btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.3)' }}>View Products</Link>
+            </div>
+          </div>
+
+          {/* Right: Image */}
+          <div className="offgrid-hero-right">
+            {/* Floating battery badge */}
+            <div className="offgrid-battery-badge">
+              <div className="battery-shell">
+                <div className="battery-segment"></div>
+                <div className="battery-segment"></div>
+                <div className="battery-segment"></div>
+              </div>
+              <span className="battery-pct">100%</span>
+              <span className="battery-lbl">Stored</span>
+            </div>
+            <div className="offgrid-img-card">
+              <img
+                src="/assets/installations/backup_system.jpg"
+                alt="Off-grid solar battery backup system"
+                className="offgrid-main-img"
+              />
+              <div className="offgrid-img-overlay"></div>
+              <div className="offgrid-img-label">
+                <span className="offgrid-img-label-dot"></span>
+                Battery Backup System — Live
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

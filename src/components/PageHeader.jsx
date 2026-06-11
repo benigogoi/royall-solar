@@ -1,13 +1,25 @@
 import './PageHeader.css';
 
-const PageHeader = ({ title, subtitle, bgImage }) => {
+const PageHeader = ({ title, subtitle, bgImage, imageStyle }) => {
   return (
-    <div className="page-header" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="page-header-overlay"></div>
-      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-        <h1 className="page-title">{title}</h1>
-        {subtitle && <p className="page-subtitle">{subtitle}</p>}
+    <div className="page-header-v2">
+      <div className="container page-header-container">
+        <div className="page-header-text">
+          <h1 className="page-header-title">{title}</h1>
+          {subtitle && <p className="page-header-subtitle">{subtitle}</p>}
+        </div>
       </div>
+      
+      {bgImage && (
+        <div className="page-header-banner">
+          <img 
+            src={bgImage} 
+            alt={title} 
+            className="page-header-img" 
+            style={imageStyle}
+          />
+        </div>
+      )}
     </div>
   );
 };
