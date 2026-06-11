@@ -259,7 +259,7 @@ const HybridPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Let Royall Solar design a hybrid solar solution that delivers energy savings, reliable backup and long-term performance.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Free Consultation
           </Link>
         </div>

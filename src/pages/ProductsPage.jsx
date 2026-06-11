@@ -65,7 +65,7 @@ const ProductsPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link to="/contact" className="btn btn-primary" style={{ width: '100%', marginTop: '16px' }}>
+                  <Link to="/contact#contact" className="btn btn-primary" style={{ width: '100%', marginTop: '16px' }}>
                     Request Details
                   </Link>
                 </div>
@@ -120,7 +120,7 @@ const ProductsPage = () => {
           <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px' }}>
             Our experts will evaluate your energy requirements and recommend the most suitable solar or power backup solution for your property.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Free Consultation
           </Link>
         </div>

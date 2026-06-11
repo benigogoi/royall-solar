@@ -1,9 +1,26 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
 import Contact from '../components/Contact';
 import { contactDetails } from '../data/siteContent';
 import { Phone, Mail, MapPin, Clock, MessageSquare, CheckCircle2, Globe } from 'lucide-react';
 
 const ContactPage = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      // Small timeout to let the page fully render first
+      const timer = setTimeout(() => {
+        const el = document.querySelector(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [hash]);
+
   const whyContactPoints = [
     'Free Consultation',
     'Customized Proposals',

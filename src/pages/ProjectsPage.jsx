@@ -89,7 +89,7 @@ const ProjectsPage = () => {
           <p style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.8', fontWeight: 600, marginBottom: '24px' }}>
             From residential rooftops to commercial facilities and industrial installations, Royall Solar delivers reliable solar energy solutions across Assam designed for long-term performance and savings.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Consultation
           </Link>
         </div>
@@ -247,7 +247,7 @@ const ProjectsPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Whether you are planning a residential rooftop installation, a commercial solar project or an industrial energy solution, Royall Solar is ready to help. Submit details to arrange a free site evaluation and customized quote.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Consultation
           </Link>
         </div>

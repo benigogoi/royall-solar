@@ -182,7 +182,7 @@ const PMSuryaGharPage = () => {
               </div>
             </div>
             <div className="pmsg-hero-actions">
-              <Link to="/contact" className="btn btn-primary">Apply Now — It's Free</Link>
+              <Link to="/contact#contact" className="btn btn-primary">Apply Now — It's Free</Link>
               <a href="#subsidy-table" className="btn btn-outline">View Subsidy Rates</a>
             </div>
           </div>
@@ -220,7 +220,7 @@ const PMSuryaGharPage = () => {
               As an MNRE-approved solar solution partner in Assam, **Royall Solar** simplifies the entire process. We manage everything from documentation and portal application to high-quality DCR panel installation and APDCL grid integration.
             </p>
             <div className="action-row">
-              <Link to="/contact" className="btn btn-primary">Start Your Application</Link>
+              <Link to="/contact#contact" className="btn btn-primary">Start Your Application</Link>
               <a href="#subsidy-table" className="btn btn-outline">Check Subsidy Rates</a>
             </div>
           </div>
@@ -445,7 +445,7 @@ const PMSuryaGharPage = () => {
             Ready to apply for PM Surya Ghar Yojana in Assam? Contact our local solar experts at Royall Solar. We will assist you with portal applications, site surveys, net metering, and final subsidy credits.
           </p>
           <div className="cta-btn-group">
-            <Link to="/contact" className="btn btn-primary btn-large">Get Free Solar Quote</Link>
+            <Link to="/contact#contact" className="btn btn-primary btn-large">Get Free Solar Quote</Link>
             <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="btn btn-secondary btn-large">Call Us: {contactDetails.mobilePhone}</a>
           </div>
         </div>

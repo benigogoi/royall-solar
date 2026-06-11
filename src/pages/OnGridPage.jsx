@@ -325,7 +325,7 @@ const OnGridPage = () => {
           <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '32px' }}>
             Let our experts design the ideal on-grid solar solution for your home, business or industrial facility.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get a Free Solar Consultation
           </Link>
         </div>

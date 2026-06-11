@@ -86,7 +86,7 @@ const OffGridPage = () => {
               </div>
             </div>
             <div className="offgrid-hero-actions">
-              <Link to="/contact" className="btn btn-primary">Get a Free Site Survey</Link>
+              <Link to="/contact#contact" className="btn btn-primary">Get a Free Site Survey</Link>
               <Link to="/products" className="btn btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.3)' }}>View Products</Link>
             </div>
           </div>
@@ -284,7 +284,7 @@ const OffGridPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Let Royall Solar design a reliable off-grid solar solution tailored to your power requirements and location.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get a Free Consultation
           </Link>
         </div>

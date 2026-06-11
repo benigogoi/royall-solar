@@ -215,7 +215,7 @@ const ResidentialPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Speak with our experts and discover the ideal residential solar solution for your home. Submit details to coordinate a home load analysis and rooftop survey visit.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Free Assessment
           </Link>
         </div>

@@ -97,7 +97,7 @@ const NetMeteringPage = () => {
               </div>
             </div>
             <div className="netmeter-hero-actions">
-              <Link to="/contact" className="btn btn-primary">Get Free Consultation</Link>
+              <Link to="/contact#contact" className="btn btn-primary">Get Free Consultation</Link>
               {/* <a href="#how-it-works" className="btn btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.25)' }}>How It Works</a> */}
             </div>
           </div>
@@ -172,7 +172,7 @@ const NetMeteringPage = () => {
           <p style={{ color: '#334155', fontSize: '1.25rem', lineHeight: '1.8', fontWeight: 600, marginBottom: '24px' }}>
             Net metering allows solar system owners to send excess electricity back to the utility grid and receive credits that help reduce future electricity bills.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Get Free Consultation
           </Link>
         </div>
@@ -334,7 +334,7 @@ const NetMeteringPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Talk to our experts and learn how net metering can help increase savings from your solar system. Get in touch to check net metering eligibility for your property profile.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Request a Free Consultation
           </Link>
         </div>

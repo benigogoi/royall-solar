@@ -191,7 +191,7 @@ const AboutPage = () => {
           <p style={{ color: 'var(--text-muted)', marginBottom: '32px', fontSize: '1.1rem', lineHeight: '1.7' }}>
             Whether you are planning a rooftop solar installation, a commercial solar project or a complete industrial energy solution, Royall Solar is ready to help.
           </p>
-          <Link to="/contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
+          <Link to="/contact#contact" className="btn btn-primary" style={{ borderRadius: '30px', padding: '14px 40px' }}>
             Contact Our Experts
           </Link>
         </div>
