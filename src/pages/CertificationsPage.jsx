@@ -1,7 +1,7 @@
 import PageHeader from '../components/PageHeader';
+import Partners from '../components/Partners';
 import './CertificationsPage.css';
-import { brandPartners } from '../data/siteContent';
-import { ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const certificationItems = [
   { id: 1, name: 'MNRE Approved', note: 'All our systems meet Ministry of New & Renewable Energy standards.' },
@@ -15,24 +15,12 @@ const certificationItems = [
 const CertificationsPage = () => {
   return (
     <div className="certifications-page">
-      <PageHeader title="Brands & Quality" subtitle="We only use certified, genuine products from trusted manufacturers" bgImage="/assets/installations/home_solar.jpg" />
+      <PageHeader title="Brands & Quality" subtitle="We only use certified, genuine products from trusted manufacturers" bgImage="/assets/installations/certifications_header.png" />
+      
+      {/* Brand Partners - Same as Home Page */}
+      <Partners />
       
       <div className="container cert-content">
-        
-        {/* Brand Partners */}
-        <section style={{ marginBottom: '60px' }}>
-          <h2 className="section-title">Brands We Deal In</h2>
-          <p className="section-subtitle">Top Indian solar manufacturers with proven track records.</p>
-          <div className="brand-partners-grid">
-            {brandPartners.map((brand) => (
-              <div key={brand} className="brand-partner-card">
-                <Award size={28} style={{ color: '#f97316', marginBottom: '12px' }} />
-                <strong>{brand}</strong>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Certifications */}
         <section>
           <h2 className="section-title">Quality & Certifications</h2>

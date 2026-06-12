@@ -1,72 +1,308 @@
-.support-page {
-  min-height: calc(100vh - 300px);
+/* SupportPage.css */
+
+.support-hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(var(--nav-height) + var(--top-bar-height));
 }
 
-.support-content {
-  padding: 60px 0 80px;
+.support-hero-bg {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
 }
 
-.support-contact-grid {
+.support-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.support-hero-bg::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to top, #0f172a, transparent);
+  z-index: 1;
+}
+
+.support-hero-content {
+  background: #0f172a;
+  padding: 50px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.support-hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.support-hero-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.support-hero-content p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.hero-contact-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 280px;
+  align-items: center;
+}
+
+.hero-contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex: 1;
+  min-width: 160px;
+}
+
+.hero-contact-card span {
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.85rem;
+}
+
+.hero-contact-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* Services Bento Grid */
+.support-services-bento {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
+  margin-top: 50px;
 }
 
-.support-cta-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 24px;
+.bento-service-card {
   background: #fff;
   border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  transition: border-color 0.2s;
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.support-cta-card:hover {
+.bento-service-card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  border-color: var(--accent-primary);
+  transform: translateY(-5px);
+}
+
+.bento-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #f0fdf4;
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.bento-service-card:hover .bento-icon-wrapper {
+  background: var(--accent-primary);
+  color: #fff;
+}
+
+.bento-service-card h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.bento-service-card p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Process Pathway */
+.process-pathway {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+
+.process-pathway::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 40px;
+  width: 2px;
+  background: #e2e8f0;
+  z-index: 0;
+}
+
+.pathway-step {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.pathway-number {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.pathway-content {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  border-radius: 16px;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+.pathway-content:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border-color: var(--accent-primary);
 }
 
-.support-cta-card svg {
-  color: var(--accent-primary);
-  flex-shrink: 0;
+.pathway-content h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 8px;
 }
 
-.support-cta-card div {
+.pathway-content p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* FAQ Accordion Grid */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.faq-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  border-color: #cbd5e1;
+}
+
+.faq-card h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 12px;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-.support-cta-card strong {
-  font-size: 1rem;
-  margin-bottom: 2px;
-}
-
-.support-cta-card span {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.cta-call {
-  background: #fff7ed;
-  border-color: #fed7aa;
-}
-
-.cta-whatsapp {
-  background: #f0fdf4;
-  border-color: #bbf7d0;
-}
-
-.cta-whatsapp svg {
-  color: #16a34a;
+.faq-card p {
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 32px;
 }
 
 @media (max-width: 768px) {
-  .support-split-section {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
+  .support-hero-section {
+    margin-top: calc(var(--nav-height) + var(--top-bar-height));
+  }
+
+  .support-hero-bg {
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .support-hero-bg img {
+    object-position: center;
+  }
+
+  .support-hero-content {
+    padding: 30px 20px 40px;
+    flex-direction: column;
+  }
+
+  .support-hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .support-hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-contact-grid {
+    flex-direction: column;
+  }
+
+  .hero-contact-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .process-pathway::before {
+    left: 30px;
+  }
+  .pathway-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 }
-

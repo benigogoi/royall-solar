@@ -25,13 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-links">
-          <h4>Products</h4>
-          <Link to="/products">Rooftop Solar</Link>
-          <Link to="/products">Solar Water Pump</Link>
-          <Link to="/products">Solar Inverter</Link>
-          <Link to="/products">Solar Street Light</Link>
-        </div>
+
 
         <div className="footer-links">
           <h4>Quick Links</h4>

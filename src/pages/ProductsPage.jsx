@@ -3,19 +3,11 @@ import FeaturedProducts from '../components/FeaturedProducts';
 import { productCategories } from '../data/siteContent';
 import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Partners from '../components/Partners';
 import './ProductsPage.css';
 
 const ProductsPage = () => {
-  const brandsList = [
-    { name: 'UTL', logo: '/assets/brands/utl.png' },
-    { name: 'Luminous', logo: '/assets/brands/luminous.jpg' },
-    { name: 'Livguard', logo: '/assets/brands/livguard.png' },
-    { name: 'Exide', logo: '/assets/brands/exide.svg' },
-    { name: 'Microtek', logo: '/assets/brands/microtek.png' },
-    { name: 'Havells', logo: '/assets/brands/havells.svg' },
-    { name: 'Waaree', logo: '/assets/brands/waaree.png' },
-    { name: 'Adani Solar', logo: '/assets/brands/adani.png' }
-  ];
+  
 
   const whyChoosePoints = [
     'Genuine products from leading brands',
@@ -30,7 +22,7 @@ const ProductsPage = () => {
       <PageHeader 
         title="Our Products & Solutions" 
         subtitle="Reliable Solar & Power Solutions for Every Need" 
-        bgImage="/assets/installations/home_solar.jpg" 
+        bgImage="/assets/installations/products_header.png" 
       />
       
       {/* Introduction with SEO Keywords */}
@@ -51,8 +43,8 @@ const ProductsPage = () => {
           <div className="categories-grid">
             {productCategories.map((cat) => (
               <div key={cat.id} className="category-card">
-                <div className="category-image">
-                  <img src={cat.image} alt={cat.title} />
+                <div className="category-image" style={{ background: '#f8fafc', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: cat.image.includes('products') ? '20px' : '0' }}>
+                  <img src={cat.image} alt={cat.title} style={{ objectFit: cat.image.includes('products') ? 'contain' : 'cover' }} />
                 </div>
                 <div className="category-info">
                   <h3>{cat.title}</h3>
@@ -75,23 +67,8 @@ const ProductsPage = () => {
         </div>
       </section>
 
-      {/* Brands Section */}
-      <section className="section bg-subtle">
-        <div className="container">
-          <h2 className="section-title">Trusted Brands We Work With</h2>
-          <p className="section-subtitle">Royall Solar partners with some of the most respected names in the solar and power backup industry to deliver dependable performance and long-term value.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '20px', marginTop: '30px' }}>
-            {brandsList.map((brand) => (
-              <div key={brand.name} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '24px 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '12px', minHeight: '120px', boxShadow: 'var(--shadow-sm)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }} className="brand-card-interactive">
-                <div style={{ width: '100%', height: '55px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src={brand.logo} alt={`${brand.name} logo`} style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
-                </div>
-                <span style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#475569', textAlign: 'center' }}>{brand.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Partners Section */}
+      <Partners />
 
       {/* Why Choose Section */}
       <section className="section bg-light">

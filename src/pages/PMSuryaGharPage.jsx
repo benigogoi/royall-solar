@@ -102,13 +102,13 @@ const PMSuryaGharPage = () => {
   ];
 
   const steps = [
-    { num: "01", title: "Portal Registration", desc: "Register on the National Solar Portal with your mobile and electricity bill details." },
-    { num: "02", title: "Submit Application", desc: "Log in and submit your rooftop solar installation request on the official portal." },
-    { num: "03", title: "Select Approved Vendor", desc: "Choose an empanelled, MNRE-approved solar provider like Royall Solar (Royal Infratech)." },
-    { num: "04", title: "System Installation", desc: "Our certified professionals install high-efficiency panels and safety equipment." },
-    { num: "05", title: "Net Meter & Inspection", desc: "Local DISCOM (APDCL) inspects the system and installs a smart bidirectional meter." },
-    { num: "06", title: "Commissioning Certificate", desc: "Get the system online and submit the final commissioning certificate on the portal." },
-    { num: "07", title: "Direct Subsidy Receipt", desc: "Government transfers your subsidy directly to your registered bank account within 30 days." }
+    { num: "01", title: "Portal Registration", desc: "Register on the National Solar Portal with your mobile and electricity bill details.", badge: "Handled by Royall Solar", badgeColor: "rgba(249, 115, 22, 0.15)", badgeTextColor: "var(--accent-primary)" },
+    { num: "02", title: "Submit Application", desc: "Log in and submit your rooftop solar installation request on the official portal.", badge: "Handled by Royall Solar", badgeColor: "rgba(249, 115, 22, 0.15)", badgeTextColor: "var(--accent-primary)" },
+    { num: "03", title: "Select Approved Vendor", desc: "Choose an empanelled, MNRE-approved solar provider like Royall Solar (Royal Infratech).", badge: "Customer Selection", badgeColor: "rgba(245, 158, 11, 0.15)", badgeTextColor: "var(--accent-yellow)" },
+    { num: "04", title: "System Installation", desc: "Our certified professionals install high-efficiency panels and safety equipment.", badge: "Executed by Royall Solar", badgeColor: "rgba(22, 101, 52, 0.2)", badgeTextColor: "#22c55e" },
+    { num: "05", title: "Net Meter & Inspection", desc: "Local DISCOM (APDCL) inspects the system and installs a smart bidirectional meter.", badge: "Coordinated by Royall Solar", badgeColor: "rgba(249, 115, 22, 0.15)", badgeTextColor: "var(--accent-primary)" },
+    { num: "06", title: "Commissioning Certificate", desc: "Get the system online and submit the final commissioning certificate on the portal.", badge: "Handled by Royall Solar", badgeColor: "rgba(249, 115, 22, 0.15)", badgeTextColor: "var(--accent-primary)" },
+    { num: "07", title: "Direct Subsidy Receipt", desc: "Government transfers your subsidy directly to your registered bank account within 30 days.", badge: "Direct to Your Bank", badgeColor: "rgba(16, 185, 129, 0.15)", badgeTextColor: "#10b981" }
   ];
 
   const timeline = [
@@ -380,13 +380,48 @@ const PMSuryaGharPage = () => {
       <section className="section bg-dark text-white-section">
         <div className="container">
           <h2 className="section-title text-white">How to Apply for Subsidy</h2>
-          <p className="section-subtitle text-white-subtitle">The complete 7-step process from portal registration to bank credit.</p>
-
+          <p className="section-subtitle text-white-subtitle" style={{ marginBottom: '16px' }}>The complete 7-step process from portal registration to bank credit.</p>
+          
+          <div style={{
+            background: 'rgba(249, 115, 22, 0.08)',
+            border: '1px solid rgba(249, 115, 22, 0.2)',
+            borderRadius: '12px',
+            padding: '16px 24px',
+            maxWidth: '800px',
+            margin: '0 auto 40px auto',
+            textAlign: 'center',
+            color: '#ffedd5',
+            fontSize: '0.95rem',
+            lineHeight: 1.6
+          }}>
+            ✨ <strong>Hassle-Free Subsidy Application:</strong> Royall Solar provides <strong>complete end-to-end support</strong>. We handle the paperwork, submit documentation on the portal, and coordinate Discom meter testing on your behalf.
+          </div>
+ 
           <div className="process-timeline-vertical">
             {steps.map((item, idx) => (
               <div className="timeline-node-premium" key={idx}>
-                <div className="timeline-number-ring">{item.num}</div>
-                <div className="timeline-content-card">
+                <div className="timeline-number-ring" style={{ borderColor: item.badgeTextColor, color: item.badgeTextColor }}>{item.num}</div>
+                <div className="timeline-content-card" style={{
+                  borderLeft: `4px solid ${item.badgeTextColor}`,
+                  background: 'rgba(255, 255, 255, 0.01)',
+                  paddingLeft: '24px'
+                }}>
+                  {item.badge && (
+                    <span style={{
+                      display: 'inline-block',
+                      background: item.badgeColor,
+                      color: item.badgeTextColor,
+                      fontSize: '0.7rem',
+                      fontWeight: 800,
+                      padding: '4px 10px',
+                      borderRadius: '6px',
+                      marginBottom: '8px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px'
+                    }}>
+                      {item.badge}
+                    </span>
+                  )}
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
                 </div>

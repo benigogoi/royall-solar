@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PageHeader from '../components/PageHeader';
-import Contact from '../components/Contact';
+import ContactSection from '../components/ContactSection';
 import { contactDetails } from '../data/siteContent';
 import { Phone, Mail, MapPin, Clock, MessageSquare, CheckCircle2, Globe } from 'lucide-react';
 
@@ -40,7 +40,7 @@ const ContactPage = () => {
       <PageHeader 
         title="Contact Royall Solar" 
         subtitle="Let's Discuss Your Solar Energy Requirements" 
-        bgImage="/assets/installations/home_solar.jpg" 
+        bgImage="/assets/installations/contact_header.png" 
       />
       
       {/* Introduction */}
@@ -150,14 +150,8 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Main Contact Form */}
-      <Contact 
-        title="Get in Touch"
-        desc="Our experts are available to answer questions, discuss project requirements and help you choose the right solar solution for your property."
-        formTitle="Request a Free Consultation"
-        formDesc="Fill out the form and our team will contact you to discuss your energy requirements and recommend the best solution."
-        successMessage="Thank you for contacting Royall Solar. Our team will review your request and get in touch shortly."
-      />
+      {/* Main Contact Form - WhatsApp Redirect */}
+      <ContactSection />
 
       {/* Office Location */}
       <section style={{ background: '#f8fafc', padding: '60px 0', borderTop: '1px solid #e2e8f0' }}>

@@ -4,102 +4,60 @@ const Partners = () => {
   const brands = [
     {
       name: 'Waaree',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 180 50" width="100%" height="100%">
-          <circle cx="22" cy="24" r="7" fill="#F37021" />
-          <circle cx="22" cy="24" r="4" fill="#FFC20E" />
-          <path d="M22 10 L22 14 M22 34 L22 38 M10 24 L14 24 M34 24 L38 24 M14 16 L17 19 M27 29 L30 32 M14 32 L17 29 M27 19 L30 16" stroke="#F37021" strokeWidth="2.2" strokeLinecap="round" />
-          <text x="46" y="32" fill="#0B3C5D" fontSize="21" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.8">WAAREE</text>
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/waaree.png',
+      customStyle: { transform: 'scale(1.5)' }
     },
     {
       name: 'Adani Solar',
       type: 'image',
-      src: '/assets/clients/adani.svg',
-      customStyle: { maxHeight: '60px' }
+      src: '/assets/brands/adani.png',
+      customStyle: { transform: 'scale(1.5)' }
     },
     {
       name: 'UTL',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 180 50" width="100%" height="100%">
-          <path d="M12 25 L20 33 L36 17" stroke="#ED1C24" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          <circle cx="24" cy="25" r="14" stroke="#005CA9" strokeWidth="3" fill="none" strokeDasharray="6 3" />
-          <text x="48" y="33" fill="#005CA9" fontSize="25" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">UTL</text>
-          <text x="106" y="31" fill="#ED1C24" fontSize="13" fontWeight="800" fontFamily="sans-serif" letterSpacing="1">SOLAR</text>
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/utl.png',
+      customStyle: { transform: 'scale(1.5)' }
     },
     {
       name: 'Luminous',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 180 50" width="100%" height="100%">
-          <text x="10" y="34" fill="#005CA9" fontSize="21" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">LUMINOUS</text>
-          <path d="M142 22 L148 16 L146 24 L153 27 L144 29 L145 36 L139 29 Z" fill="#00AEEF" />
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/luminous.jpg'
     },
     {
       name: 'Livguard',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 180 50" width="100%" height="100%">
-          <path d="M15 12 L28 7 L41 12 L41 24 C41 33 28 41 28 41 C28 41 15 33 15 24 Z" fill="#ED1C24" />
-          <path d="M22 21 L27 26 L34 17" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-          <text x="50" y="33" fill="#111827" fontSize="19" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">LIVGUARD</text>
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/livguard.png',
+      customStyle: { transform: 'scale(1.5)' }
     },
     {
       name: 'Exide',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 160 50" width="100%" height="100%">
-          <rect x="5" y="5" width="150" height="40" rx="6" fill="#ED1C24" />
-          <text x="50%" y="58%" dominantBaseline="middle" textAnchor="middle" fill="#FFFFFF" fontSize="24" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">EXIDE</text>
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/exide.png',
+      customStyle: { transform: 'scale(1.5)' }
     },
     {
       name: 'Microtek',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 180 50" width="100%" height="100%">
-          <text x="10" y="33" fill="#0E4F9F" fontSize="19" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">MICROTEK</text>
-          <circle cx="138" cy="24" r="8" fill="#ED1C24" />
-          <circle cx="152" cy="24" r="6" fill="#0E4F9F" />
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/microtek.png',
+      customStyle: { transform: 'scale(1.5)' }
     },
     {
       name: 'Havells',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 160 50" width="100%" height="100%">
-          <rect x="5" y="5" width="150" height="40" rx="6" fill="#E31E24" />
-          <text x="50%" y="58%" dominantBaseline="middle" textAnchor="middle" fill="#FFFFFF" fontSize="19" fontWeight="900" fontFamily="sans-serif" letterSpacing="1.5">HAVELLS</text>
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/havells.svg'
     },
     {
       name: 'Tata Power Solar',
       type: 'image',
-      src: '/assets/clients/tata.svg',
-      customStyle: { maxHeight: '60px' }
+      src: '/assets/clients/tata.svg'
     },
     {
       name: 'Vikram Solar',
-      type: 'svg',
-      svg: (
-        <svg viewBox="0 0 180 50" width="100%" height="100%">
-          <circle cx="25" cy="24" r="14" fill="#F8A51D" />
-          <path d="M25 7 L25 41 M7 24 L41 24 M13 12 L37 36 M13 36 L37 12" stroke="#FFFFFF" strokeWidth="2.5" />
-          <text x="48" y="32" fill="#15803d" fontSize="17" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">VIKRAM SOLAR</text>
-        </svg>
-      )
+      type: 'image',
+      src: '/assets/brands/vikram.png',
+      customStyle: { transform: 'scale(1.5)' }
     }
   ];
 
@@ -139,7 +97,7 @@ const Partners = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              height: '100px',
+              height: '120px',
               cursor: 'default',
               overflow: 'hidden'
             }}
@@ -160,10 +118,11 @@ const Partners = () => {
                   src={brand.src} 
                   alt={brand.name} 
                   style={{ 
-                    maxWidth: '85%', 
-                    maxHeight: '55px', 
+                    maxWidth: '95%', 
+                    maxHeight: '80px', 
                     objectFit: 'contain',
-                    ...brand.customStyle 
+                    mixBlendMode: 'multiply',
+                    ...brand.customStyle
                   }} 
                 />
               ) : (

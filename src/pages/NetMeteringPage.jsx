@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle2, ChevronDown, BarChart3, HelpCircle, FileCheck, ShieldCheck, Settings, Users, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ChevronDown, BarChart3, HelpCircle, FileCheck, ShieldCheck, Settings, Users, ArrowRight, Home, Briefcase, GraduationCap, Bed, Factory, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './NetMeteringPage.css';
 
@@ -23,12 +23,12 @@ const NetMeteringPage = () => {
   ];
 
   const targetAudience = [
-    { title: 'Residential Homeowners', desc: 'Save significantly on monthly household bills and get faster payback.' },
-    { title: 'Commercial Buildings', desc: 'Reduce operational expenditures and improve green corporate profiles.' },
-    { title: 'Educational Institutions', desc: 'Lower administrative facility bills and showcase sustainability.' },
-    { title: 'Hotels', desc: 'Offset high daytime baseline cooling and lighting consumption costs.' },
-    { title: 'Industrial Facilities', desc: 'Reduce maximum contract demand charge spikes during operations.' },
-    { title: 'Large Rooftop Solar Installations', desc: 'Maximize generation yield across expansive physical structures.' }
+    { title: 'Residential Homeowners', desc: 'Save significantly on monthly household bills and get faster payback.', icon: Home },
+    { title: 'Commercial Buildings', desc: 'Reduce operational expenditures and improve green corporate profiles.', icon: Briefcase },
+    { title: 'Educational Institutions', desc: 'Lower administrative facility bills and showcase sustainability.', icon: GraduationCap },
+    { title: 'Hotels', desc: 'Offset high daytime baseline cooling and lighting consumption costs.', icon: Bed },
+    { title: 'Industrial Facilities', desc: 'Reduce maximum contract demand charge spikes during operations.', icon: Factory },
+    { title: 'Large Rooftop Solar Installations', desc: 'Maximize generation yield across expansive physical structures.', icon: Sun }
   ];
 
   const whyChoosePoints = [
@@ -241,18 +241,22 @@ const NetMeteringPage = () => {
           <p className="section-subtitle">Ideal configurations for various commercial and domestic rooftop installations across Assam.</p>
           
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '45px' }}>
-            {targetAudience.map((audience, i) => (
-              <div key={i} style={{
-                background: '#fff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '12px',
-                padding: '28px',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.01)'
-              }}>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', marginBottom: '8px' }}>{audience.title}</h3>
-                <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>{audience.desc}</p>
-              </div>
-            ))}
+            {targetAudience.map((audience, i) => {
+              const IconComponent = audience.icon;
+              return (
+                <div key={i} style={{
+                  background: '#fff',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: '12px',
+                  padding: '28px',
+                  boxShadow: '0 4px 6px rgba(0,0,0,0.01)'
+                }}>
+                  {IconComponent && <IconComponent size={32} style={{ color: '#166534', marginBottom: '16px' }} />}
+                  <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', marginBottom: '8px' }}>{audience.title}</h3>
+                  <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5, margin: 0 }}>{audience.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

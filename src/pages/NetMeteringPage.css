@@ -224,8 +224,8 @@
   font-weight: 700;
 }
 .nm-node-text span {
-  font-size: 0.72rem;
-  color: #475569;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 /* Animated arrow connectors */
@@ -274,7 +274,8 @@
 /* Bidirectional label on meter connector */
 .nm-bidir-label {
   position: absolute;
-  right: -80px;
+  left: 100%;
+  margin-left: 16px;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(22, 163, 74, 0.15);

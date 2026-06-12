@@ -55,7 +55,7 @@
 .page-header-img {
   width: 100%;
   height: auto;
-  max-height: 300px; /* Vertically smaller than homepage banner */
+  max-height: 450px; /* Vertically smaller than homepage banner */
   object-fit: cover;
   display: block;
   mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
@@ -64,7 +64,7 @@
 
 @media (max-width: 768px) {
   .page-header-v2 {
-    padding-top: 100px;
+    padding-top: 0;
   }
 
   .page-header-title {
@@ -76,6 +76,6 @@
   }
 
   .page-header-img {
-    max-height: 200px;
+    max-height: 280px;
   }
 }

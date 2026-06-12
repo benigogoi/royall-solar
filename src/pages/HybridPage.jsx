@@ -222,34 +222,79 @@ const HybridPage = () => {
       </section>
 
       {/* Popular in Assam Section */}
-      <section className="section bg-dark text-white summary-section">
-        <div className="container summary-grid">
-          <div className="summary-text">
-            <h2 className="section-title text-left" style={{ color: '#fff' }}>Why Hybrid Solar is Popular in Assam</h2>
-            <p className="solution-description" style={{ color: 'rgba(255,255,255,0.8)' }}>
+      <section className="section bg-dark text-white summary-section" style={{ padding: '80px 0' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 className="section-title" style={{ color: '#fff', marginBottom: '20px' }}>Why Hybrid Solar is Popular in Assam</h2>
+            <p className="solution-description" style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '800px', margin: '0 auto', fontSize: '1.15rem' }}>
               Hybrid solar systems are becoming increasingly popular across Assam because they provide reliable power during outages while reducing electricity expenses. They are particularly suitable for homes, businesses and institutions that require uninterrupted operation.
             </p>
-            <h3 style={{ color: '#fff', fontSize: '1.4rem', margin: '24px 0 16px', textTransform: 'none' }}>Who Should Install Hybrid Solar:</h3>
-            <ul className="summary-list" style={{ listStyleType: 'none', paddingLeft: 0 }}>
-              {targetAudiences.map((audience, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '16px', gap: '12px' }}>
-                  <CheckCircle2 size={20} style={{ color: 'var(--accent-primary)', flexShrink: 0, marginTop: '2px' }} />
-                  <div>
-                    <strong style={{ color: '#fff', display: 'block' }}>{audience.name}</strong>
-                    <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>{audience.desc}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
-          <div className="summary-visual" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/8/80/Official_portrait_of_Narendra_Modi%2C_2022.jpg" 
-              alt="PM Narendra Modi" 
-              style={{ width: '100%', maxWidth: '350px', height: 'auto', borderRadius: '16px', boxShadow: 'var(--shadow-lg)', objectFit: 'cover' }} 
-            />
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 0.7fr', gap: '50px', alignItems: 'center' }} className="hybrid-target-grid">
+            <div>
+              <h3 style={{ color: '#fff', fontSize: '1.6rem', marginBottom: '30px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <Users size={28} style={{ color: 'var(--accent-primary)' }} />
+                Who Should Install Hybrid Solar:
+              </h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
+                {targetAudiences.map((audience, i) => (
+                  <div key={i} style={{ 
+                    background: 'rgba(255,255,255,0.05)', 
+                    padding: '24px', 
+                    borderRadius: '16px', 
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    transition: 'transform 0.3s ease'
+                  }} className="target-audience-card">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                      <CheckCircle2 size={24} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} />
+                      <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{audience.name}</strong>
+                    </div>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', margin: 0, lineHeight: '1.6' }}>{audience.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ position: 'relative', width: '100%', maxWidth: '400px' }}>
+                <img 
+                  src="/assets/modiJi.png" 
+                  alt="PM Narendra Modi — PM Surya Ghar Yojana" 
+                  style={{ width: '100%', height: 'auto', borderRadius: '20px', boxShadow: '0 20px 40px rgba(0,0,0,0.4)', objectFit: 'cover', border: '3px solid rgba(255,255,255,0.1)' }} 
+                />
+                <div style={{ 
+                  position: 'absolute', 
+                  bottom: '-24px', 
+                  left: '50%', 
+                  transform: 'translateX(-50%)', 
+                  background: 'linear-gradient(135deg, var(--accent-primary) 0%, #d97706 100%)', 
+                  padding: '16px 24px', 
+                  borderRadius: '30px',
+                  boxShadow: '0 10px 25px rgba(245, 158, 11, 0.4)',
+                  whiteSpace: 'nowrap',
+                  width: '85%',
+                  textAlign: 'center'
+                }}>
+                  <strong style={{ color: '#fff', fontSize: '1.1rem', display: 'block', marginBottom: '4px' }}>PM Surya Ghar Yojana</strong>
+                  <span style={{ color: 'rgba(255,255,255,0.9)', fontSize: '0.9rem' }}>Subsidy Available for Solar</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <style>{`
+          @media (max-width: 992px) {
+            .hybrid-target-grid {
+              grid-template-columns: 1fr !important;
+              gap: 80px !important;
+            }
+          }
+          .target-audience-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08) !important;
+          }
+        `}</style>
       </section>
 
       {/* Final CTA Section */}

@@ -2,6 +2,7 @@ import React from 'react';
 import PageHeader from '../components/PageHeader';
 import { CheckCircle2, FileText, BarChart3, Wrench, ShieldCheck, Heart, Award, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import './ProjectsPage.css';
 
 const ProjectsPage = () => {
   const categories = [
@@ -14,7 +15,7 @@ const ProjectsPage = () => {
         'Battery Backup Solutions',
         'Long-Term Energy Savings'
       ],
-      image: '/assets/installations/home_solar.jpg'
+      image: '/assets/assam_home_solar.png'
     },
     {
       title: 'Commercial Solar Projects',
@@ -25,7 +26,7 @@ const ProjectsPage = () => {
         'Grid-Tied Solar Systems',
         'Custom System Design'
       ],
-      image: '/assets/installations/backup_system.jpg'
+      image: '/assets/installations/guwahati_commercial.png'
     },
     {
       title: 'Industrial Solar Projects',
@@ -36,17 +37,17 @@ const ProjectsPage = () => {
         'Reliable Performance',
         'Long-Term Cost Reduction'
       ],
-      image: '/assets/office_building.png'
+      image: '/assets/installations/dibrugarh_industrial.png'
     }
   ];
 
   const galleryItems = [
-    { title: 'Residential Rooftop Solar', image: '/assets/installations/home_solar.jpg', desc: 'Rooftop Solar Installation Assam' },
-    { title: 'Commercial Rooftop Solar', image: '/assets/office_building.png', desc: 'Commercial Solar Projects Assam' },
-    { title: 'Industrial Solar Installations', image: '/assets/installations/backup_system.jpg', desc: 'Industrial Solar Solutions Assam' },
-    { title: 'Hybrid Solar Systems', image: '/assets/installations/home_solar.jpg', desc: 'Hybrid Solar Systems Assam' },
-    { title: 'Solar Water Pump Projects', image: '/assets/products/mono_panel.png', desc: 'Solar Energy Solutions Assam' },
-    { title: 'Energy Storage Solutions', image: '/assets/products/battery.png', desc: 'Solar Projects Assam' }
+    { title: 'Residential Rooftop Solar', image: '/assets/installations/assam_independent_home.png', desc: 'Rooftop Solar Installation Assam' },
+    { title: 'Commercial Rooftop Solar', image: '/assets/installations/guwahati_commercial.png', desc: 'Commercial Solar Projects Assam' },
+    { title: 'Industrial Solar Installations', image: '/assets/installations/dibrugarh_industrial.png', desc: 'Industrial Solar Solutions Assam' },
+    { title: 'Hybrid Solar Systems', image: '/assets/installations/assam_10kw_solar.png', desc: 'Hybrid Solar Systems Assam' },
+    { title: 'Solar Water Pump Projects', image: '/assets/installations/solar_pump.jpg', desc: 'Solar Energy Solutions Assam' },
+    { title: 'Energy Storage Solutions', image: '/assets/installations/backup_system.jpg', desc: 'Solar Projects Assam' }
   ];
 
   const steps = [
@@ -80,7 +81,7 @@ const ProjectsPage = () => {
       <PageHeader 
         title="Our Projects" 
         subtitle="Projects That Power Progress" 
-        bgImage="/assets/installations/home_solar.jpg" 
+        bgImage="/assets/installations/projects_header.png" 
       />
 
       {/* Hero / Intro Section */}
@@ -114,35 +115,23 @@ const ProjectsPage = () => {
           <h2 className="section-title">Project Capabilities</h2>
           <p className="section-subtitle">Specialized engineering and deployment for various solar projects Assam profiles.</p>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginTop: '50px' }}>
+          <div className="capabilities-list">
             {categories.map((cat, i) => (
-              <div key={i} style={{
-                background: '#fff',
-                border: '1px solid #e2e8f0',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
-                display: 'flex',
-                flexDirection: 'column',
-                height: '100%'
-              }}>
-                <div style={{ width: '100%', height: '200px', overflow: 'hidden' }}>
-                  <img src={cat.image} alt={cat.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div key={i} className="capability-card">
+                <div className="capability-image">
+                  <img src={cat.image} alt={cat.title} />
                 </div>
-                <div style={{ padding: '28px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', marginBottom: '12px' }}>{cat.title}</h3>
-                  <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '20px' }}>{cat.desc}</p>
-                  
-                  <div style={{ marginTop: 'auto', borderTop: '1px solid #f1f5f9', paddingTop: '20px' }}>
-                    <h4 style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: '#0f172a', fontWeight: 700, marginBottom: '12px' }}>Key Deliverables:</h4>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      {cat.features.map((feat, idx) => (
-                        <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                          <CheckCircle2 size={16} style={{ color: '#166534', flexShrink: 0 }} />
-                          <span style={{ fontSize: '0.9rem', color: '#475569', fontWeight: 500 }}>{feat}</span>
-                        </div>
-                      ))}
-                    </div>
+                <div className="capability-content">
+                  <h3>{cat.title}</h3>
+                  <p>{cat.desc}</p>
+                  <h4 style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px', color: '#0f172a', fontWeight: 700, marginBottom: '12px' }}>Key Deliverables:</h4>
+                  <div className="capability-features">
+                    {cat.features.map((feat, idx) => (
+                      <div key={idx} className="capability-feature">
+                        <CheckCircle2 size={16} style={{ color: '#166534', flexShrink: 0 }} />
+                        <span>{feat}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -191,20 +180,12 @@ const ProjectsPage = () => {
           <h2 className="section-title">How We Deliver Successful Projects</h2>
           <p className="section-subtitle">A professional and structured methodology ensuring absolute efficiency.</p>
           
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px', marginTop: '50px' }}>
+          <div className="timeline-grid">
             {steps.map((item, i) => (
-              <div key={i} style={{
-                padding: '30px 24px',
-                background: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                borderRadius: '12px',
-                textAlign: 'center'
-              }}>
-                <span style={{ display: 'inline-block', background: '#166534', color: '#fff', fontWeight: 800, fontSize: '0.8rem', padding: '4px 12px', borderRadius: '20px', marginBottom: '16px' }}>
-                  {item.step}
-                </span>
-                <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', marginBottom: '10px' }}>{item.title}</h3>
-                <p style={{ color: '#64748b', fontSize: '0.85rem', lineHeight: 1.5, margin: 0 }}>{item.desc}</p>
+              <div key={i} className="timeline-card">
+                <div className="step-number">{i + 1}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>

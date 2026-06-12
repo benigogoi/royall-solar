@@ -161,7 +161,7 @@ export const productCategories = [
     id: 'solar-pumps',
     title: 'Solar Water Pumps',
     description: 'Energy-efficient solar-powered pumping systems designed for agriculture, irrigation and rural water supply applications.',
-    image: '/assets/products/gamma_pcu.png',
+    image: '/assets/installations/solar_pump.jpg',
     features: [
       'Reduced operating costs',
       'Sustainable water management',
@@ -248,9 +248,9 @@ export const installationProcess = [
 ];
 
 export const contactDetails = {
-  carePhone: '03772-325190',
-  mobilePhone: '+91 8135986518',
-  whatsapp: '+91 8135986518',
+  carePhone: '03772-325910',
+  mobilePhone: '+91 9707670101',
+  whatsapp: '+91 9707670101',
   email: 'royalinfratech28@gmail.com',
   office: 'c/o Borah Bhavan, Sonari Town, Near ASTC Bus Terminus, P.O. Sonari, Charaideo, Assam - 785690',
 };

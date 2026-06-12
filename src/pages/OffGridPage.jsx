@@ -1,5 +1,5 @@
 import { solarSolutions } from '../data/siteContent';
-import { CheckCircle2, Battery, Cpu, Sun, ZapOff, ArrowRight, Shield, Settings, Wrench, HardHat, HelpCircle, Users, FileCheck, Award, Zap } from 'lucide-react';
+import { CheckCircle2, Battery, Cpu, Sun, ZapOff, ArrowRight, Shield, Settings, Wrench, HardHat, HelpCircle, Users, FileCheck, Award, Zap, Home, Tractor, Leaf, Briefcase, GraduationCap, HeartPulse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './SolarSolutionPage.css';
 import './OffGridPage.css';
@@ -25,12 +25,12 @@ const OffGridPage = () => {
   ];
 
   const idealApplications = [
-    { name: 'Residential Homes', desc: 'Reliable electricity for homes located in remote or underserved areas.' },
-    { name: 'Agricultural Operations', desc: 'Power irrigation systems, water pumps and farm equipment. Ideal for solar power for farms and solar water pump solutions.' },
-    { name: 'Tea Gardens & Estates', desc: 'Provide dependable electricity for operations and worker facilities.' },
-    { name: 'Remote Businesses', desc: 'Maintain uninterrupted operations without grid dependency.' },
-    { name: 'Educational Institutions', desc: 'Reliable energy for schools and training centers.' },
-    { name: 'Healthcare Facilities', desc: 'Support critical equipment and services in remote locations.' }
+    { name: 'Residential Homes', desc: 'Reliable electricity for homes located in remote or underserved areas.', icon: Home },
+    { name: 'Agricultural Operations', desc: 'Power irrigation systems, water pumps and farm equipment. Ideal for solar power for farms and solar water pump solutions.', icon: Tractor },
+    { name: 'Tea Gardens & Estates', desc: 'Provide dependable electricity for operations and worker facilities.', icon: Leaf },
+    { name: 'Remote Businesses', desc: 'Maintain uninterrupted operations without grid dependency.', icon: Briefcase },
+    { name: 'Educational Institutions', desc: 'Reliable energy for schools and training centers.', icon: GraduationCap },
+    { name: 'Healthcare Facilities', desc: 'Support critical equipment and services in remote locations.', icon: HeartPulse }
   ];
 
   const whyChoosePoints = [
@@ -208,14 +208,17 @@ const OffGridPage = () => {
         <div className="container">
           <h2 className="section-title">Ideal Applications</h2>
           <p className="section-subtitle">Reliable electricity for sectors requiring absolute power isolation and operational self-sustenance.</p>
-          <div className="modes-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-            {idealApplications.map((app, i) => (
-              <div key={i} className="mode-card" style={{ padding: '30px' }}>
-                <CheckCircle2 className="mode-icon" size={32} />
-                <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem', margin: '12px 0' }}>{app.name}</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>{app.desc}</p>
-              </div>
-            ))}
+          <div className="modes-grid">
+            {idealApplications.map((app, i) => {
+              const IconComponent = app.icon || CheckCircle2;
+              return (
+                <div key={i} className="mode-card" style={{ padding: '30px' }}>
+                  <IconComponent className="mode-icon" size={32} />
+                  <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem', margin: '12px 0' }}>{app.name}</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: '1.6' }}>{app.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

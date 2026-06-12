@@ -31,6 +31,8 @@ function ScrollToTop() {
   return null;
 }
 
+import FloatingButtons from './components/FloatingButtons';
+
 function App() {
   return (
     <Router>
@@ -55,6 +57,7 @@ function App() {
         <Route path="/pm-surya-ghar" element={<PMSuryaGharPage />} />
       </Routes>
       <Footer />
+      <FloatingButtons />
     </Router>
   );
 }

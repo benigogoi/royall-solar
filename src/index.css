@@ -27,6 +27,7 @@
 @media (max-width: 768px) {
   :root {
     --nav-height: 70px;
+    --top-bar-height: 0px;
   }
 }
 
@@ -147,4 +148,30 @@ h3 { font-size: 1.5rem; }
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
   .container { width: calc(100% - 32px); }
+}
+
+/* Residential Process Steps Grid */
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-top: 45px;
+}
+
+@media (max-width: 1200px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
 }

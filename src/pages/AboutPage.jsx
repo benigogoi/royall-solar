@@ -74,7 +74,7 @@ const AboutPage = () => {
       <PageHeader 
         title="About Royall Solar" 
         subtitle="Empowering Assam Through Reliable Solar Energy Solutions" 
-        bgImage="/assets/installations/home_solar.jpg" 
+        bgImage="/assets/installations/about_header.png" 
       />
       
       <section className="section company-history">
@@ -85,81 +85,95 @@ const AboutPage = () => {
             <p>Royall Solar is a trusted <strong>Solar Company in Assam</strong> serving customers across the entire region. We specialize in delivering complete solar EPC services as a leading <strong>Solar EPC Company</strong> for residential, commercial and industrial clients.</p>
             <p>From consultation and system design to professional <strong>rooftop solar installation</strong> and long-term support, our goal is to help customers reduce electricity expenses, improve energy reliability and embrace sustainable power solutions.</p>
           </div>
-          <div className="history-visual" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-             <div className="history-card" style={{ padding: '30px' }}>
-                <Target size={36} className="history-icon" style={{ marginBottom: '16px' }} />
-                <h3>Our Mission</h3>
-                <p style={{ fontSize: '0.95rem' }}>To make clean, affordable and dependable solar energy accessible to every home, business and industry across Assam.</p>
-             </div>
-             <div className="history-card" style={{ padding: '30px' }}>
-                <ShieldCheck size={36} className="history-icon" style={{ marginBottom: '16px' }} />
-                <h3>Our Vision</h3>
-                <p style={{ fontSize: '0.95rem' }}>To become one of the most trusted solar energy companies in Northeast India by delivering innovative, high-quality and customer-focused energy solutions.</p>
-             </div>
+          <div className="history-visual-container">
+            <img src="/assets/about/about_hero.png" alt="Royall Solar Modern Installation" className="hero-graphic" />
+            <div className="floating-card floating-mission">
+              <h3><Target size={20} /> Our Mission</h3>
+              <p>To make clean, affordable and dependable solar energy accessible to every home, business and industry across Assam.</p>
+            </div>
+            <div className="floating-card floating-vision">
+              <h3><ShieldCheck size={20} /> Our Vision</h3>
+              <p>To become the most trusted solar energy company in Northeast India by delivering innovative, customer-focused solutions.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section bg-subtle areas-section">
         <div className="container">
-          <h2 className="section-title">What We Do</h2>
-          <p className="section-subtitle">Comprehensive solar EPC services and backup solutions tailored for homes, businesses, and agriculture in Assam.</p>
-          <div className="areas-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
-            {services.map((service) => (
-              <div key={service.title} className="area-tag" style={{ display: 'block', height: 'auto', padding: '24px' }}>
-                <h3 style={{ fontSize: '1.15rem', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px', color: '#0f172a', textTransform: 'none', letterSpacing: 'normal' }}>
-                  <CheckCircle2 size={18} className="pin-icon" />
-                  {service.title}
-                </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: 'normal', lineHeight: '1.6' }}>
-                  {service.desc}
-                </p>
-              </div>
-            ))}
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 className="section-title">What We Do</h2>
+            <p className="section-subtitle">Comprehensive solar EPC services and backup solutions tailored for homes, businesses, and agriculture in Assam.</p>
           </div>
+
+          <div className="service-row">
+            <div className="service-image-container">
+              <img src="/assets/about/service_residential.png" alt="Residential Solar" />
+            </div>
+            <div className="service-text">
+              <h3>Residential Solar Solutions</h3>
+              <p>Customized rooftop solar installation systems that help homeowners reduce electricity bills and gain energy independence. Our smart home integrations ensure maximum efficiency and visual appeal.</p>
+            </div>
+          </div>
+
+          <div className="service-row">
+            <div className="service-image-container">
+              <img src="/assets/about/service_commercial.png" alt="Commercial Solar" />
+            </div>
+            <div className="service-text">
+              <h3>Commercial & Industrial Projects</h3>
+              <p>Scalable, large-scale commercial solar solutions engineered for manufacturing units, warehouses, and industrial facilities. We focus on maximizing ROI and improving operational efficiency.</p>
+            </div>
+          </div>
+
+          <div className="service-row">
+            <div className="service-image-container">
+              <img src="/assets/about/service_water.png" alt="Solar Water Pumps" />
+            </div>
+            <div className="service-text">
+              <h3>Solar Water Pumping Systems</h3>
+              <p>Efficient solar-powered pumping solutions for agriculture, irrigation, and rural applications. Empowering farmers with reliable water access independent of grid electricity.</p>
+            </div>
+          </div>
+
         </div>
       </section>
 
       <section className="section team-values">
         <div className="container">
-          <h2 className="section-title">Why Choose Royall Solar</h2>
-          <p className="section-subtitle">We are dedicated to delivering reliable solar power with unmatched quality, local expertise, and continuous support.</p>
-          <div className="values-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
-            {whyChooseItems.map((item, index) => {
-              const icons = [ShieldCheck, Users, Wrench, CheckCircle2];
-              const Icon = icons[index] || ShieldCheck;
-              return (
-                <div key={item.title} className="value-item" style={{ textAlign: 'center' }}>
-                  <div className="value-icon-box" style={{ width: '56px', height: '56px', marginBottom: '16px' }}>
-                    <Icon size={22} />
-                  </div>
-                  <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', textTransform: 'none', letterSpacing: 'normal' }}>{item.title}</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>{item.desc}</p>
-                </div>
-              );
-            })}
+          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <h2 className="section-title">Why Choose Royall Solar</h2>
+            <p className="section-subtitle">We are dedicated to delivering reliable solar power with unmatched quality, local expertise, and continuous support.</p>
           </div>
-        </div>
-      </section>
+          
+          <div className="bento-grid">
+            <div className="bento-large">
+              <img src="/assets/about/trust_badge.png" alt="Quality & Trust" />
+            </div>
+            
+            <div className="bento-item">
+              <div className="value-icon-box"><ShieldCheck size={24} /></div>
+              <h3>Quality Products</h3>
+              <p>We work with trusted manufacturers to ensure long-term performance.</p>
+            </div>
 
-      <section className="section bg-subtle team-values">
-        <div className="container">
-          <h2 className="section-title">Our Values</h2>
-          <p className="section-subtitle">The core principles that guide our operations, relationship with customers, and quality of service.</p>
-          <div className="values-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '30px' }}>
-            {valuesItems.map((item, index) => {
-              const icons = [Award, ShieldCheck, Zap, Heart];
-              const Icon = icons[index] || Award;
-              return (
-                <div key={item.title} className="value-item" style={{ textAlign: 'center' }}>
-                  <div className="value-icon-box" style={{ width: '56px', height: '56px', marginBottom: '16px' }}>
-                    <Icon size={22} />
-                  </div>
-                  <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', textTransform: 'none', letterSpacing: 'normal' }}>{item.title}</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: '1.6' }}>{item.desc}</p>
-                </div>
-              );
-            })}
+            <div className="bento-item">
+              <div className="value-icon-box"><Users size={24} /></div>
+              <h3>Expert Team</h3>
+              <p>Professionals assisting you from planning to installation and maintenance.</p>
+            </div>
+
+            <div className="bento-item">
+              <div className="value-icon-box"><Wrench size={24} /></div>
+              <h3>Customized Solutions</h3>
+              <p>Every project is designed according to actual energy requirements.</p>
+            </div>
+
+            <div className="bento-item">
+              <div className="value-icon-box"><CheckCircle2 size={24} /></div>
+              <h3>End-to-End Service</h3>
+              <p>Complete project execution, commissioning and after-sales support.</p>
+            </div>
           </div>
         </div>
       </section>

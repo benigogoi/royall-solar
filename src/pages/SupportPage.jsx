@@ -98,116 +98,92 @@ const SupportPage = () => {
 
   return (
     <div className="support-page">
-      <PageHeader 
-        title="Customer Support & Services" 
-        subtitle="Expert Support for Every Stage of Your Solar Journey" 
-        bgImage="/assets/installations/home_solar.jpg" 
-      />
-      
-      <div className="container support-content">
-        
-        {/* Introduction */}
-        <div style={{ maxWidth: '800px', margin: '0 auto 50px', textAlign: 'center' }}>
-          <p style={{ color: '#475569', fontSize: '1.15rem', lineHeight: '1.8' }}>
-            At <strong>Royall Solar</strong>, our commitment extends beyond installation. As a trusted <strong>solar EPC company Assam</strong>, we provide comprehensive <strong>solar support Assam</strong> services to help customers maximize system performance, maintain reliability and achieve long-term energy savings.
-          </p>
-          <p style={{ color: '#475569', fontSize: '1.15rem', lineHeight: '1.8', marginTop: '16px' }}>
-            Whether you need consultation, <strong>solar system maintenance</strong>, troubleshooting or <strong>solar warranty support</strong>, our team is ready to help.
-          </p>
+      <section className="support-hero-section">
+        <div className="support-hero-bg">
+          <img src="/assets/support_hero.png" alt="Royall Solar Support Technician" />
         </div>
-
-        {/* Quick Contact Cards */}
-        <div className="support-contact-grid">
-          <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="support-cta-card cta-call">
-            <PhoneCall size={28} />
-            <div>
-              <strong>Call Us Now</strong>
+        <div className="support-hero-content">
+          <div className="support-hero-text">
+            <h2>We Are Here To Help</h2>
+            <p>
+              At <strong>Royall Solar</strong>, our commitment extends beyond installation. As a trusted solar EPC company, we provide comprehensive support services to help you maximize system performance, maintain reliability and achieve long-term energy savings.
+            </p>
+          </div>
+          <div className="hero-contact-grid">
+            <a href={`tel:${contactDetails.mobilePhone.replace(/\s/g, '')}`} className="hero-contact-card">
+              <PhoneCall size={28} />
+              <div>Call Us Now</div>
               <span>{contactDetails.mobilePhone}</span>
-            </div>
-          </a>
-          <a href={`https://wa.me/${contactDetails.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="support-cta-card cta-whatsapp">
-            <MessageSquare size={28} />
-            <div>
-              <strong>WhatsApp Support</strong>
-              <span>Send us a message</span>
-            </div>
-          </a>
-          <a href={`mailto:${contactDetails.email}`} className="support-cta-card">
-            <Mail size={28} />
-            <div>
-              <strong>Email Us</strong>
+            </a>
+            <a href={`https://wa.me/${contactDetails.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="hero-contact-card">
+              <MessageSquare size={28} />
+              <div>WhatsApp Chat</div>
+              <span>Instant Support</span>
+            </a>
+            <a href={`mailto:${contactDetails.email}`} className="hero-contact-card">
+              <Mail size={28} />
+              <div>Email Support</div>
               <span>{contactDetails.email}</span>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
+      </section>
+
+      <div className="container support-content">
 
         {/* Support Services Grid */}
         <section style={{ marginTop: '80px' }}>
-          <h2 className="section-title">Our Support Services</h2>
-          <p className="section-subtitle">Comprehensive solar support Assam for residential, commercial and industrial setups.</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginTop: '40px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h2 className="section-title">Our Support Services</h2>
+            <p className="section-subtitle">Comprehensive solar support for residential, commercial and industrial setups.</p>
+          </div>
+          <div className="support-services-bento">
             {supportServices.map((item, i) => (
-              <div key={i} style={{
-                display: 'flex', gap: '16px', padding: '28px', background: '#fff',
-                border: '1px solid #e2e8f0', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.02)'
-              }}>
-                <div style={{ width: '48px', height: '48px', background: '#f8fafc', color: '#166534', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              <div key={i} className="bento-service-card">
+                <div className="bento-icon-wrapper">
                   {item.icon}
                 </div>
-                <div>
-                  <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', fontWeight: 800, color: '#0f172a' }}>{item.title}</h3>
-                  <p style={{ color: '#64748b', fontSize: '0.9rem', lineHeight: 1.5 }}>{item.desc}</p>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section style={{ marginTop: '100px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h2 className="section-title">Service Process</h2>
+            <p className="section-subtitle">A streamlined approach to resolve queries and handle maintenance requests efficiently.</p>
+          </div>
+          
+          <div className="process-pathway">
+            {processSteps.map((step, index) => (
+              <div key={index} className="pathway-step">
+                <div className="pathway-number">{step.step}</div>
+                <div className="pathway-content">
+                  <h3>{step.title}</h3>
+                  <p>{step.desc}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Why Our Support Matters & Process Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', marginTop: '80px', alignItems: 'start' }} className="support-split-section">
-          {/* Why Our Support Matters */}
-          <section>
-            <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 16px 0' }}>Reliable Service You Can Count On</h2>
-            <p style={{ color: '#64748b', marginBottom: '32px' }}>We provide professional support before, during and after installation to build trust and improve conversion confidence.</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '20px' }}>
-              {whyChoosePoints.map((point, index) => (
-                <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <CheckCircle2 size={20} style={{ color: '#166534', flexShrink: 0 }} />
-                  <span style={{ fontSize: '0.95rem', color: '#334155', fontWeight: 500 }}>{point}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Process Section */}
-          <section>
-            <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 16px 0' }}>Service Process</h2>
-            <p style={{ color: '#64748b', marginBottom: '32px' }}>A streamlined approach to resolve queries and handle maintenance requests efficiently.</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {processSteps.map((step, index) => (
-                <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '16px', background: '#f8fafc', padding: '16px 20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                  <span style={{ fontSize: '1.2rem', fontWeight: 800, color: '#166534' }}>{step.step}</span>
-                  <div>
-                    <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>{step.title}</h4>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '2px 0 0' }}>{step.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </div>
-
         {/* FAQ Section */}
-        <section style={{ marginTop: '80px' }}>
-          <h2 className="section-title">Frequent Customer Requests</h2>
-          <p className="section-subtitle">Common technical assistance and maintenance queries from our clients in Assam.</p>
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        <section style={{ marginTop: '100px', marginBottom: '40px' }}>
+          <div style={{ textAlign: 'center' }}>
+            <h2 className="section-title">Frequent Customer Requests</h2>
+            <p className="section-subtitle">Common technical assistance and maintenance queries from our clients.</p>
+          </div>
+          <div className="faq-grid">
             {faqItems.map((faq, i) => (
-              <div key={i} style={{
-                padding: '24px', borderBottom: '1px solid #e2e8f0'
-              }}>
-                <h4 style={{ fontSize: '1.05rem', marginBottom: '10px', color: '#0f172a', fontWeight: 700 }}>{faq.q}</h4>
-                <p style={{ color: '#64748b', lineHeight: 1.6, fontSize: '0.95rem' }}>{faq.a}</p>
+              <div key={i} className="faq-card">
+                <h3>
+                  <HelpCircle size={20} style={{ color: 'var(--accent-primary)' }} />
+                  {faq.q}
+                </h3>
+                <p>{faq.a}</p>
               </div>
             ))}
           </div>

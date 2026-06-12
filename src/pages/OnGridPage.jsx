@@ -44,22 +44,22 @@ const OnGridPage = () => {
     {
       title: 'Residential Homes',
       desc: 'Reduce household electricity costs and gain greater energy independence with residential solar Assam.',
-      icon: <Users size={32} className="peace-icon" />
+      image: '/assets/installations/assam_3kw_solar.png'
     },
     {
       title: 'Commercial Buildings',
       desc: 'Lower operational expenses for offices, retail spaces and institutions with scalable commercial solar Assam.',
-      icon: <FileCheck size={32} className="peace-icon" />
+      image: '/assets/office_building.png'
     },
     {
       title: 'Hotels and Hospitality',
       desc: 'Reduce energy costs while supporting sustainability goals and reliable operations.',
-      icon: <Award size={32} className="peace-icon" />
+      image: '/assets/installations/hotel_resort_solar.png'
     },
     {
       title: 'Industrial Facilities',
       desc: 'Offset large electricity consumption and improve profitability with high-capacity setups.',
-      icon: <Settings size={32} className="peace-icon" />
+      image: '/assets/installations/dibrugarh_industrial.png'
     }
   ];
 
@@ -173,9 +173,11 @@ const OnGridPage = () => {
 
             <div className="peace-features-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '24px' }}>
               {targetAudiences.map((audience, i) => (
-                <div key={i} className="peace-feature-card">
-                  {audience.icon}
-                  <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem' }}>{audience.title}</h3>
+                <div key={i} className="peace-feature-card" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <div style={{ width: '80px', height: '80px', borderRadius: '50%', overflow: 'hidden', marginBottom: '20px', border: '3px solid #ffedd5', boxShadow: '0 4px 10px rgba(0,0,0,0.05)', flexShrink: 0 }}>
+                    <img src={audience.image} alt={audience.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <h3 style={{ textTransform: 'none', letterSpacing: 'normal', fontSize: '1.25rem', marginTop: 0 }}>{audience.title}</h3>
                   <p>{audience.desc}</p>
                 </div>
               ))}
